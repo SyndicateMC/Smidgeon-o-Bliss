@@ -1,0 +1,106 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"2": "sob:block/roast_turkey",
+		"3": "sob:block/roast_turkey_gibs",
+		"particle": "sob:block/tray_top_plum",
+		"tray_top": "sob:block/tray_top_plum",
+		"tray_bottom": "farmersdelight:block/tray_bottom"
+	},
+	"elements": [
+		{
+			"name": "tray",
+			"from": [1, 0, 1],
+			"to": [15, 2, 15],
+			"faces": {
+				"north": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#tray_top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#tray_top"}
+			}
+		},
+		{
+			"from": [3, 2, 5],
+			"to": [13, 10, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 2, 0]},
+			"faces": {
+				"north": {"uv": [0, 7.5, 5, 11.5], "texture": "#2"},
+				"east": {"uv": [0, 0, 4.5, 4], "texture": "#2"},
+				"south": {"uv": [11, 0, 16, 4], "texture": "#2"},
+				"west": {"uv": [4.5, 0, 0, 4], "texture": "#2"},
+				"up": {"uv": [8, 5.5, 13, 10], "texture": "#2"},
+				"down": {"uv": [8, 11.5, 13, 16], "rotation": 180, "texture": "#2"}
+			}
+		},
+		{
+			"from": [4, 2.025, 3],
+			"to": [4, 9.025, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.525, 8]},
+			"faces": {
+				"north": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"east": {"uv": [5, 0.5, 10, 4], "texture": "#3"},
+				"south": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"west": {"uv": [10, 0.5, 5, 4], "texture": "#3"},
+				"up": {"uv": [0.5, 6, 4.5, 11], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [0.5, 0.5, 4.5, 5.5], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [12, 2.025, 3],
+			"to": [12, 9.025, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.525, 8]},
+			"faces": {
+				"north": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"east": {"uv": [5, 0.5, 10, 4], "texture": "#3"},
+				"south": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"west": {"uv": [10, 0.5, 5, 4], "texture": "#3"},
+				"up": {"uv": [0.5, 6, 4.5, 11], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [0.5, 0.5, 4.5, 5.5], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [4, 2.025, 3],
+			"to": [12, 2.025, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.525, 8]},
+			"faces": {
+				"north": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"east": {"uv": [5, 0.5, 10, 4], "texture": "#3"},
+				"south": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"west": {"uv": [10, 0.5, 5, 4], "texture": "#3"},
+				"up": {"uv": [0.5, 0.5, 4.5, 5.5], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [0.5, 0.5, 4.5, 5.5], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [4, 9.025, 3],
+			"to": [12, 9.025, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 5.525, 8]},
+			"faces": {
+				"north": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"east": {"uv": [5, 0.5, 10, 4], "texture": "#3"},
+				"south": {"uv": [5, 4.5, 9, 8], "texture": "#3"},
+				"west": {"uv": [10, 0.5, 5, 4], "texture": "#3"},
+				"up": {"uv": [0.5, 6, 4.5, 11], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [0.5, 11, 4.5, 6], "rotation": 180, "texture": "#3"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "turkey",
+			"origin": [16, 2, 0],
+			"color": 0,
+			"children": [1]
+		},
+		{
+			"name": "bones",
+			"origin": [7, 2, 3],
+			"color": 0,
+			"children": [2, 3, 4, 5]
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "uneaten",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:roast_turkey_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:roast_turkey_block",
+          "properties": {
+            "servings": "6"
+          }
+        }
+      ]
+    },
+    {
+      "name": "leftover",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bowl"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:block_state_property",
+            "block": "sob:roast_turkey_block",
+            "properties": {
+              "servings": "6"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "leftover_2",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bone"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:roast_turkey_block",
+          "properties": {
+            "servings": "0"
+          }
+        }
+      ]
+    }
+  ]
+}

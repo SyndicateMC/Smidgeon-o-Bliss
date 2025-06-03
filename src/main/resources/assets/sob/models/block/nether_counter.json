@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/polished_blackstone_bricks",
+    "side": "mynethersdelight:block/nether_stove_side",
+    "top": "sob:block/nether_counter_top"
+  }
+}

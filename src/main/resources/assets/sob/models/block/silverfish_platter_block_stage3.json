@@ -1,0 +1,138 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"2": "sob:block/silverfish_platter_bread",
+		"3": "sob:block/silverfish_platter_sides",
+		"4": "sob:block/silverfish_platter_silverfish",
+		"particle": "farmersdelight:block/tray_top",
+		"tray_top": "farmersdelight:block/tray_top",
+		"tray_bottom": "farmersdelight:block/tray_bottom"
+	},
+	"elements": [
+		{
+			"name": "tray",
+			"from": [1, 0, 1],
+			"to": [15, 2, 15],
+			"faces": {
+				"north": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#tray_top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#tray_top"}
+			}
+		},
+		{
+			"from": [2.5, 2, 7],
+			"to": [6.5, 4, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [3, 7, 5, 11], "rotation": 270, "texture": "#4"},
+				"east": {"uv": [5, 12, 7, 16], "rotation": 270, "texture": "#4"},
+				"south": {"uv": [0, 7, 2, 11], "rotation": 270, "texture": "#4"},
+				"west": {"uv": [5, 12, 7, 16], "rotation": 90, "texture": "#4"},
+				"up": {"uv": [0, 12, 4, 16], "rotation": 180, "texture": "#4"},
+				"down": {"uv": [0, 12, 4, 16], "texture": "#4"}
+			}
+		},
+		{
+			"from": [1.5, 2.999, 9],
+			"to": [7.5, 2.999, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 6], "rotation": 270, "texture": "#4"},
+				"east": {"uv": [0, 0, 0, 3], "rotation": 270, "texture": "#4"},
+				"south": {"uv": [0, 0, 0, 6], "rotation": 270, "texture": "#4"},
+				"west": {"uv": [0, 0, 0, 3], "rotation": 90, "texture": "#4"},
+				"up": {"uv": [10, 9, 16, 12], "rotation": 180, "texture": "#4"},
+				"down": {"uv": [16, 9, 10, 12], "texture": "#4"}
+			}
+		},
+		{
+			"from": [6.52688, 2, 4.34411],
+			"to": [8.52688, 3, 6.34411],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [11, 15, 13, 16], "texture": "#3"},
+				"east": {"uv": [13, 15, 11, 16], "texture": "#3"},
+				"south": {"uv": [11, 15, 13, 16], "texture": "#3"},
+				"west": {"uv": [13, 15, 11, 16], "texture": "#3"},
+				"up": {"uv": [14, 11, 16, 13], "rotation": 180, "texture": "#3"},
+				"down": {"uv": [14, 14, 16, 16], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [5.25, 2.17388, 2.88268],
+			"to": [7.25, 2.17388, 5.88268],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 2], "rotation": 90, "texture": "#3"},
+				"east": {"uv": [0, 0, 0, 3], "rotation": 90, "texture": "#3"},
+				"south": {"uv": [0, 0, 0, 2], "rotation": 270, "texture": "#3"},
+				"west": {"uv": [0, 0, 0, 3], "rotation": 90, "texture": "#3"},
+				"up": {"uv": [15, 8, 12, 10], "rotation": 270, "texture": "#3"},
+				"down": {"uv": [12, 8, 15, 10], "rotation": 270, "texture": "#3"}
+			}
+		},
+		{
+			"name": "bread",
+			"from": [7.63634, 2, 8.82141],
+			"to": [12.63634, 3, 13.82141],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [3, 9, 8, 10], "rotation": 180, "texture": "#2"},
+				"east": {"uv": [16, 11, 15, 16], "rotation": 270, "texture": "#2"},
+				"south": {"uv": [9, 5, 10, 10], "rotation": 270, "texture": "#2"},
+				"west": {"uv": [15, 11, 16, 16], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [3, 5, 8, 10], "rotation": 180, "texture": "#2"},
+				"down": {"uv": [3, 11, 8, 16], "texture": "#2"}
+			}
+		},
+		{
+			"name": "caviar",
+			"from": [10.5, 2, 3.5],
+			"to": [13.5, 3, 6.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [3, 1, 0, 2], "texture": "#3"},
+				"east": {"uv": [0, 1, 3, 2], "texture": "#3"},
+				"south": {"uv": [3, 1, 0, 2], "texture": "#3"},
+				"west": {"uv": [0, 1, 3, 2], "texture": "#3"},
+				"up": {"uv": [1, 5, 4, 8], "rotation": 270, "texture": "#3"},
+				"down": {"uv": [0, 12, 4, 16], "rotation": 90, "texture": "#3"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "group",
+			"origin": [7.65, 2, 2],
+			"color": 0,
+			"children": [
+				{
+					"name": "silverfish",
+					"origin": [7.65, 2, 2],
+					"color": 0,
+					"children": [
+						1,
+						{
+							"name": "spines",
+							"origin": [7.65, 2, 2],
+							"color": 0,
+							"children": [2]
+						}
+					]
+				},
+				{
+					"name": "glow_berry",
+					"origin": [12, 0, 6],
+					"color": 0,
+					"children": [3, 4]
+				},
+				5,
+				6
+			]
+		}
+	]
+}

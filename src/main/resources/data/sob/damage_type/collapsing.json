@@ -1,0 +1,6 @@
+{
+    "effects": "hurt",
+    "exhaustion": 1.5,
+    "message_id": "collapsing",
+    "scaling": "when_caused_by_living_non_player"
+}

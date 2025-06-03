@@ -1,0 +1,195 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "uneaten",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:donut_box_block"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "7"
+          }
+        }
+      ]
+    },
+    {
+      "name": "leftover",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:block_state_property",
+            "block": "sob:donut_box_block",
+            "properties": {
+              "servings": "7"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6_donuts",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut",
+          "functions": [
+            {
+              "add": false,
+              "count": 6,
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "6"
+          }
+        }
+      ]
+    },
+    {
+      "name": "5_donuts",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut",
+          "functions": [
+            {
+              "add": false,
+              "count": 5,
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "4_donuts",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut",
+          "functions": [
+            {
+              "add": false,
+              "count": 4,
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "4"
+          }
+        }
+      ]
+    },
+    {
+      "name": "3_donuts",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut",
+          "functions": [
+            {
+              "add": false,
+              "count": 3,
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "3"
+          }
+        }
+      ]
+    },
+    {
+      "name": "2_donuts",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut",
+          "functions": [
+            {
+              "add": false,
+              "count": 2,
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "1_donut",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:maple_donut"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:donut_box_block",
+          "properties": {
+            "servings": "1"
+          }
+        }
+      ]
+    }
+  ]
+}

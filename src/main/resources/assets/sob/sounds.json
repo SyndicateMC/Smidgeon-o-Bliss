@@ -1,0 +1,33 @@
+{
+    "entity.collapse_building": {
+        "subtitle": "subtitle.sob.collapse_building",
+        "sounds": [
+            {
+                "name": "sob:resonance/collapse_build1"
+            },
+            {
+                "name": "sob:resonance/collapse_build2"
+            },
+            {
+                "name": "sob:resonance/collapse_build3"
+            }
+        ]
+    },
+    "entity.collapsing": {
+        "subtitle": "subtitle.sob.collapsing",
+        "sounds": [
+            {
+                "name": "sob:resonance/collapse1"
+            },
+            {
+                "name": "sob:resonance/collapse2"
+            },
+            {
+                "name": "sob:resonance/collapse3"
+            },
+            {
+                "name": "sob:resonance/collapse4"
+            }
+        ]
+    }
+}
