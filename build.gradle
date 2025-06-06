@@ -105,6 +105,22 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("curse.maven:farmers-delight-398521:6597298")
+    implementation fg.deobf("curse.maven:create-328085:6323270")
+    implementation fg.deobf("curse.maven:farmers-respite-551453:5543547")
+    implementation fg.deobf("curse.maven:miners-delight-plus-689630:5038950")
+    implementation fg.deobf("curse.maven:my-nethers-delight-1003673:6529919")
+    implementation fg.deobf("curse.maven:brewin-and-chewin-637808:6237884")
+    implementation fg.deobf("curse.maven:frycooks-delight-1081410:5630141")
+    implementation fg.deobf("curse.maven:blueprint-382216:6408581")
+    implementation fg.deobf("curse.maven:atmospheric-362393:6393127")
+    implementation fg.deobf("curse.maven:autumnity-365045:6151402")
+    implementation fg.deobf("curse.maven:buzzier-bees-355458:6151411")
+    implementation fg.deobf("curse.maven:caverns-and-chasms-438005:6040957")
+    implementation fg.deobf("curse.maven:endergetic-291509:6157658")
+    implementation fg.deobf("curse.maven:environmental-388992:6060255")
+    implementation fg.deobf("curse.maven:neapolitan-382016:6248885")
+    implementation fg.deobf("curse.maven:savage-and-ravage-381736:6040963")
+    implementation fg.deobf("curse.maven:upgrade-aquatic-326895:6393133")
 
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }

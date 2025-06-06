@@ -2,7 +2,7 @@
   "required": true,
   "package": "com.syndicatemc.sob.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "${mod_id}.refmap.json",
+  "refmap": "sob.refmap.json",
   "mixins": [
     "LivingEntityMixin"
   ],
