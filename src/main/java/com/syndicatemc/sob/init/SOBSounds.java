@@ -15,6 +15,8 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.collapse_building")));
     public static final RegistryObject<SoundEvent> COLLAPSING = SOUNDS.register("entity.collapsing",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.collapsing")));
+    public static final RegistryObject<SoundEvent> FIZZY_DRINK = SOUNDS.register("item.fizzy_drink",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.fizzy_drink")));
 
     public static void init(IEventBus bus) {
         SOUNDS.register(bus);

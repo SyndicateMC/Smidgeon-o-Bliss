@@ -1,5 +1,7 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"parent": "block/block",
 	"textures": {
 		"particle": "farmersdelight:block/tray_top",
 		"tray_top": "farmersdelight:block/tray_top",

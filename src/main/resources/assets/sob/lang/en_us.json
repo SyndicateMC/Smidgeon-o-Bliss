@@ -1,4 +1,6 @@
 {
+  "itemGroup.sob": "Smidgeon O' Bliss",
+
   "item.sob.golden_potato": "Gilded Potato",
   "item.sob.dripleaves": "Dripleaves",
   "item.sob.sculk_tendril": "Sculk Tendril",
@@ -13,6 +15,7 @@
   "item.sob.duck_sandwich": "Duck Sandwich",
   "item.sob.creeper_drink": "Demolition Dirty",
   "item.sob.tequila": "Tequila",
+  "item.sob.glittering_gloop": "Glittering Gloop",
   "item.sob.orange_juice": "Orange Juice",
   "item.sob.sugar_chicken": "Sugar Chicken",
   "item.sob.sunrise_seltzer": "Sunrise Seltzer",
@@ -39,9 +42,9 @@
   "effect.sob.bitterness": "Bitterness",
   "effect.sob.bitterness.description": "Increases attack damage dependant on hunger level. The lower your hunger, the more damage you deal.",
   "effect.sob.zest": "Zest",
-  "effect.sob.zest.description": "Increases movement speed. Speed is increased further when in orange vapor.",
+  "effect.sob.zest.description": "Grants a movement speed increase when in an orange vapor cloud.",
   "effect.sob.zest_boost": "Zesty Boost",
-  "effect.sob.zest_boost.description": "Increases movement speed. Applied from orange vapor while having the Zest effect.",
+  "effect.sob.zest_boost.description": "Increases movement speed. Applied from orange vapor clouds while having the Zest effect.",
   "effect.sob.resonance": "Resonance",
   "effect.sob.resonance.description": "Causes attacks to inflict a stacking Collapse effect. Collapse deals additional damage on effect expiry.",
   "effect.sob.collapse": "Collapse",

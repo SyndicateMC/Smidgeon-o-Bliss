@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sob:item/exquisite_mushroom_soup"
+  }
+}

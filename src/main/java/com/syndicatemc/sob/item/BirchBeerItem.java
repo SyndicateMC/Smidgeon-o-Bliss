@@ -7,8 +7,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 
-public class AloeTeaItem extends DrinkableItem {
-    public AloeTeaItem(Properties properties) {
+public class BirchBeerItem extends DrinkableItem {
+    public BirchBeerItem(Properties properties) {
         super(properties);
     }
 
@@ -19,9 +19,8 @@ public class AloeTeaItem extends DrinkableItem {
 
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity consumer) {
-        if (!level.isClientSide && consumer.isOnFire()) {
-            consumer.extinguishFire();
-            level.playSeededSound(null, consumer.getX(), consumer.getY(), consumer.getZ(), SoundEvents.FIRE_EXTINGUISH, SoundSource.PLAYERS, 1.0F, 1.0F, 1);
+        if (!level.isClientSide) {
+
         }
         return super.finishUsingItem(stack, level, consumer);
     }

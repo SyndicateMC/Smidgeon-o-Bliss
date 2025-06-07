@@ -29,5 +29,19 @@
                 "name": "sob:resonance/collapse4"
             }
         ]
+    },
+    "item.fizzy_drink": {
+        "subtitle": "subtitle.sob.fizzy_drink",
+        "sounds": [
+            {
+                "name": "sob:food_sounds/fizzy_drink1"
+            },
+            {
+                "name": "sob:food_sounds/fizzy_drink2"
+            },
+            {
+                "name": "sob:food_sounds/fizzy_drink3"
+            }
+        ]
     }
 }

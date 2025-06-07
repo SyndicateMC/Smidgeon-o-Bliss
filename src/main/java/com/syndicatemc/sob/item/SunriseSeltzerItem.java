@@ -1,25 +1,26 @@
 package com.syndicatemc.sob.item;
 
-import com.syndicatemc.sob.utillity.SOBTranslationKey;
+import com.syndicatemc.sob.init.SOBSounds;
 import com.teamabnormals.atmospheric.common.entity.OrangeVaporCloud;
 import com.teamabnormals.atmospheric.core.registry.AtmosphericEntityTypes;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import umpaz.brewinandchewin.common.item.BoozeItem;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class SunriseSeltzerItem extends BoozeItem {
     public SunriseSeltzerItem(Fluid fluid, Properties properties) {
         super(fluid, properties);
+    }
+
+    public SoundEvent getEatingSound() {
+        return SOBSounds.FIZZY_DRINK.get();
+    }
+    public SoundEvent getDrinkingSound() {
+        return SOBSounds.FIZZY_DRINK.get();
     }
 
     @Override
@@ -33,15 +34,5 @@ public class SunriseSeltzerItem extends BoozeItem {
             level.addFreshEntity(cloud);
         }
         return super.finishUsingItem(stack, level, consumer);
-    }
-
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
-        super.appendHoverText(stack, worldIn, tooltip, flagIn);
-        for (int i = 0; i < tooltip.size(); ++i) {
-            Component tt = tooltip.get(i);
-            tooltip.set(i, SOBTranslationKey.getTranslation("tooltip", "makes_orange_vapor").withStyle(ChatFormatting.BLUE));
-        }
     }
 }

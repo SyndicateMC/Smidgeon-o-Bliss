@@ -1,21 +1,117 @@
 modLoader="javafml" #mandatory
-loaderVersion="${loader_version_range}" #mandatory
-license="${mod_license}"
-[[mods]] #mandatory
-modId="${mod_id}" #mandatory
-version="${mod_version}" #mandatory
-displayName="${mod_name}" #mandatory
-authors="${mod_authors}" #optional
-description="${mod_description}"
-[[dependencies.${mod_id}]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="${forge_version_range}" #mandatory
+loaderVersion="47.4.1" #mandatory
+license="MPL"
+[[mods]]
+modId="sob"
+version="1.0"
+displayName="${mod_name}"
+authors="ZAPtron_Gamer, squoshi"
+description="Food for any and all mods."
+[[dependencies.sob]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
-[[dependencies.${mod_id}]]
+[[dependencies.sob]]
     modId="minecraft"
     mandatory=true
     versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="farmersdelight"
+    mandatory=true
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="create"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="farmersrespite"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="miners_delight"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="mynethersdelight"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="brewinandchewin"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="frycooks_delight"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="blueprint"
+    mandatory=true
+    versionRange="[1.0,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="atmospheric"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="autumnity"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="buzzier_bees"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="caverns_and_chasms"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="endergetic"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="neapolitan"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="savage_and_ravage"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="upgrade_aquatic"
+    mandatory=false
+    versionRange="[1.0,)"
     ordering="NONE"
     side="BOTH"

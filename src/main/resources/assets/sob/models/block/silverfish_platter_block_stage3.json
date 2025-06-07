@@ -1,5 +1,7 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"parent": "block/block",
 	"textures": {
 		"2": "sob:block/silverfish_platter_bread",
 		"3": "sob:block/silverfish_platter_sides",

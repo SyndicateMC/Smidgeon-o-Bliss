@@ -1,5 +1,7 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"parent": "block/block",
 	"texture_size": [32, 32],
 	"textures": {
 		"3": "sob:block/roast_turkey_gibs",
