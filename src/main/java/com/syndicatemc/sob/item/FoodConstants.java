@@ -22,6 +22,14 @@ public class FoodConstants {
             .fast()
             .effect(() -> new MobEffectInstance(SOBMobEffects.BITTERNESS.get(), 200, 0), 1.0F)
             .build();
+    public static final FoodProperties NOPAL = (new FoodProperties.Builder())
+            .nutrition(2)
+            .saturationMod(0.65F)
+            .build();
+    public static final FoodProperties PRICKLY_PEAR = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.5F)
+            .build();
     public static final FoodProperties SCULK_TENDRIL = (new FoodProperties.Builder())
             .nutrition(2)
             .saturationMod(0.5F)
@@ -108,13 +116,17 @@ public class FoodConstants {
             .build();
 
     /* drink food items */
-    public static final FoodProperties BITTER_TEA = (new FoodProperties.Builder())
-            .effect(() -> new MobEffectInstance(SOBMobEffects.BITTERNESS.get(), 1200, 0), 1.0F)
+    public static final FoodProperties BIRCH_BEER = (new FoodProperties.Builder())
             .alwaysEat()
             .build();
     public static final FoodProperties GLITTERING_GLOOP = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(SOBMobEffects.RESONANCE.get(), 1800, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 1800, 0), 1.0F)
+            .alwaysEat()
+            .build();
+    //req: FR
+    public static final FoodProperties BITTER_TEA = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(SOBMobEffects.BITTERNESS.get(), 1200, 0), 1.0F)
             .alwaysEat()
             .build();
     //req: ATMO

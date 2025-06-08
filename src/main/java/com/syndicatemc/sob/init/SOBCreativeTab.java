@@ -23,6 +23,8 @@ public class SOBCreativeTab {
                         /* bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());
+                        output.accept(NOPAL.get());
+                        output.accept(PRICKLY_PEAR.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
                         if (ModList.get().isLoaded("create")) {
@@ -55,6 +57,7 @@ public class SOBCreativeTab {
                             output.accept(POUTINE.get());
                         }
                         /* drink food items */
+                        output.accept(BIRCH_BEER.get());
                         output.accept(GLITTERING_GLOOP.get());
                         if (ModList.get().isLoaded("farmersrespite")) {
                             output.accept(BITTER_TEA.get());
@@ -82,6 +85,9 @@ public class SOBCreativeTab {
                         if (ModList.get().isLoaded("autumnity") && ModList.get().isLoaded("environmental")) {
                             output.accept(ROAST_TURKEY_BLOCK.get());
                             output.accept(ROAST_TURKEY.get());
+                        }
+                        if (ModList.get().isLoaded("autumnity") && ModList.get().isLoaded("frycooks_delight")) {
+                            output.accept(DONUT_BOX_BLOCK.get());
                         }
                     })
                     .build());

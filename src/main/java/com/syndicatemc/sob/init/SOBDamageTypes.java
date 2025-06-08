@@ -10,6 +10,7 @@ import com.syndicatemc.sob.SOB;
 
 public class SOBDamageTypes {
     public static final ResourceKey<DamageType> COLLAPSING = ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation(SOB.MOD_ID, "collapsing"));
+    public static final ResourceKey<DamageType> NOPAL_PRICK = ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation(SOB.MOD_ID, "nopal_prick"));
 
     public static DamageSource getSimpleDamageSource(Level level, ResourceKey<DamageType> type) {
         return new DamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(type));
