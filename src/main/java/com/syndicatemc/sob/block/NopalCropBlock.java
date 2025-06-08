@@ -40,11 +40,11 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
 
     public static final IntegerProperty NOPAL_AGE = BlockStateProperties.AGE_4;
     protected static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
-            Block.box(6.0D, 0.0D, 6.0D, 10.0D, 3.0D, 10.0D),
-            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 10.0D, 11.0D),
-            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 12.0D, 12.0D),
-            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D),
-            Block.box(2.0D, 0.0D, 2.0D, 14.0D, 14.0D, 14.0D)
+            Block.box(5.0D, 0.0D, 5.0D, 11.0D, 4.0D, 11.0D),
+            Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D),
+            Block.box(3.0D, 0.0D, 3.0D, 13.0D, 9.0D, 13.0D),
+            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D),
+            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D)
     };
 
     public NopalCropBlock(Properties properties, Supplier<Item> itemOne, Supplier<Item> itemTwo) {
@@ -65,7 +65,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.isSolidRender(level, pos);
+        return state.is(BlockTags.SAND);
     }
 
     @Override

@@ -27,8 +27,9 @@ public class FoodConstants {
             .saturationMod(0.65F)
             .build();
     public static final FoodProperties PRICKLY_PEAR = (new FoodProperties.Builder())
-            .nutrition(4)
-            .saturationMod(0.5F)
+            .nutrition(3)
+            .saturationMod(0.45F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 200, 0), 1.0F)
             .build();
     public static final FoodProperties SCULK_TENDRIL = (new FoodProperties.Builder())
             .nutrition(2)
@@ -72,6 +73,11 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(SOBMobEffects.RESONANCE.get(), 2400, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0F)
+            .build();
+    public static final FoodProperties SPIKY_SALAD = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.65F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 1800, 0), 1.0F)
             .build();
     //req: ENVI
     public static final FoodProperties TRUFFLE_PASTA = (new FoodProperties.Builder())
@@ -122,6 +128,11 @@ public class FoodConstants {
     public static final FoodProperties GLITTERING_GLOOP = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(SOBMobEffects.RESONANCE.get(), 1800, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 1800, 0), 1.0F)
+            .alwaysEat()
+            .build();
+    public static final FoodProperties CACTUS_JUICE = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 1200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0), 1.0F)
             .alwaysEat()
             .build();
     //req: FR

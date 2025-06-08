@@ -63,7 +63,7 @@ description="Food for any and all mods."
     side="BOTH"
 [[dependencies.sob]]
     modId="blueprint"
-    mandatory=true
+    mandatory=false
     versionRange="[1.0,)"
     ordering="AFTER"
     side="BOTH"
@@ -114,4 +114,10 @@ description="Food for any and all mods."
     mandatory=false
     versionRange="[1.0,)"
     ordering="NONE"
+    side="BOTH"
+[[dependencies.sob]]
+    modId="jei"
+    mandatory=false
+    versionRange="[1.0,)"
+    ordering="AFTER"
     side="BOTH"

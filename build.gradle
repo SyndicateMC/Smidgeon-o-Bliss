@@ -121,6 +121,7 @@ dependencies {
     implementation fg.deobf("curse.maven:neapolitan-382016:6248885")
     implementation fg.deobf("curse.maven:savage-and-ravage-381736:6040963")
     implementation fg.deobf("curse.maven:upgrade-aquatic-326895:6393133")
+    implementation fg.deobf("curse.maven:jei-238222:6600311")
 
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }

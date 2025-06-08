@@ -52,6 +52,7 @@ public class SOBCreativeTab {
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(SUGAR_CHICKEN.get());
+                            output.accept(SPIKY_SALAD.get());
                         }
                         if (ModList.get().isLoaded("frycooks_delight") && ModList.get().isLoaded("brewinandchewin")) {
                             output.accept(POUTINE.get());
@@ -59,6 +60,7 @@ public class SOBCreativeTab {
                         /* drink food items */
                         output.accept(BIRCH_BEER.get());
                         output.accept(GLITTERING_GLOOP.get());
+                        output.accept(CACTUS_JUICE.get());
                         if (ModList.get().isLoaded("farmersrespite")) {
                             output.accept(BITTER_TEA.get());
                         }

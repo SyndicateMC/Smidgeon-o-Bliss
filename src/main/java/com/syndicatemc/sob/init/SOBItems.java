@@ -64,6 +64,9 @@ public class SOBItems {
     //req: ATMO
     public static final RegistryObject<Item> SUGAR_CHICKEN = ITEMS.register("sugar_chicken",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.SUGAR_CHICKEN), true));
+    //req: ATMO
+    public static final RegistryObject<Item> SPIKY_SALAD = ITEMS.register("spiky_salad",
+            () -> new SpikySaladItem(bowlFoodItem(FoodConstants.SPIKY_SALAD), true));
     //req: BaC & frycooks
     public static final RegistryObject<Item> POUTINE = ITEMS.register("poutine",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.POUTINE), true));
@@ -73,6 +76,8 @@ public class SOBItems {
             () -> new DrinkableItem(drinkItem().food(FoodConstants.GLITTERING_GLOOP), true, false));
     public static final RegistryObject<Item> BIRCH_BEER = ITEMS.register("birch_beer",
             () -> new BirchBeerItem(drinkItem().food(FoodConstants.BIRCH_BEER)));
+    public static final RegistryObject<Item> CACTUS_JUICE = ITEMS.register("cactus_juice",
+            () -> new DrinkableItem(drinkItem().food(FoodConstants.CACTUS_JUICE), true, false));
     //req: FR
     public static final RegistryObject<Item> BITTER_TEA = ITEMS.register("bitter_tea",
             () -> new DrinkableItem(drinkItem().food(FoodConstants.BITTER_TEA), true, false));
