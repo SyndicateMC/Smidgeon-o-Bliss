@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "autumnity:foul_berries"
+    },
+    {
+      "item": "autumnity:foul_berries"
+    },
+    {
+      "item": "sob:dripleaves"
+    },
+    {
+      "item": "sob:dripleaves"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "sob:foul_salad"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ]
+}

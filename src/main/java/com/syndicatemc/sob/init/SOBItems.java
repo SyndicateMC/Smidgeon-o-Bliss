@@ -5,6 +5,7 @@ import com.syndicatemc.sob.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +19,12 @@ import static vectorwing.farmersdelight.common.registry.ModItems.*;
 
 public class SOBItems {
     public static DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, SOB.MOD_ID);
+
+    /* blocks */
+    public static final RegistryObject<Item> COUNTER = ITEMS.register("counter",
+            () -> new BlockItem(SOBBlocks.COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NETHER_COUNTER = ITEMS.register("nether_counter",
+            () -> new BlockItem(SOBBlocks.NETHER_COUNTER.get(), new Item.Properties()));
 
     /* bowl-less food items */
     public static RegistryObject<Item> GILDED_POTATO = ITEMS.register("golden_potato",

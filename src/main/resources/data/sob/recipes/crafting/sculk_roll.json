@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "sob:sculk_roll"
+  }
+}

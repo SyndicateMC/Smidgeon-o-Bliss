@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "key": {
+    "P": {
+      "item": "minecraft:glow_berries"
+    },
+    "B": {
+      "item": "minecraft:bread"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "T": {
+      "item": "autumnity:cooked_turkey"
+    },
+    "L": {
+      "item": "minecraft:bowl"
+    },
+    "O": {
+      "tag": "forge:vegetables/onion"
+    },
+    "R": {
+      "item": "farmersdelight:cooked_rice"
+    }
+  },
+  "pattern": [
+    "ORB",
+    "PTC",
+    "PLC"
+  ],
+  "result": {
+    "item": "sob:roast_turkey_block"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "environmental"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    }
+  ]
+}

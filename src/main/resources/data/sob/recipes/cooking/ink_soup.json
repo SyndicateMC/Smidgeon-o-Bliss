@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "minecraft:ink_sac"
+    },
+    {
+      "tag": "forge:raw_fishes"
+    }
+  ],
+  "result": {
+    "item": "sob:ink_soup"
+  }
+}

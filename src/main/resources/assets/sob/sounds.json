@@ -57,5 +57,16 @@
                 "name": "sob:spite/spite_prick3"
             }
         ]
+    },
+    "entity.spite_consume": {
+        "subtitle": "subtitle.sob.spite_consume",
+        "sounds": [
+            {
+                "name": "sob:spite/spite_consume1"
+            },
+            {
+                "name": "sob:spite/spite_consume2"
+            }
+        ]
     }
 }

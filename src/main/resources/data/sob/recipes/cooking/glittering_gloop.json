@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "minecraft:glow_ink_sac"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    }
+  ],
+  "result": {
+    "item": "sob:glittering_gloop"
+  }
+}

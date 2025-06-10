@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:sculk_vein"
+    }
+  ],
+  "result": [
+    {
+      "chance": 0.5,
+      "item": "sob:sculk_tendril"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

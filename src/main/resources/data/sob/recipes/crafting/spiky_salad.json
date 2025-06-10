@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:prickly_pear"
+    },
+    {
+      "item": "atmospheric:yucca_flower"
+    },
+    {
+      "item": "sob:nopal"
+    },
+    {
+      "item": "sob:nopal"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "sob:spiky_salad"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "atmospheric"
+    }
+  ]
+}

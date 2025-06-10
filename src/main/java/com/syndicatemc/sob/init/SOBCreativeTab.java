@@ -3,6 +3,7 @@ package com.syndicatemc.sob.init;
 import com.syndicatemc.sob.SOB;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,11 @@ public class SOBCreativeTab {
                     .title(Component.translatable("itemGroup.sob"))
                     .icon(() -> new ItemStack(GILDED_POTATO.get()))
                     .displayItems((parameters, output) -> {
+                        /* blocks */
+                        output.accept(COUNTER.get());
+                        if (ModList.get().isLoaded("mynethersdelight")) {
+                            output.accept(NETHER_COUNTER.get());
+                        }
                         /* bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());

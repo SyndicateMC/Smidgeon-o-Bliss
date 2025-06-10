@@ -6,7 +6,6 @@ import com.syndicatemc.sob.init.SOBMobEffects;
 import com.syndicatemc.sob.init.SOBSounds;
 import com.syndicatemc.sob.utillity.SOBTranslationKey;
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -16,7 +15,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.CustomizeGuiOverlayEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
@@ -47,6 +45,13 @@ public class SOBEvents {
             t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.COLLAPSE_BUILDING.get(), SoundSource.NEUTRAL, 1.0F, (t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() * 0.1F) + 1.0F, 1);
             t.addEffect(new MobEffectInstance(SOBMobEffects.COLLAPSE.get(), 30, Math.min(t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() + 1, 9), false, true));
         }
+        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && !t.isInvulnerable()) {
+            float amp = e.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier();
+            float bonus = ((amp + 1) / 5);
+            event.setAmount(event.getAmount() * (1 + bonus));
+            e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
+            e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
+        }
     }
 
     @SubscribeEvent
@@ -54,12 +59,12 @@ public class SOBEvents {
         Entity target = event.getEntity();
         if (target instanceof LivingEntity t && t.hasEffect(SOBMobEffects.SPITE.get()) && event.getAmount() >= 2.0 && !t.isInvulnerable()) {
             if (!t.hasEffect(SOBMobEffects.SPITE_BOOST.get())) {
-                t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), 100, 0, false, true));
+                t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), -1, 0, false, true));
                 t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.SPITE_PRICK.get(), SoundSource.NEUTRAL, 1.0F, 0.6F, 1);
                 return;
             }
             t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.SPITE_PRICK.get(), SoundSource.NEUTRAL, 1.0F, (t.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier() * 0.1F) + 0.7F, 1);
-            t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), 100, Math.min(t.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier() + 1, 4), false, true));
+            t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), -1, Math.min(t.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier() + 1, 4), false, true));
         }
     }
 
@@ -71,6 +76,10 @@ public class SOBEvents {
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.COLLAPSING.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
             //dude I don't wanna learn mixins
             //e.level().addParticle(ParticleTypes.SONIC_BOOM, e.getX(), e.getY() + 1, e.getZ(), 0.0, 0.0, 0.0);
+        }
+        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE.get()) && e.hasEffect((SOBMobEffects.SPITE_BOOST.get()))) {
+            e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
+            e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
         }
     }
 

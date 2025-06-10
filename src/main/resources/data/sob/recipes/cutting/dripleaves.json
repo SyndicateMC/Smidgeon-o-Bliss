@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:small_dripleaf"
+    }
+  ],
+  "result": [
+    {
+      "item": "sob:dripleaves"
+    },
+    {
+      "chance": 0.25,
+      "count": 2,
+      "item": "sob:dripleaves"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

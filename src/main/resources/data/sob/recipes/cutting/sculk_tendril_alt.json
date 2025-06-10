@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:sculk_sensor"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "chance": 0.75,
+      "count": 2,
+      "item": "sob:sculk_tendril"
+    }
+  ],
+  "tool": {
+    "tag": "forge:shears"
+  }
+}

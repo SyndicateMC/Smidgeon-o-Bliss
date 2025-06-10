@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:big_dripleaf"
+    }
+  ],
+  "result": [
+    {
+      "item": "sob:dripleaves"
+    },
+    {
+      "chance": 0.15,
+      "item": "sob:dripleaves"
+    }
+  ],
+  "tool": {
+    "tag": "forge:shears"
+  }
+}

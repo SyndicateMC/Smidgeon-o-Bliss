@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sob:block/nether_counter"
+    }
+  }
+}

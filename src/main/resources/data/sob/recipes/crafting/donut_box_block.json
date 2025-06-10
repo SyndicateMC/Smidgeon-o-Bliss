@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "food",
+  "key": {
+    "D": {
+      "item": "frycooks_delight:plain_donut"
+    },
+    "M": {
+      "item": "autumnity:syrup_bottle"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "pattern": [
+    "DMD",
+    "DMD",
+    "DPD"
+  ],
+  "result": {
+    "item": "sob:donut_box_block"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "autumnity"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "frycooks_delight"
+    }
+  ]
+}
