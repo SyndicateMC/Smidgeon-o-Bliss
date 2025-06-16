@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:campfire_cooking",
+    "ingredient": {
+      "item": "sob:cinder_dough"
+    },
+    "result": "sob:cinder_bread",
+    "experience": 0.0,
+    "cookingtime": 600,
+    "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ]
+  }

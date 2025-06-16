@@ -1,0 +1,19 @@
+{
+    "type": "create:splashing",
+    "ingredients": [
+      {
+        "item": "create:cinder_flour"
+      }
+    ],
+    "results": [
+      {
+        "item": "sob:cinder_dough"
+      }
+    ],
+    "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ]
+  }

@@ -2,15 +2,18 @@
   "type": "brewinandchewin:keg_pouring",
   "amount": 250,
   "filling": true,
-  "fluid": "sob:tequila",
+  "fluid": "sob:pale_daiquiri",
   "output": {
-    "item": "sob:tequila"
+    "item": "sob:pale_daiquiri"
   },
   "strict": false,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "atmospheric"
+      "modid": "neapolitan"
     }
   ]
 }

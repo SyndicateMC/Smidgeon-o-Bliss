@@ -29,10 +29,6 @@
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "brewinandchewin"
-    },
-    {
-      "type": "forge:mod_loaded",
       "modid": "savage_and_ravage"
     }
   ]

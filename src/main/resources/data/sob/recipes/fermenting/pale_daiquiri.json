@@ -2,16 +2,16 @@
   "type": "brewinandchewin:fermenting",
   "basefluid": {
     "count": 1000,
-    "fluid": "minecraft:water"
+    "fluid": "brewinandchewin:mead"
   },
   "experience": 1.0,
-  "fermentingtime": 9600,
+  "fermentingtime": 1200,
   "ingredients": [
     {
-      "item": "atmospheric:agave"
+      "item": "neapolitan:white_strawberries"
     },
     {
-      "item": "atmospheric:agave"
+      "item": "minecraft:bone_meal"
     },
     {
       "item": "minecraft:sugar"
@@ -20,13 +20,13 @@
   "recipe_book_tab": "drinks",
   "result": {
     "count": 1000,
-    "fluid": "sob:tequila"
+    "fluid": "sob:pale_daiquiri"
   },
-  "temperature": 4,
+  "temperature": 1,
   "conditions": [
     {
       "type": "forge:mod_loaded",
-      "modid": "atmospheric"
+      "modid": "neapolitan"
     }
   ]
 }

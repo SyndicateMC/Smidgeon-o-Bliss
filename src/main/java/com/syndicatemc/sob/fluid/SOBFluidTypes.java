@@ -8,13 +8,13 @@ import net.minecraftforge.fluids.FluidType;
 
 import java.util.function.Consumer;
 
-public class SOBFluidType extends FluidType {
+public class SOBFluidTypes extends FluidType {
 
     public static final ResourceLocation FLUID_STILL_TEXTURE = new  ResourceLocation("block/water_still");
     public static final ResourceLocation FLUID_FLOWING_TEXTURE = new ResourceLocation("block/water_flow");
     private final int tintColor;
 
-    public SOBFluidType(int tintColor) {
+    public SOBFluidTypes(int tintColor) {
         super(FluidType.Properties.create()
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
                 .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)

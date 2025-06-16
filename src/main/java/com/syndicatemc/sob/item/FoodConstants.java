@@ -1,8 +1,6 @@
 package com.syndicatemc.sob.item;
 
-import com.soytutta.mynethersdelight.common.registry.MNDEffects;
 import com.syndicatemc.sob.init.SOBMobEffects;
-import com.teamabnormals.autumnity.core.registry.AutumnityMobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
@@ -43,6 +41,11 @@ public class FoodConstants {
             .saturationMod(0.75F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.RESONANCE.get(), 600, 0), 1.0F)
             .build();
+    public static final FoodProperties VEGGIE_WRAP = (new FoodProperties.Builder())
+            .nutrition(10)
+            .saturationMod(0.70F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 200, 0), 1.0F)
+            .build();
     //req: create
     public static final FoodProperties CINDER_BREAD = (new FoodProperties.Builder())
             .nutrition(4)
@@ -75,9 +78,14 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 100, 0), 1.0F)
             .build();
     public static final FoodProperties SPIKY_SALAD = (new FoodProperties.Builder())
+            .nutrition(12)
+            .saturationMod(0.75F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 1800, 0), 1.0F)
+            .build();
+    public static final FoodProperties MANGROVE_STIR_FRY = (new FoodProperties.Builder())
             .nutrition(6)
             .saturationMod(0.65F)
-            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 1800, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 2400, 0), 1.0F)
             .build();
     //req: ENVI
     public static final FoodProperties TRUFFLE_PASTA = (new FoodProperties.Builder())
@@ -92,13 +100,6 @@ public class FoodConstants {
             .saturationMod(0.75F)
             .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 1), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1.0F)
-            .build();
-    //req: autumnity
-    public static final FoodProperties FOUL_SALAD = (new FoodProperties.Builder())
-            .nutrition(3)
-            .saturationMod(0.5F)
-            .effect(() -> new MobEffectInstance(SOBMobEffects.BITTERNESS.get(), 1800, 0), 1.0F)
-            .effect(() -> new MobEffectInstance(AutumnityMobEffects.FOUL_TASTE.get(), 2400, 0), 1.0F)
             .build();
     //req: ATMO
     public static final FoodProperties SUGAR_CHICKEN = (new FoodProperties.Builder())
@@ -115,11 +116,7 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 4800, 0), 1.0F)
             .build();
     //req: MND
-    public static final FoodProperties HONEY_BARBECUE_STICK = (new FoodProperties.Builder())
-            .nutrition(8)
-            .saturationMod(0.85F)
-            .effect(() -> new MobEffectInstance(MNDEffects.BPUNGENT.get(), 200, 0), 1.0F)
-            .build();
+
 
     /* drink food items */
     public static final FoodProperties BIRCH_BEER = (new FoodProperties.Builder())
@@ -151,7 +148,22 @@ public class FoodConstants {
             .alwaysEat()
             .build();
 
-    /* booze food items */ //obv req: BnC
+    /* feast food items */
+    //req: MD & BB
+    public static final FoodProperties SILVERFISH_TOAST = (new FoodProperties.Builder())
+            .nutrition(7)
+            .saturationMod(0.65F)
+            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 100, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 0), 1.0F)
+            .build();
+    //req: autumnity & ENVI
+    public static final FoodProperties ROAST_TURKEY = (new FoodProperties.Builder())
+            .nutrition(15)
+            .saturationMod(0.75F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 7200, 0), 1.0F)
+            .build();
+
+    /* booze food items */
     public static final FoodProperties HARD_CIDER = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 2400, 0), 1.0F)
             .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 2400, 0), 1.0F)
@@ -178,19 +190,10 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 1800, 0), 1.0F)
             .alwaysEat()
             .build();
-
-    /* feast food items */
-    //req: MD & BB
-    public static final FoodProperties SILVERFISH_TOAST = (new FoodProperties.Builder())
-            .nutrition(7)
-            .saturationMod(0.65F)
-            .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 100, 0), 1.0F)
-            .effect(() -> new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 200, 0), 1.0F)
-            .build();
-    //req: autumnity & ENVI
-    public static final FoodProperties ROAST_TURKEY = (new FoodProperties.Builder())
-            .nutrition(15)
-            .saturationMod(0.75F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 7200, 0), 1.0F)
+    //req: NEA
+    public static final FoodProperties PALE_DAIQUIRI = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 1200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 1200, 0), 1.0F)
+            .alwaysEat()
             .build();
 }

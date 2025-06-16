@@ -1,9 +1,11 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
+import com.syndicatemc.sob.init.compat.autumnity.AutumnityCompatItems;
+import com.syndicatemc.sob.init.compat.mynethersdelight.MNDCompatItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.syndicatemc.sob.init.SOBItems.*;
 
-public class SOBCreativeTab {
+public class SOBCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SOB.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TAB_SOB = CREATIVE_TABS.register(SOB.MOD_ID,
@@ -31,6 +33,7 @@ public class SOBCreativeTab {
                         output.accept(DRIPLEAVES.get());
                         output.accept(NOPAL.get());
                         output.accept(PRICKLY_PEAR.get());
+                        output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
                         if (ModList.get().isLoaded("create")) {
@@ -44,23 +47,24 @@ public class SOBCreativeTab {
                             output.accept(MAPLE_DONUT.get());
                         }
                         if (ModList.get().isLoaded("mynethersdelight")) {
-                            output.accept(HONEY_BARBECUE_STICK.get());
+                            output.accept(MNDCompatItems.HONEY_BARBECUE_STICK.get());
                         }
                         /* bowl food items */
                         output.accept(INK_SOUP.get());
                         output.accept(GRAVY.get());
+                        output.accept(MANGROVE_STIR_FRY.get());
                         if (ModList.get().isLoaded("environmental")) {
                             output.accept(TRUFFLE_PASTA.get());
                             output.accept(EXQUISITE_MUSHROOM_SOUP.get());
                         }
                         if (ModList.get().isLoaded("autumnity")) {
-                            output.accept(FOUL_SALAD.get());
+                            output.accept(AutumnityCompatItems.FOUL_SALAD.get());
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(SUGAR_CHICKEN.get());
                             output.accept(SPIKY_SALAD.get());
                         }
-                        if (ModList.get().isLoaded("frycooks_delight") && ModList.get().isLoaded("brewinandchewin")) {
+                        if (ModList.get().isLoaded("frycooks_delight")) {
                             output.accept(POUTINE.get());
                         }
                         /* drink food items */
@@ -71,19 +75,20 @@ public class SOBCreativeTab {
                             output.accept(BITTER_TEA.get());
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
-                            output.accept(ORANGE_JUICE.get());
+                            output.accept(AtmoCompatItems.ORANGE_JUICE.get());
                             output.accept(ALOE_TEA.get());
                         }
                         /* booze food items */
-                        if (ModList.get().isLoaded("brewinandchewin")){
-                            output.accept(HARD_CIDER.get());
-                            if (ModList.get().isLoaded("atmospheric")) {
-                                output.accept(TEQUILA.get());
-                                output.accept(SUNRISE_SELTZER.get());
-                            }
-                            if (ModList.get().isLoaded("savage_and_ravage")) {
-                                output.accept(CREEPER_DRINK.get());
-                            }
+                        output.accept(HARD_CIDER.get());
+                        if (ModList.get().isLoaded("atmospheric")) {
+                            output.accept(TEQUILA.get());
+                            output.accept(AtmoCompatItems.SUNRISE_SELTZER.get());
+                        }
+                        if (ModList.get().isLoaded("savage_and_ravage")) {
+                            output.accept(CREEPER_DRINK.get());
+                        }
+                        if (ModList.get().isLoaded("neapolitan")) {
+                            output.accept(PALE_DAIQUIRI.get());
                         }
                         /* feast items and food items */
                         if (ModList.get().isLoaded("miners_delight") && ModList.get().isLoaded("buzzier_bees")) {

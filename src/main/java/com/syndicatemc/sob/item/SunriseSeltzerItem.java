@@ -4,7 +4,6 @@ import com.syndicatemc.sob.init.SOBSounds;
 import com.teamabnormals.atmospheric.common.entity.OrangeVaporCloud;
 import com.teamabnormals.atmospheric.core.registry.AtmosphericEntityTypes;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;

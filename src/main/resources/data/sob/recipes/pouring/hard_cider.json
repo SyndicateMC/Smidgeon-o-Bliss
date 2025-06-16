@@ -6,11 +6,5 @@
   "output": {
     "item": "sob:hard_cider"
   },
-  "strict": false,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "brewinandchewin"
-    }
-  ]
+  "strict": false
 }

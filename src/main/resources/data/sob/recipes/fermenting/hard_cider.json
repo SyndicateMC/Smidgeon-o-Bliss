@@ -22,11 +22,5 @@
     "count": 1000,
     "fluid": "sob:hard_cider"
   },
-  "temperature": 3,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "brewinandchewin"
-    }
-  ]
+  "temperature": 3
 }

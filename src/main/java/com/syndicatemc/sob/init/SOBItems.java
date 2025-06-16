@@ -1,19 +1,22 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
+import com.syndicatemc.sob.init.compat.autumnity.AutumnityCompatItems;
+import com.syndicatemc.sob.init.compat.mynethersdelight.MNDCompatItems;
 import com.syndicatemc.sob.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import umpaz.brewinandchewin.common.item.BoozeItem;
 import umpaz.brewinandchewin.common.registry.BnCItems;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
-import umpaz.brewinandchewin.common.item.BoozeItem;
 
 import static vectorwing.farmersdelight.common.registry.ModItems.*;
 
@@ -39,6 +42,8 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.SCULK_TENDRIL)));
     public static final RegistryObject<Item> SCULK_ROLL = ITEMS.register("sculk_roll",
             () -> new Item(foodItem(FoodConstants.SCULK_ROLL)));
+    public static final RegistryObject<Item> VEGGIE_WRAP = ITEMS.register("veggie_wrap",
+            () -> new Item(foodItem(FoodConstants.VEGGIE_WRAP)));
     //req: create
     public static final RegistryObject<Item> CINDER_DOUGH = ITEMS.register("cinder_dough",
             () -> new Item(new Item.Properties()));
@@ -50,15 +55,14 @@ public class SOBItems {
     //req: frycooks & autumnity
     public static final RegistryObject<Item> MAPLE_DONUT = ITEMS.register("maple_donut",
             () -> new Item(foodItem(FoodConstants.MAPLE_DONUT)));
-    //req: MND
-    public static final RegistryObject<Item> HONEY_BARBECUE_STICK = ITEMS.register("honey_barbecue_stick",
-            () -> new Item(foodItem(FoodConstants.HONEY_BARBECUE_STICK)));
 
     /* bowl food items */
     public static final RegistryObject<Item> GRAVY = ITEMS.register("gravy",
             () -> new GravyItem(bowlFoodItem(FoodConstants.GRAVY).stacksTo(64)));
     public static final RegistryObject<Item> INK_SOUP = ITEMS.register("ink_soup",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.INK_SOUP), true));
+    public static final RegistryObject<Item> MANGROVE_STIR_FRY = ITEMS.register("mangrove_stir_fry",
+            () -> new MangroveStirFryItem(bowlFoodItem(FoodConstants.MANGROVE_STIR_FRY), true));
     //req: ENVI
     public static final RegistryObject<Item> TRUFFLE_PASTA = ITEMS.register("truffle_pasta",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.TRUFFLE_PASTA), true));
@@ -66,8 +70,7 @@ public class SOBItems {
     public static final RegistryObject<Item> EXQUISITE_MUSHROOM_SOUP = ITEMS.register("exquisite_mushroom_soup",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.EXQUISITE_MUSHROOM_SOUP), true));
     //req: autumnity
-    public static final RegistryObject<Item> FOUL_SALAD = ITEMS.register("foul_salad",
-            () -> new ConsumableItem(bowlFoodItem(FoodConstants.FOUL_SALAD), true));
+
     //req: ATMO
     public static final RegistryObject<Item> SUGAR_CHICKEN = ITEMS.register("sugar_chicken",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.SUGAR_CHICKEN), true));
@@ -89,24 +92,8 @@ public class SOBItems {
     public static final RegistryObject<Item> BITTER_TEA = ITEMS.register("bitter_tea",
             () -> new DrinkableItem(drinkItem().food(FoodConstants.BITTER_TEA), true, false));
     //req: ATMO
-    public static final RegistryObject<Item> ORANGE_JUICE = ITEMS.register("orange_juice",
-            () -> new OrangeJuiceItem(drinkItem().food(FoodConstants.ORANGE_JUICE)));
-    //req: ATMO
     public static final RegistryObject<Item> ALOE_TEA = ITEMS.register("aloe_tea",
             () -> new AloeTeaItem(drinkItem().food(FoodConstants.ALOE_TEA)));
-
-    /* booze food items */ //obv req: BaC
-    public static final RegistryObject<Item> HARD_CIDER = ITEMS.register("hard_cider", () -> new BoozeItem(SOBFluids.HARD_CIDER.get(), new Item.Properties()
-            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.HARD_CIDER)));
-    //req: ATMO
-    public static final RegistryObject<Item> TEQUILA = ITEMS.register("tequila", () -> new BoozeItem(SOBFluids.TEQUILA.get(), new Item.Properties()
-            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.TEQUILA)));
-    //req: ATMO
-    public static final RegistryObject<Item> SUNRISE_SELTZER = ITEMS.register("sunrise_seltzer", () -> new SunriseSeltzerItem(SOBFluids.SUNRISE_SELTZER.get(), new Item.Properties()
-            .stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(FoodConstants.SUNRISE_SELTZER)));
-    //req: SaR
-    public static final RegistryObject<Item> CREEPER_DRINK = ITEMS.register("creeper_drink", () -> new CreeperDrinkItem(SOBFluids.CREEPER_DRINK.get(), new Item.Properties()
-            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.CREEPER_DRINK)));
 
     /* feast items & food items */
     //req: MD & BB
@@ -123,7 +110,29 @@ public class SOBItems {
     public static final RegistryObject<Item> DONUT_BOX_BLOCK = ITEMS.register("donut_box_block",
             () -> new BlockItem(SOBBlocks.DONUT_BOX_BLOCK.get(), new Item.Properties().stacksTo(1)));
 
+    /* booze food items */
+    public static final RegistryObject<Item> HARD_CIDER = ITEMS.register("hard_cider", () -> new BoozeItem(SOBFluids.HARD_CIDER.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.HARD_CIDER)));
+    //req: ATMO
+    public static final RegistryObject<Item> TEQUILA = ITEMS.register("tequila", () -> new BoozeItem(SOBFluids.TEQUILA.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.TEQUILA)));
+    //req: SaR
+    public static final RegistryObject<Item> CREEPER_DRINK = ITEMS.register("creeper_drink", () -> new CreeperDrinkItem(SOBFluids.CREEPER_DRINK.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.CREEPER_DRINK)));
+    //req: NEA
+    public static final RegistryObject<Item> PALE_DAIQUIRI = ITEMS.register("pale_daiquiri", () -> new PaleDaiquiriItem(SOBFluids.PALE_DAIQUIRI.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(Items.GLASS_BOTTLE).food(FoodConstants.PALE_DAIQUIRI)));
+
     public static void init(IEventBus bus) {
+        if (ModList.get().isLoaded("atmospheric")) {
+            AtmoCompatItems.init();
+        }
+        if (ModList.get().isLoaded("autumnity")) {
+            AutumnityCompatItems.init();
+        }
+        if (ModList.get().isLoaded("mynethersdelight")) {
+            MNDCompatItems.init();
+        }
         ITEMS.register(bus);
     }
 }

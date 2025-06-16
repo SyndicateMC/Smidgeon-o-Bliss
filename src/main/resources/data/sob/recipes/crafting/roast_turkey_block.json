@@ -3,7 +3,7 @@
   "category": "food",
   "key": {
     "P": {
-      "item": "minecraft:glow_berries"
+      "item": "environmental:plum"
     },
     "B": {
       "item": "minecraft:bread"

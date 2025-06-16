@@ -4,6 +4,7 @@ import com.syndicatemc.sob.init.SOBDamageTypes;
 import com.syndicatemc.sob.init.SOBItems;
 import com.syndicatemc.sob.init.SOBMobEffects;
 import com.syndicatemc.sob.init.SOBSounds;
+import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
 import com.syndicatemc.sob.utillity.SOBTranslationKey;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -20,6 +21,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
@@ -74,8 +76,6 @@ public class SOBEvents {
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.COLLAPSE.get())) {
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.COLLAPSING), (e.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier()) * 2 + 3);
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.COLLAPSING.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
-            //dude I don't wanna learn mixins
-            //e.level().addParticle(ParticleTypes.SONIC_BOOM, e.getX(), e.getY() + 1, e.getZ(), 0.0, 0.0, 0.0);
         }
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE.get()) && e.hasEffect((SOBMobEffects.SPITE_BOOST.get()))) {
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
@@ -95,14 +95,10 @@ public class SOBEvents {
         if (item == SOBItems.ALOE_TEA.get()) {
             tooltip.add(SOBTranslationKey.getTranslation("extinguishes", "tooltip").withStyle(ChatFormatting.BLUE));
         }
-        if (item == SOBItems.CREEPER_DRINK.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("makes_explosion", "tooltip").withStyle(ChatFormatting.BLUE));
-        }
-        if (item == SOBItems.ORANGE_JUICE.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
-        }
-        if (item == SOBItems.SUNRISE_SELTZER.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
+        if (ModList.get().isLoaded("atmospheric")) {
+            if (item == AtmoCompatItems.ORANGE_JUICE.get()) {
+                tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
+            }
         }
         if (item == SOBItems.BIRCH_BEER.get()) {
             tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor", "tooltip").withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC));
@@ -110,6 +106,28 @@ public class SOBEvents {
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.resistance").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.regeneration").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.farmersdelight.comfort").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
+        }
+        if (ModList.get().isLoaded("neapolitan")) {
+            if (item == SOBItems.PALE_DAIQUIRI.get()) {
+                tooltip.add(SOBTranslationKey.getTranslation("heal_25_percent_health", "tooltip").withStyle(ChatFormatting.BLUE));
+            }
+        }
+        if (ModList.get().isLoaded("atmospheric")) {
+            if (item == AtmoCompatItems.SUNRISE_SELTZER.get()) {
+                tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
+            }
+        }
+        if (ModList.get().isLoaded("savage_and_ravage")) {
+            if (item == SOBItems.CREEPER_DRINK.get()) {
+                tooltip.add(SOBTranslationKey.getTranslation("makes_explosion", "tooltip").withStyle(ChatFormatting.BLUE));
+            }
+        }
+        if (item == SOBItems.MANGROVE_STIR_FRY.get()) {
+            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor", "tooltip").withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC));
+            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor_effect_give", "tooltip").withStyle(ChatFormatting.GRAY).append(Component.literal(":")));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.strength").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.luck").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.hunger").withStyle(ChatFormatting.RED)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.RED)));
         }
     }
 }

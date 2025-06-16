@@ -2,11 +2,7 @@
   "type": "forge:add_features",
   "biomes": [
     "minecraft:desert",
-    "minecraft:badlands",
-    "atmospheric:dunes",
-    "atmospheric:flourishing_dunes",
-    "atmospheric:scrubland",
-    "atmospheric:rocky_dunes"
+    "minecraft:badlands"
   ],
   "features": "sob:patch_nopal_crop",
   "step": "vegetal_decoration"

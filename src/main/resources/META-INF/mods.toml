@@ -51,7 +51,7 @@ description="Food for any and all mods."
     side="BOTH"
 [[dependencies.sob]]
     modId="brewinandchewin"
-    mandatory=false
+    mandatory=true
     versionRange="[1.0,)"
     ordering="AFTER"
     side="BOTH"

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smoking",
+    "ingredient": {
+      "item": "sob:cinder_dough"
+    },
+    "result": "sob:cinder_bread",
+    "experience": 0.0,
+    "cookingtime": 100,
+    "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ]
+  }

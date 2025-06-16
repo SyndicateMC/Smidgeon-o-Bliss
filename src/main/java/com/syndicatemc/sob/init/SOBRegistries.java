@@ -1,6 +1,5 @@
 package com.syndicatemc.sob.init;
 
-import com.syndicatemc.sob.fluid.SOBFluidType;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class SOBRegistries {
@@ -10,6 +9,6 @@ public class SOBRegistries {
         SOBFluids.init(bus);
         SOBMobEffects.init(bus);
         SOBSounds.init(bus);
-        SOBCreativeTab.init(bus);
+        SOBCreativeTabs.init(bus);
     }
 }

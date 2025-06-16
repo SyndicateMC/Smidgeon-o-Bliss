@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "sob:cinder_dough"
+    },
+    "result": "sob:cinder_bread",
+    "experience": 0.0,
+    "cookingtime": 200,
+    "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "create"
+        }
+      ]
+  }

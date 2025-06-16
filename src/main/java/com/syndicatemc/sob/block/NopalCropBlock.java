@@ -94,7 +94,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         int age = state.getValue(NOPAL_AGE);
         BlockState groundState = level.getBlockState(pos.below());
-        if (age < getMaxAge() && groundState.is(BlockTags.SAND) && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(level, pos, state, random.nextInt(4) == 0)) {
+        if (age < getMaxAge() && groundState.is(BlockTags.SAND) && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(level, pos, state, random.nextInt(8) == 0)) {
             level.setBlock(pos, state.setValue(NOPAL_AGE, age + 1), 2);
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(level, pos, state);
         }

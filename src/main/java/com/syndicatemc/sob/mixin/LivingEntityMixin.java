@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.mixin;
 
 import com.syndicatemc.sob.item.GildedPotatoItem;
+import com.syndicatemc.sob.item.PaleDaiquiriItem;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,6 +21,12 @@ public class LivingEntityMixin {
                 LivingEntity entity = (LivingEntity) (Object) this;
                 for (int i = 0; i < 15; i++) {
                     l.addParticle(ParticleTypes.END_ROD, entity.getX() + Math.random() * 2 - 1, entity.getY() + 1 + Math.random() * 2 - 1, entity.getZ() + Math.random() * 2 - 1, 0.0, 0.0, 0.0);
+                }
+            }
+            if (food.getItem() instanceof PaleDaiquiriItem) {
+                LivingEntity entity = (LivingEntity) (Object) this;
+                for (int i = 0; i < 15; i++) {
+                    l.addParticle(ParticleTypes.HEART, entity.getX() + Math.random() * 2 - 1, entity.getY() + 1 + Math.random() * 2 - 1, entity.getZ() + Math.random() * 2 - 1, 0.0, 0.0, 0.0);
                 }
             }
         }
