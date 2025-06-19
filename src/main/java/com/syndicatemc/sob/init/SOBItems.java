@@ -37,7 +37,9 @@ public class SOBItems {
     public static final RegistryObject<Item> NOPAL = ITEMS.register("nopal",
             () -> new NopalItem(SOBBlocks.NOPAL_CROP.get(), foodItem(FoodConstants.NOPAL)));
     public static final RegistryObject<Item> PRICKLY_PEAR = ITEMS.register("prickly_pear",
-            () -> new Item(foodItem(FoodConstants.PRICKLY_PEAR)));
+            () -> new PricklyPearItem(foodItem(FoodConstants.PRICKLY_PEAR)));
+    public static final RegistryObject<Item> ASPARAGUS = ITEMS.register("asparagus",
+            () -> new Item(foodItem(FoodConstants.ASPARAGUS)));
     public static final RegistryObject<Item> SCULK_TENDRIL = ITEMS.register("sculk_tendril",
             () -> new Item(foodItem(FoodConstants.SCULK_TENDRIL)));
     public static final RegistryObject<Item> SCULK_ROLL = ITEMS.register("sculk_roll",
@@ -63,6 +65,10 @@ public class SOBItems {
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.INK_SOUP), true));
     public static final RegistryObject<Item> MANGROVE_STIR_FRY = ITEMS.register("mangrove_stir_fry",
             () -> new MangroveStirFryItem(bowlFoodItem(FoodConstants.MANGROVE_STIR_FRY), true));
+    public static final RegistryObject<Item> GRILLED_VEGETABLES = ITEMS.register("grilled_vegetables",
+            () -> new ConsumableItem(bowlFoodItem(FoodConstants.GRILLED_VEGETABLES), true));
+    public static final RegistryObject<Item> ASPARAGUS_SOUP = ITEMS.register("asparagus_soup",
+            () -> new ConsumableItem(bowlFoodItem(FoodConstants.ASPARAGUS_SOUP), true));
     //req: ENVI
     public static final RegistryObject<Item> TRUFFLE_PASTA = ITEMS.register("truffle_pasta",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.TRUFFLE_PASTA), true));
@@ -77,7 +83,7 @@ public class SOBItems {
     //req: ATMO
     public static final RegistryObject<Item> SPIKY_SALAD = ITEMS.register("spiky_salad",
             () -> new SpikySaladItem(bowlFoodItem(FoodConstants.SPIKY_SALAD), true));
-    //req: BaC & frycooks
+    //req: frycooks
     public static final RegistryObject<Item> POUTINE = ITEMS.register("poutine",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.POUTINE), true));
 
@@ -88,6 +94,8 @@ public class SOBItems {
             () -> new BirchBeerItem(drinkItem().food(FoodConstants.BIRCH_BEER)));
     public static final RegistryObject<Item> CACTUS_JUICE = ITEMS.register("cactus_juice",
             () -> new DrinkableItem(drinkItem().food(FoodConstants.CACTUS_JUICE), true, false));
+    public static final RegistryObject<Item> BUILDER_SMOOTHIE = ITEMS.register("builder_smoothie",
+            () -> new BuilderSmoothieItem(drinkItem().food(FoodConstants.BUILDER_SMOOTHIE), true));
     //req: FR
     public static final RegistryObject<Item> BITTER_TEA = ITEMS.register("bitter_tea",
             () -> new DrinkableItem(drinkItem().food(FoodConstants.BITTER_TEA), true, false));

@@ -35,6 +35,10 @@
   "item.sob.honey_barbecue_stick": "Honey Barbecue on a Stick",
   "item.sob.foul_salad": "Foul Salad",
   "item.sob.maple_donut": "Maple-Glazed Donut",
+  "item.sob.asparagus": "Asparagus Spear",
+  "item.sob.asparagus_soup": "Cream of Asparagus Soup",
+  "item.sob.grilled_vegetables": "Grilled Vegetables",
+  "item.sob.builder_smoothie": "Builder's Smoothie",
 
   "block.sob.silverfish_platter_block": "Silverfish Platter",
   "block.sob.roast_turkey_block": "Roast Turkey with Plum",
@@ -65,6 +69,8 @@
   "effect.sob.spite.description": "Taking damage gives you a stacking damage bonus.",
   "effect.sob.spite_boost": "Retaliation",
   "effect.sob.spite_boost.description": "Your next attack will deal increased damage.",
+  "effect.sob.reach": "Reach",
+  "effect.sob.reach.description": "Increases block reach and entity attack range.",
 
   "tooltip.sob.makes_explosion": "Explodes when drank",
   "tooltip.sob.makes_sparkles": "Sparkles when eaten",

@@ -33,6 +33,7 @@ public class SOBCreativeTabs {
                         output.accept(DRIPLEAVES.get());
                         output.accept(NOPAL.get());
                         output.accept(PRICKLY_PEAR.get());
+                        output.accept(ASPARAGUS.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
@@ -50,27 +51,35 @@ public class SOBCreativeTabs {
                             output.accept(MNDCompatItems.HONEY_BARBECUE_STICK.get());
                         }
                         /* bowl food items */
-                        output.accept(INK_SOUP.get());
                         output.accept(GRAVY.get());
-                        output.accept(MANGROVE_STIR_FRY.get());
+                        output.accept(INK_SOUP.get());
+                        output.accept(ASPARAGUS_SOUP.get());
                         if (ModList.get().isLoaded("environmental")) {
-                            output.accept(TRUFFLE_PASTA.get());
                             output.accept(EXQUISITE_MUSHROOM_SOUP.get());
                         }
                         if (ModList.get().isLoaded("autumnity")) {
                             output.accept(AutumnityCompatItems.FOUL_SALAD.get());
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
-                            output.accept(SUGAR_CHICKEN.get());
                             output.accept(SPIKY_SALAD.get());
                         }
                         if (ModList.get().isLoaded("frycooks_delight")) {
                             output.accept(POUTINE.get());
                         }
+                        /* plate food items */
+                        output.accept(MANGROVE_STIR_FRY.get());
+                        output.accept(GRILLED_VEGETABLES.get());
+                        if (ModList.get().isLoaded("environmental")) {
+                            output.accept(TRUFFLE_PASTA.get());
+                        }
+                        if (ModList.get().isLoaded("atmospheric")) {
+                            output.accept(SUGAR_CHICKEN.get());
+                        }
                         /* drink food items */
                         output.accept(BIRCH_BEER.get());
                         output.accept(GLITTERING_GLOOP.get());
                         output.accept(CACTUS_JUICE.get());
+                        output.accept(BUILDER_SMOOTHIE.get());
                         if (ModList.get().isLoaded("farmersrespite")) {
                             output.accept(BITTER_TEA.get());
                         }

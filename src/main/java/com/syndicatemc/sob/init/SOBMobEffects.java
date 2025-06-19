@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +23,10 @@ public class SOBMobEffects {
             .addAttributeModifier(Attributes.MOVEMENT_SPEED, "6b1e4ea9-7ab6-42a6-aa02-da00e2082bc0", 0.3, AttributeModifier.Operation.MULTIPLY_BASE));
     public static final RegistryObject<MobEffect> SPITE = MOB_EFFECTS.register("spite", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0xA8379E));
     public static final RegistryObject<MobEffect> SPITE_BOOST = MOB_EFFECTS.register("spite_boost", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0xA8379E));
+    public static final RegistryObject<MobEffect> REACH = MOB_EFFECTS.register("reach", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0x31a15e)
+            .addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "9e6901e5-a3cc-446c-94ed-56dd2e3cd70b", 2.0, AttributeModifier.Operation.ADDITION)
+            .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "4c08845b-48ff-4964-9d5c-d94bd90a853f", 0.5, AttributeModifier.Operation.ADDITION));
+
 
     public static void init(IEventBus bus) {
         MOB_EFFECTS.register(bus);

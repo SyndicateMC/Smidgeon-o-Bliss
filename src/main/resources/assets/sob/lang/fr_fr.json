@@ -35,6 +35,10 @@
   "item.sob.honey_barbecue_stick": "Brochette au miel",
   "item.sob.foul_salad": "Salade infâme",
   "item.sob.maple_donut": "Beignets glacés à l'érable",
+  "item.sob.asparagus": "Asperges",
+  "item.sob.asparagus_soup": "Soupe à la crème d'asperges",
+  "item.sob.grilled_vegetables": "Légumes grillés",
+  "item.sob.builder_smoothie": "Smoothie du constructeur",
 
   "block.sob.silverfish_platter_block": "Plateau de pains grillés au poisson d'argent",
   "block.sob.roast_turkey_block": "Dinde rôtie aux pruneaux",
@@ -65,6 +69,8 @@
   "effect.sob.spite.description": "Subir des dégâts vous confère un bonus de dégâts cumulable.",
   "effect.sob.spite_boost": "Représailles",
   "effect.sob.spite_boost.description": "Votre prochaine attaque infligera des dégâts accrus.",
+  "effect.sob.reach": "Portée",
+  "effect.sob.reach.description": "Augmente la portée de placement des blocs et la portée d'attaque envers les entités.",
 
   "tooltip.sob.makes_explosion": "Explose si bu",
   "tooltip.sob.makes_sparkles": "Pétille en bouche",
