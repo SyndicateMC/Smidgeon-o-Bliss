@@ -8,7 +8,9 @@ import com.syndicatemc.sob.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +31,15 @@ public class SOBItems {
     public static final RegistryObject<Item> NETHER_COUNTER = ITEMS.register("nether_counter",
             () -> new BlockItem(SOBBlocks.NETHER_COUNTER.get(), new Item.Properties()));
 
+    /* items */
+    public static final RegistryObject<Item> ASPARAGUS_SEEDS = ITEMS.register("asparagus_seeds",
+            () -> new ItemNameBlockItem(SOBBlocks.ASPARAGUS.get(), new Item.Properties()));
+    //req: create
+    public static final RegistryObject<Item> CINDER_DOUGH = ITEMS.register("cinder_dough",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CINDER_BREAD = ITEMS.register("cinder_bread",
+            () -> new Item(foodItem(FoodConstants.CINDER_BREAD)));
+
     /* bowl-less food items */
     public static RegistryObject<Item> GILDED_POTATO = ITEMS.register("golden_potato",
             () -> new GildedPotatoItem(foodItem(FoodConstants.GILDED_POTATO)));
@@ -46,11 +57,7 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.SCULK_ROLL)));
     public static final RegistryObject<Item> VEGGIE_WRAP = ITEMS.register("veggie_wrap",
             () -> new Item(foodItem(FoodConstants.VEGGIE_WRAP)));
-    //req: create
-    public static final RegistryObject<Item> CINDER_DOUGH = ITEMS.register("cinder_dough",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CINDER_BREAD = ITEMS.register("cinder_bread",
-            () -> new Item(foodItem(FoodConstants.CINDER_BREAD)));
+
     //req: ENVI & UA
     public static final RegistryObject<Item> DUCK_SANDWICH = ITEMS.register("duck_sandwich",
             () -> new Item(foodItem(FoodConstants.DUCK_SANDWICH)));

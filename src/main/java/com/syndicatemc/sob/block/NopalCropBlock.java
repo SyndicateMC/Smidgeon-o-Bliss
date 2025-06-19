@@ -73,7 +73,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
         int age = state.getValue(NOPAL_AGE);
         ItemStack heldStack = player.getItemInHand(hand);
 
-        if (age > 0 && heldStack.is(Tags.Items.SHEARS)) {
+        if (age > 1 && heldStack.is(Tags.Items.SHEARS)) {
             popResource(level, pos, getCloneItemStack(level, pos, state));
             level.playSound(null, pos, SoundEvents.MOOSHROOM_SHEAR, SoundSource.BLOCKS, 1.0F, 1.0F);
             level.setBlock(pos, state.setValue(NOPAL_AGE, age - 1), 2);

@@ -1,12 +1,12 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
-import com.syndicatemc.sob.block.DonutBoxBlock;
-import com.syndicatemc.sob.block.NopalCropBlock;
-import com.syndicatemc.sob.block.RoastTurkeyFeastBlock;
-import com.syndicatemc.sob.block.SilverfishPlatterFeastBlock;
+import com.syndicatemc.sob.block.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -29,6 +29,8 @@ public class SOBBlocks {
 
     public static final RegistryObject<Block> NOPAL_CROP = BLOCKS.register("nopal_crop",
             () -> new NopalCropBlock(Block.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion(), () -> SOBItems.NOPAL.get(), () -> SOBItems.PRICKLY_PEAR.get()));
+    public static final RegistryObject<Block> ASPARAGUS = BLOCKS.register("asparagus",
+            () -> new AsparagusCropBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
     public static void init(IEventBus bus) {
         BLOCKS.register(bus);
