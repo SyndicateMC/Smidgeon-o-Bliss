@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_potato",
+  "textures": {
+    "potato": "sob:block/coaster/golden_potato"
+  }
+}

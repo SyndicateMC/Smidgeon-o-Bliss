@@ -1,0 +1,7 @@
+{
+	"parent": "sob:block/coaster/birch_beer",
+	"textures": {
+		"particle": "sob:block/coaster/sunrise_seltzer",
+		"mug": "sob:block/coaster/sunrise_seltzer"
+	}
+}

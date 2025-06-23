@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "sob:block/desert_crate_bottom",
+    "side": "sob:block/prickly_pear_crate_side",
+    "top": "sob:block/prickly_pear_crate_top"
+  }
+}

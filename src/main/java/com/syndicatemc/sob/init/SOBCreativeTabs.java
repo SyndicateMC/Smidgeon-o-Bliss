@@ -28,12 +28,17 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(NETHER_COUNTER.get());
                         }
-                        /* bowl-less food items */
+                        /* items and bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());
                         output.accept(NOPAL.get());
+                        output.accept(NOPAL_CRATE.get());
                         output.accept(PRICKLY_PEAR.get());
+                        output.accept(PRICKLY_PEAR_CRATE.get());
+                        output.accept(ASPARAGUS_SEEDS.get());
                         output.accept(ASPARAGUS.get());
+                        output.accept(ASPARAGUS_BUNDLE.get());
+                        output.accept(WILD_ASPARAGUS.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());

@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:vegetables/asparagus"
+    },
+    {
+      "tag": "forge:vegetables/asparagus"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:vegetables/onion"
+    }
+  ],
+  "result": {
+    "item": "sob:asparagus_soup"
+  }
+}

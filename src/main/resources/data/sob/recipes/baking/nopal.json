@@ -1,0 +1,20 @@
+{
+  "type": "clayworks:baking",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "sob:nopal"
+  },
+  "result": "minecraft:lime_dye",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "clayworks"
+    },
+    {
+      "type": "clayworks:config",
+      "value": "kiln"
+    }
+  ]
+}

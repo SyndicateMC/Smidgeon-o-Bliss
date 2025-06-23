@@ -47,7 +47,7 @@
           "to_place": {
             "type": "minecraft:simple_state_provider",
             "state": {
-              "Name": "farmersdelight:sandy_shrub"
+              "Name": "minecraft:dead_bush"
             }
           }
         }

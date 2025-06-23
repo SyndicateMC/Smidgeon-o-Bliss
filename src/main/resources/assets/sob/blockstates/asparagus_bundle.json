@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "sob:block/asparagus_bundle",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "sob:block/asparagus_bundle",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sob:block/asparagus_bundle",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "sob:block/asparagus_bundle",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "sob:block/asparagus_bundle"
+    },
+    "facing=west": {
+      "model": "sob:block/asparagus_bundle",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

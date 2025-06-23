@@ -38,11 +38,12 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
     public final Supplier<Item> itemOne;
     public final Supplier<Item> itemTwo;
 
-    public static final IntegerProperty NOPAL_AGE = BlockStateProperties.AGE_4;
+    public static final IntegerProperty NOPAL_AGE = BlockStateProperties.AGE_5;
     protected static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(5.0D, 0.0D, 5.0D, 11.0D, 4.0D, 11.0D),
             Block.box(4.0D, 0.0D, 4.0D, 12.0D, 6.0D, 12.0D),
             Block.box(3.0D, 0.0D, 3.0D, 13.0D, 9.0D, 13.0D),
+            Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D),
             Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D),
             Block.box(1.0D, 0.0D, 1.0D, 15.0D, 11.0D, 15.0D)
     };
@@ -87,7 +88,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
     }
 
     public int getMaxAge() {
-        return 4;
+        return 5;
     }
 
     @Override
@@ -103,7 +104,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
     @Override
     public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
         RandomSource random = RandomSource.create();
-        return state.getValue(getAgeProperty()) <= 3 ? new ItemStack(this.itemOne.get()) : new ItemStack(this.itemTwo.get(), random.nextIntBetweenInclusive(1, 3));
+        return state.getValue(getAgeProperty()) <= 3 ? new ItemStack(this.itemOne.get()) : new ItemStack(this.itemTwo.get());
     }
 
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:prickly_pear_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "sob:prickly_pear"
+  }
+}

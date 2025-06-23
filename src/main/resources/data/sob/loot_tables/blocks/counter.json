@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:counter"
+          "name": "sob:counter"
         }
       ],
       "rolls": 1.0

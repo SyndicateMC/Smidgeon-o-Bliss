@@ -30,6 +30,14 @@ public class SOBItems {
             () -> new BlockItem(SOBBlocks.COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> NETHER_COUNTER = ITEMS.register("nether_counter",
             () -> new BlockItem(SOBBlocks.NETHER_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NOPAL_CRATE = ITEMS.register("nopal_crate",
+            () -> new BlockItem(SOBBlocks.NOPAL_CRATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PRICKLY_PEAR_CRATE = ITEMS.register("prickly_pear_crate",
+            () -> new BlockItem(SOBBlocks.PRICKLY_PEAR_CRATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ASPARAGUS_BUNDLE = ITEMS.register("asparagus_bundle",
+            () -> new BlockItem(SOBBlocks.ASPARAGUS_BUNDLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WILD_ASPARAGUS = ITEMS.register("wild_asparagus",
+            () -> new BlockItem(SOBBlocks.WILD_ASPARAGUS.get(), new Item.Properties()));
 
     /* items */
     public static final RegistryObject<Item> ASPARAGUS_SEEDS = ITEMS.register("asparagus_seeds",

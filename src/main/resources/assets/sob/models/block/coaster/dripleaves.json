@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_flat",
+  "textures": {
+    "flat": "sob:block/coaster/dripleaves"
+  }
+}

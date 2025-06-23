@@ -2,6 +2,7 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"render_type": "minecraft:cutout",
+	"ambientocclusion": false,
 	"textures": {
 		"0": "sob:block/asparagus_stage1",
 		"particle": "sob:block/asparagus_stage1"
@@ -11,6 +12,7 @@
 			"from": [8, 0, 7],
 			"to": [8, 3, 9],
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 1, 8]},
+			"shade": false,
 			"faces": {
 				"north": {"uv": [0, 0, 0, 2], "texture": "#0"},
 				"east": {"uv": [7, 13, 9, 16], "texture": "#0"},
@@ -24,6 +26,7 @@
 			"from": [7, 0, 8],
 			"to": [9, 3, 8],
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 1, 8]},
+			"shade": false,
 			"faces": {
 				"north": {"uv": [7, 13, 9, 16], "texture": "#0"},
 				"east": {"uv": [0, 0, 0, 2], "texture": "#0"},

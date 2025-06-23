@@ -41,12 +41,16 @@
   "item.sob.grilled_vegetables": "Grilled Vegetables",
   "item.sob.builder_smoothie": "Builder's Smoothie",
 
+  "block.sob.wild_asparagus": "Wild Asparagus",
   "block.sob.silverfish_platter_block": "Silverfish Platter",
   "block.sob.roast_turkey_block": "Roast Turkey with Plum",
   "block.sob.counter": "Countertop",
   "block.sob.nether_counter": "Nether Countertop",
   "block.sob.donut_box_block": "Box of Maple-Glazed Donuts",
   "block.sob.nopal_crop": "Prickly Pear Cactus",
+  "block.sob.nopal_crate": "Cactus Paddle Crate",
+  "block.sob.prickly_pear_crate": "Prickly Pear Crate",
+  "block.sob.asparagus_bundle": "Asparagus Bundle",
 
   "fluid_type.sob.bitter_tea_type": "Bitter Tea",
   "fluid_type.sob.hard_cider_type": "Hard Cider",

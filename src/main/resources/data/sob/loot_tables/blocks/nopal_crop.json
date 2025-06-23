@@ -164,6 +164,63 @@
           }
         }
       ]
+    },
+    {
+      "name": "stage5",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:nopal",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:nopal_crop",
+          "properties": {
+            "age": "5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "stage5_fruit",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sob:prickly_pear",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "value": 2,
+                "type": "minecraft:constant"
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "sob:nopal_crop",
+          "properties": {
+            "age": "5"
+          }
+        }
+      ]
     }
   ]
 }

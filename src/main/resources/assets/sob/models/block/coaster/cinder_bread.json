@@ -1,0 +1,6 @@
+{
+  "parent": "brewinandchewin:block/coaster_bread",
+  "textures": {
+    "bread": "sob:block/coaster/cinder_bread"
+  }
+}

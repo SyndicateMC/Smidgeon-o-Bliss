@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "sob:wild_asparagus"
+    }
+  ],
+  "result": [
+    {
+      "item": "sob:asparagus_seeds"
+    },
+    {
+      "chance": 0.5,
+      "item": "sob:asparagus"
+    },
+    {
+      "chance": 0.2,
+      "item": "minecraft:green_dye"
+    },
+    {
+      "chance": 0.1,
+      "item": "minecraft:cyan_dye"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

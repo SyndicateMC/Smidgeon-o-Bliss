@@ -1,0 +1,6 @@
+{
+  "type": "farmersdelight:add_features_by_filter",
+  "allowed_biomes": "#sob:has_wild_asparagus",
+  "features": "sob:patch_wild_asparagus",
+  "step": "vegetal_decoration"
+}
