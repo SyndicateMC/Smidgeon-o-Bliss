@@ -48,8 +48,8 @@
   "block.sob.nether_counter": "下界料理台",
   "block.sob.donut_box_block": "枫糖甜甜圈盒",
   "block.sob.nopal_crop": "仙人球植株",
-  "block.sob.nopal_crate": "仙人掌板条箱",
-  "block.sob.prickly_pear_crate": "仙人球板条箱",
+  "block.sob.nopal_crate": "箱装仙人掌",
+  "block.sob.prickly_pear_crate": "箱装仙人球",
   "block.sob.asparagus_bundle": "芦笋捆",
 
   "fluid_type.sob.bitter_tea_type": "苦茶",
