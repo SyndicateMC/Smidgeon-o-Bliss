@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "farmersdelight:block/dark_oak_cabinet_top",
+    "side": "sob:block/dark_oak_counter",
+    "bottom": "farmersdelight:block/dark_oak_cabinet_top"
+  }
+}

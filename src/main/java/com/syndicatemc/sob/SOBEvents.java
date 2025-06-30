@@ -1,25 +1,27 @@
 package com.syndicatemc.sob;
 
-import com.syndicatemc.sob.init.SOBDamageTypes;
-import com.syndicatemc.sob.init.SOBItems;
-import com.syndicatemc.sob.init.SOBMobEffects;
-import com.syndicatemc.sob.init.SOBSounds;
+import com.syndicatemc.sob.init.*;
 import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
 import com.syndicatemc.sob.utillity.SOBTranslationKey;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.event.level.NoteBlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -92,6 +94,9 @@ public class SOBEvents {
         if (item == SOBItems.GILDED_POTATO.get()) {
             tooltip.add(SOBTranslationKey.getTranslation("makes_sparkles", "tooltip").withStyle(ChatFormatting.BLUE));
         }
+        if (item == SOBItems.BIG_SOUP.get()) {
+            tooltip.add(SOBTranslationKey.getTranslation("extends_comfort", "tooltip").withStyle(ChatFormatting.BLUE));
+        }
         if (item == SOBItems.ALOE_TEA.get()) {
             tooltip.add(SOBTranslationKey.getTranslation("extinguishes", "tooltip").withStyle(ChatFormatting.BLUE));
         }
@@ -128,6 +133,24 @@ public class SOBEvents {
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.strength").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.luck").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.hunger").withStyle(ChatFormatting.RED)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.RED)));
+        }
+    }
+
+    @SubscribeEvent
+    public static void noteBlockPlayed(NoteBlockEvent.Play event) {
+        Level level = (Level) event.getLevel();
+        BlockPos noteBlockPos = event.getPos();
+        SoundEvent sound = null;
+        Block blockUnder = level.getBlockState(noteBlockPos.below()).getBlock();
+        if (blockUnder == SOBBlocks.ASPARAGUS_BUNDLE.get()) {
+            sound = SOBSounds.SLAP_BASE.get();
+        } else if (blockUnder == SOBBlocks.NOPAL_CRATE.get() || blockUnder == SOBBlocks.PRICKLY_PEAR_CRATE.get()) {
+            sound = SOBSounds.NICE_GUITAR.get();
+        }
+        if (sound != null) {
+            float pitch = (float) Math.pow(2.0, (event.getVanillaNoteId() - 12) / 12.0);
+            level.playSound(null, noteBlockPos, sound, SoundSource.RECORDS, 1F, pitch);
+            event.setCanceled(true);
         }
     }
 }

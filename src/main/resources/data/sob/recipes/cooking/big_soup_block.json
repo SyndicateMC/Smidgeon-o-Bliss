@@ -1,0 +1,31 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 2.0,
+  "ingredients": [
+    {
+      "tag": "sob:ingredients/fancy_aromatics"
+    },
+    {
+      "tag": "farmersdelight:cabbage_roll_ingredients"
+    },
+    {
+      "tag": "farmersdelight:cabbage_roll_ingredients"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "tag": "forge:vegetables"
+    },
+    {
+      "item": "minecraft:wooden_shovel"
+    }
+  ],
+  "container": {
+    "item": "minecraft:bucket"
+  },
+  "result": {
+    "item": "sob:big_soup_block"
+  }
+}

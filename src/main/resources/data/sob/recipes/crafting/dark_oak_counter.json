@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "S": {
+      "item": "minecraft:dark_oak_slab"
+    }
+  },
+  "pattern": [
+    "SS",
+    "BB"
+  ],
+  "result": {
+    "count": 3,
+    "item": "sob:dark_oak_counter"
+  }
+}

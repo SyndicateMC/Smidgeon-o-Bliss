@@ -1,6 +1,19 @@
 {
   "values": [
     "sob:nopal_crate",
-    "sob:prickly_pear_crate"
+    "sob:prickly_pear_crate",
+    "sob:pitcher_tuber",
+    "sob:pitcher_tuber_bundle",
+    "sob:acacia_counter",
+    "sob:bamboo_counter",
+    "sob:birch_counter",
+    "sob:cherry_counter",
+    "sob:crimson_counter",
+    "sob:dark_oak_counter",
+    "sob:jungle_counter",
+    "sob:mangrove_counter",
+    "sob:oak_counter",
+    "sob:spruce_counter",
+    "sob:warped_counter"
   ]
 }

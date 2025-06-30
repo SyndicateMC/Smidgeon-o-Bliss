@@ -28,6 +28,17 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(NETHER_COUNTER.get());
                         }
+                        output.accept(OAK_COUNTER.get());
+                        output.accept(SPRUCE_COUNTER.get());
+                        output.accept(BIRCH_COUNTER.get());
+                        output.accept(JUNGLE_COUNTER.get());
+                        output.accept(ACACIA_COUNTER.get());
+                        output.accept(DARK_OAK_COUNTER.get());
+                        output.accept(MANGROVE_COUNTER.get());
+                        output.accept(CHERRY_COUNTER.get());
+                        output.accept(BAMBOO_COUNTER.get());
+                        output.accept(CRIMSON_COUNTER.get());
+                        output.accept(WARPED_COUNTER.get());
                         /* items and bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());
@@ -39,6 +50,9 @@ public class SOBCreativeTabs {
                         output.accept(ASPARAGUS.get());
                         output.accept(ASPARAGUS_BUNDLE.get());
                         output.accept(WILD_ASPARAGUS.get());
+                        output.accept(PITCHER_TUBER.get());
+                        output.accept(PITCHER_TUBER_BUNDLE.get());
+                        output.accept(TUBER_STICKS.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
@@ -74,6 +88,7 @@ public class SOBCreativeTabs {
                         /* plate food items */
                         output.accept(MANGROVE_STIR_FRY.get());
                         output.accept(GRILLED_VEGETABLES.get());
+                        output.accept(ROOT_STEAK.get());
                         if (ModList.get().isLoaded("environmental")) {
                             output.accept(TRUFFLE_PASTA.get());
                         }
@@ -105,6 +120,8 @@ public class SOBCreativeTabs {
                             output.accept(PALE_DAIQUIRI.get());
                         }
                         /* feast items and food items */
+                        output.accept(BIG_SOUP_BLOCK.get());
+                        output.accept(BIG_SOUP.get());
                         if (ModList.get().isLoaded("miners_delight") && ModList.get().isLoaded("buzzier_bees")) {
                             output.accept(SILVERFISH_PLATTER_BLOCK.get());
                             output.accept(SILVERFISH_TOAST.get());

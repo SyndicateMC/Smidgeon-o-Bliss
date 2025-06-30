@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "farmersdelight:block/acacia_cabinet_top",
+    "side": "sob:block/acacia_counter",
+    "bottom": "farmersdelight:block/acacia_cabinet_top"
+  }
+}

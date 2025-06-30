@@ -1,6 +1,7 @@
 {
   "values": [
     "sob:counter",
-    "sob:nether_counter"
+    "sob:nether_counter",
+    "sob:big_soup_block"
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "farmersdelight:block/crimson_cabinet_top",
+    "side": "sob:block/crimson_counter",
+    "bottom": "farmersdelight:block/crimson_cabinet_top"
+  }
+}

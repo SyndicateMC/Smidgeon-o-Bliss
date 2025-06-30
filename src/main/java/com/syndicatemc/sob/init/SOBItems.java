@@ -10,7 +10,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
@@ -38,7 +37,32 @@ public class SOBItems {
             () -> new BlockItem(SOBBlocks.ASPARAGUS_BUNDLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WILD_ASPARAGUS = ITEMS.register("wild_asparagus",
             () -> new BlockItem(SOBBlocks.WILD_ASPARAGUS.get(), new Item.Properties()));
-
+    public static final RegistryObject<Item> PITCHER_TUBER = ITEMS.register("pitcher_tuber",
+            () -> new BlockItem(SOBBlocks.PITCHER_TUBER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PITCHER_TUBER_BUNDLE = ITEMS.register("pitcher_tuber_bundle",
+            () -> new BlockItem(SOBBlocks.PITCHER_TUBER_BUNDLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ACACIA_COUNTER = ITEMS.register("acacia_counter",
+            () -> new BlockItem(SOBBlocks.ACACIA_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BAMBOO_COUNTER = ITEMS.register("bamboo_counter",
+            () -> new BlockItem(SOBBlocks.BAMBOO_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BIRCH_COUNTER = ITEMS.register("birch_counter",
+            () -> new BlockItem(SOBBlocks.BIRCH_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CHERRY_COUNTER = ITEMS.register("cherry_counter",
+            () -> new BlockItem(SOBBlocks.CHERRY_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CRIMSON_COUNTER = ITEMS.register("crimson_counter",
+            () -> new BlockItem(SOBBlocks.CRIMSON_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DARK_OAK_COUNTER = ITEMS.register("dark_oak_counter",
+            () -> new BlockItem(SOBBlocks.DARK_OAK_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> JUNGLE_COUNTER = ITEMS.register("jungle_counter",
+            () -> new BlockItem(SOBBlocks.JUNGLE_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> MANGROVE_COUNTER = ITEMS.register("mangrove_counter",
+            () -> new BlockItem(SOBBlocks.MANGROVE_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> OAK_COUNTER = ITEMS.register("oak_counter",
+            () -> new BlockItem(SOBBlocks.OAK_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SPRUCE_COUNTER = ITEMS.register("spruce_counter",
+            () -> new BlockItem(SOBBlocks.SPRUCE_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> WARPED_COUNTER = ITEMS.register("warped_counter",
+            () -> new BlockItem(SOBBlocks.WARPED_COUNTER.get(), new Item.Properties()));
     /* items */
     public static final RegistryObject<Item> ASPARAGUS_SEEDS = ITEMS.register("asparagus_seeds",
             () -> new ItemNameBlockItem(SOBBlocks.ASPARAGUS.get(), new Item.Properties()));
@@ -65,6 +89,8 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.SCULK_ROLL)));
     public static final RegistryObject<Item> VEGGIE_WRAP = ITEMS.register("veggie_wrap",
             () -> new Item(foodItem(FoodConstants.VEGGIE_WRAP)));
+    public static final RegistryObject<Item> TUBER_STICKS = ITEMS.register("tuber_sticks",
+            () -> new Item(foodItem(FoodConstants.TUBER_STICKS)));
 
     //req: ENVI & UA
     public static final RegistryObject<Item> DUCK_SANDWICH = ITEMS.register("duck_sandwich",
@@ -84,6 +110,8 @@ public class SOBItems {
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.GRILLED_VEGETABLES), true));
     public static final RegistryObject<Item> ASPARAGUS_SOUP = ITEMS.register("asparagus_soup",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.ASPARAGUS_SOUP), true));
+    public static final RegistryObject<Item> ROOT_STEAK = ITEMS.register("root_steak",
+            () -> new ConsumableItem(bowlFoodItem(FoodConstants.ROOT_STEAK), true));
     //req: ENVI
     public static final RegistryObject<Item> TRUFFLE_PASTA = ITEMS.register("truffle_pasta",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.TRUFFLE_PASTA), true));
@@ -119,6 +147,10 @@ public class SOBItems {
             () -> new AloeTeaItem(drinkItem().food(FoodConstants.ALOE_TEA)));
 
     /* feast items & food items */
+    public static final RegistryObject<Item> BIG_SOUP = ITEMS.register("big_soup",
+            () -> new BigSoupItem(bowlFoodItem(FoodConstants.BIG_SOUP), true));
+    public static final RegistryObject<Item> BIG_SOUP_BLOCK = ITEMS.register("big_soup_block",
+            () -> new BlockItem(SOBBlocks.BIG_SOUP_BLOCK.get(), new Item.Properties().stacksTo(1)));
     //req: MD & BB
     public static final RegistryObject<Item> SILVERFISH_TOAST = ITEMS.register("silverfish_toast",
             () -> new Item(foodItem(FoodConstants.SILVERFISH_TOAST)));

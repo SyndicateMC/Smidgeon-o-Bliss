@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:pitcher_tuber_bundle"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "sob:pitcher_tuber"
+  }
+}

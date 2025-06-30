@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,10 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_prick")));
     public static final RegistryObject<SoundEvent> SPITE_CONSUME = SOUNDS.register("entity.spite_consume",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_consume")));
+    public static final RegistryObject<SoundEvent> SLAP_BASE = SOUNDS.register("block.slap_base",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.slap_base")));
+    public static final RegistryObject<SoundEvent> NICE_GUITAR = SOUNDS.register("block.nice_guitar",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.nice_guitar")));
 
     public static void init(IEventBus bus) {
         SOUNDS.register(bus);

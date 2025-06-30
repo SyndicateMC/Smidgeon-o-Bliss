@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "sob:pitcher_tuber"
+    }
+  ],
+  "result": [
+    {
+      "count": 4,
+      "item": "sob:tuber_sticks"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

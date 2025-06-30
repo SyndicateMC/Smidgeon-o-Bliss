@@ -51,6 +51,12 @@ public class FoodConstants {
             .saturationMod(0.70F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 200, 0), 1.0F)
             .build();
+    public static final FoodProperties TUBER_STICKS = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.55F)
+            .fast()
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 1), 1.0F)
+            .build();
     //req: create
     public static final FoodProperties CINDER_BREAD = (new FoodProperties.Builder())
             .nutrition(4)
@@ -99,10 +105,22 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
             .build();
     public static final FoodProperties ASPARAGUS_SOUP = (new FoodProperties.Builder())
-            .nutrition(7)
+            .nutrition(9)
             .saturationMod(0.65F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1.0F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
+            .build();
+    // big poop food item when
+    public static final FoodProperties BIG_SOUP = (new FoodProperties.Builder())
+            .nutrition(8)
+            .saturationMod(0.65F)
+            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 0), 1.0F)
+            .build();
+    public static final FoodProperties ROOT_STEAK = (new FoodProperties.Builder())
+            .nutrition(12)
+            .saturationMod(0.55F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1800, 0), 1.0F)
             .build();
     //req: ENVI
     public static final FoodProperties TRUFFLE_PASTA = (new FoodProperties.Builder())

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "sob:block/bamboo_counter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sob:block/bamboo_counter"
+    },
+    "facing=south": {
+      "model": "sob:block/bamboo_counter"
+    },
+    "facing=west": {
+      "model": "sob:block/bamboo_counter",
+      "y": 90
+    }
+  }
+}

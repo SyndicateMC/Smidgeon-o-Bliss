@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "sob:block/warped_counter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sob:block/warped_counter"
+    },
+    "facing=south": {
+      "model": "sob:block/warped_counter"
+    },
+    "facing=west": {
+      "model": "sob:block/warped_counter",
+      "y": 90
+    }
+  }
+}

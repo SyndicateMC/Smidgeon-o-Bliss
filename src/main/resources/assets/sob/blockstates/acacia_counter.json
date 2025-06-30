@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "sob:block/acacia_counter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sob:block/acacia_counter"
+    },
+    "facing=south": {
+      "model": "sob:block/acacia_counter"
+    },
+    "facing=west": {
+      "model": "sob:block/acacia_counter",
+      "y": 90
+    }
+  }
+}

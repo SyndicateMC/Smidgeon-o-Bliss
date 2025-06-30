@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "farmersdelight:block/warped_cabinet_top",
+    "side": "sob:block/warped_counter",
+    "bottom": "farmersdelight:block/warped_cabinet_top"
+  }
+}

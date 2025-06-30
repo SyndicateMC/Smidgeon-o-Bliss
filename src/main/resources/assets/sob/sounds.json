@@ -68,5 +68,21 @@
                 "name": "sob:spite/spite_consume2"
             }
         ]
+    },
+    "block.slap_base": {
+        "subtitle": "subtitles.block.note_block.note",
+        "sounds": [
+            {
+                "name": "sob:note_block/slap_bass"
+            }
+        ]
+    },
+    "block.nice_guitar": {
+        "subtitle": "subtitles.block.note_block.note",
+        "sounds": [
+            {
+                "name": "sob:note_block/nice_guitar"
+            }
+        ]
     }
 }

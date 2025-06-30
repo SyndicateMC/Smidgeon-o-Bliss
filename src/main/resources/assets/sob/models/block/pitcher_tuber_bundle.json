@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"top": "sob:block/pitcher_tuber_bundle_top",
+		"side": "sob:block/pitcher_tuber_bundle_side",
+		"bottom": "sob:block/pitcher_tuber_bundle_bottom"
+	}
+}
