@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -34,13 +35,13 @@ public class SOBEvents {
     public static void onEntityAttack(LivingDamageEvent event) {
         Entity entity = event.getSource().getEntity();
         Entity target = event.getEntity();
-        if (entity instanceof Player player && player.hasEffect(SOBMobEffects.BITTERNESS.get())) {
+        if (entity instanceof Player player && player.hasEffect(SOBMobEffects.BITTERNESS.get())) { //increases damage dealt based on hunger level
             float hunger = player.getFoodData().getFoodLevel();
             float amp = player.getEffect(SOBMobEffects.BITTERNESS.get()).getAmplifier();
             float bonus = (Math.abs(hunger - 20) / 20) * ((amp + 1) / 2);
             event.setAmount(event.getAmount() * (1 + bonus));
         }
-        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.RESONANCE.get()) && event.getAmount() >= 1.5 && !t.isInvulnerable()) {
+        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.RESONANCE.get()) && event.getAmount() >= 1.5 && !t.isInvulnerable()) { //applies a stack of Collapse every time an entity is damaged at least 1.5 damage from an entity with the Resonance effect
             if (!t.hasEffect(SOBMobEffects.COLLAPSE.get())) {
                 t.addEffect(new MobEffectInstance(SOBMobEffects.COLLAPSE.get(), 30, 0, false, true));
                 t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.COLLAPSE_BUILDING.get(), SoundSource.NEUTRAL, 1.0F, 0.9F, 1);
@@ -49,7 +50,7 @@ public class SOBEvents {
             t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.COLLAPSE_BUILDING.get(), SoundSource.NEUTRAL, 1.0F, (t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() * 0.1F) + 1.0F, 1);
             t.addEffect(new MobEffectInstance(SOBMobEffects.COLLAPSE.get(), 30, Math.min(t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() + 1, 9), false, true));
         }
-        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && !t.isInvulnerable()) {
+        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && !t.isInvulnerable()) { //consumes all stacks of Retaliation and increases damage accordingly
             float amp = e.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier();
             float bonus = ((amp + 1) / 5);
             event.setAmount(event.getAmount() * (1 + bonus));
@@ -61,7 +62,7 @@ public class SOBEvents {
     @SubscribeEvent
     public static void onEntityDamage(LivingHurtEvent event) {
         Entity target = event.getEntity();
-        if (target instanceof LivingEntity t && t.hasEffect(SOBMobEffects.SPITE.get()) && event.getAmount() >= 2.0 && !t.isInvulnerable()) {
+        if (target instanceof LivingEntity t && t.hasEffect(SOBMobEffects.SPITE.get()) && event.getAmount() >= 2.0 && !t.isInvulnerable()) { //applies a stack of Retaliation everytime the entity takes at least 1 heart of damage
             if (!t.hasEffect(SOBMobEffects.SPITE_BOOST.get())) {
                 t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), -1, 0, false, true));
                 t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.SPITE_PRICK.get(), SoundSource.NEUTRAL, 1.0F, 0.6F, 1);
@@ -70,23 +71,40 @@ public class SOBEvents {
             t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.SPITE_PRICK.get(), SoundSource.NEUTRAL, 1.0F, (t.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier() * 0.1F) + 0.7F, 1);
             t.addEffect(new MobEffectInstance(SOBMobEffects.SPITE_BOOST.get(), -1, Math.min(t.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier() + 1, 4), false, true));
         }
+        if (target instanceof LivingEntity t && t.hasEffect(SOBMobEffects.EXPOSED.get())) { //increases damage taken by 10% per level
+            float amp = t.getEffect(SOBMobEffects.EXPOSED.get()).getAmplifier();
+            float bonus = (amp + 1) / 10;
+            event.setAmount(event.getAmount() * (1 + bonus));
+        }
     }
 
     @SubscribeEvent
-    public static void mobEffectEvent(MobEffectEvent.Expired event) {
+    public static void mobEffectExpiredEvent(MobEffectEvent.Expired event) {
+        MobEffect effect = event.getEffectInstance().getEffect();
         Entity entity = event.getEntity();
-        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.COLLAPSE.get())) {
+        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.COLLAPSE.get()) && effect == SOBMobEffects.COLLAPSE.get()) {
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.COLLAPSING), (e.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier()) * 2 + 3);
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.COLLAPSING.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
         }
-        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE.get()) && e.hasEffect((SOBMobEffects.SPITE_BOOST.get()))) {
+        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE.get()) && e.hasEffect((SOBMobEffects.SPITE_BOOST.get())) && effect == SOBMobEffects.SPITE.get()) {
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
             e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
         }
+        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
+            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+        }
+    }
+    @SubscribeEvent
+    public static void mobEffectRemovedEvent(MobEffectEvent.Remove event) {
+        MobEffect effect = event.getEffectInstance().getEffect();
+        Entity entity = event.getEntity();
+        if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
+            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+        }
     }
 
-    @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
     public static void addTooltips(ItemTooltipEvent event) {
         Item item = event.getItemStack().getItem();
         List<Component> tooltip = event.getToolTip();

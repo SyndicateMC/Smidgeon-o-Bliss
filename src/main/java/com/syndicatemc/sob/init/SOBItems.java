@@ -135,8 +135,6 @@ public class SOBItems {
     //req: ENVI
     public static final RegistryObject<Item> EXQUISITE_MUSHROOM_SOUP = ITEMS.register("exquisite_mushroom_soup",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.EXQUISITE_MUSHROOM_SOUP), true));
-    //req: autumnity
-
     //req: ATMO
     public static final RegistryObject<Item> SUGAR_CHICKEN = ITEMS.register("sugar_chicken",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.SUGAR_CHICKEN), true));
@@ -146,6 +144,9 @@ public class SOBItems {
     //req: frycooks
     public static final RegistryObject<Item> POUTINE = ITEMS.register("poutine",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.POUTINE), true));
+    //req: frycooks
+    public static final RegistryObject<Item> FISH_FRY = ITEMS.register("fish_fry",
+            () -> new ConsumableItem(bowlFoodItem(FoodConstants.FISH_FRY), true));
 
     /* drink food items */
     public static final RegistryObject<Item> GLITTERING_GLOOP = ITEMS.register("glittering_gloop",

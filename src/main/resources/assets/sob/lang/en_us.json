@@ -100,6 +100,10 @@
   "effect.sob.spite_boost.description": "Your next attack will deal increased damage.",
   "effect.sob.reach": "Reach",
   "effect.sob.reach.description": "Increases block reach and entity attack range.",
+  "effect.sob.exposed": "Exposed",
+  "effect.sob.exposed.description": "Reduces armor and increases damage taken.",
+  "effect.sob.cessation": "Cessation",
+  "effect.sob.cessation.description": "Deals absurd amounts of damage to the entity upon effect expiry or removal.",
 
   "tooltip.sob.makes_explosion": "Explodes when drank",
   "tooltip.sob.makes_sparkles": "Sparkles when eaten",
@@ -115,7 +119,10 @@
   "subtitle.sob.spite_prick": "Spite builds",
   "subtitle.sob.spite_consume": "Spite depletes",
   "subtitle.sob.ichorfruit_explodes": "Ichorfruit explodes",
+  "subtitle.sob.ceasing": "Heart beats",
 
   "death.attack.collapsing": "%1$s felt the vibrations",
-  "death.attack.collapsing.player": "%1$s did not get the memo from %2$s"
+  "death.attack.collapsing.player": "%1$s did not get the memo from %2$s",
+  "death.attack.ceasing": "%1$s did not understand the gravity of the situation",
+  "death.attack.ceasing.player": "%1$s's heart stopped while fighting %2$s"
 }

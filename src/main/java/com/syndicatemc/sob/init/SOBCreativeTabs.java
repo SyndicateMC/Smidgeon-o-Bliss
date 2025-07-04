@@ -12,6 +12,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.holdersets.ICustomHolderSet;
 
 import static com.syndicatemc.sob.init.SOBItems.*;
 
@@ -56,7 +57,7 @@ public class SOBCreativeTabs {
                         output.accept(PITCHER_TUBER.get());
                         output.accept(PITCHER_TUBER_BUNDLE.get());
                         output.accept(TUBER_STICKS.get());
-                        output.accept(ICHOR_SPROUT.get());
+                        output.accept(ICHOR_BUD.get());
                         output.accept(ICHORFRUIT.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
@@ -99,6 +100,9 @@ public class SOBCreativeTabs {
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(SUGAR_CHICKEN.get());
+                        }
+                        if (ModList.get().isLoaded("frycooks_delight")) {
+                            output.accept(FISH_FRY.get());
                         }
                         /* drink food items */
                         output.accept(BIRCH_BEER.get());

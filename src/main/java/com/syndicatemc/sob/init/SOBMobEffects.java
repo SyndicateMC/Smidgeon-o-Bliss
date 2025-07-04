@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import com.syndicatemc.sob.mob_effect.CessationEffect;
 import com.syndicatemc.sob.mob_effect.SOBMobEffectHelp;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
@@ -26,6 +27,9 @@ public class SOBMobEffects {
     public static final RegistryObject<MobEffect> REACH = MOB_EFFECTS.register("reach", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0x31a15e)
             .addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "9e6901e5-a3cc-446c-94ed-56dd2e3cd70b", 2.0, AttributeModifier.Operation.ADDITION)
             .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "4c08845b-48ff-4964-9d5c-d94bd90a853f", 0.5, AttributeModifier.Operation.ADDITION));
+    public static final RegistryObject<MobEffect> CESSATION = MOB_EFFECTS.register("cessation", CessationEffect::new);
+    public static final RegistryObject<MobEffect> EXPOSED = MOB_EFFECTS.register("exposed", () -> new SOBMobEffectHelp(MobEffectCategory.HARMFUL, 0xFE6C0A)
+            .addAttributeModifier(Attributes.ARMOR, "f3145073-5b49-4e46-b58f-f9c37cff9ed3", -5.0, AttributeModifier.Operation.ADDITION));
 
 
     public static void init(IEventBus bus) {

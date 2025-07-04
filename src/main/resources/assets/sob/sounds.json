@@ -83,6 +83,14 @@
             }
         ]
     },
+    "entity.ceasing": {
+        "subtitle": "subtitle.sob.ceasing",
+        "sounds": [
+            {
+                "name": "sob:cessation_heartbeat"
+            }
+        ]
+    },
     "entity.ichorfruit_explode": {
         "subtitle": "subtitle.sob.ichorfruit_explode",
         "sounds": [

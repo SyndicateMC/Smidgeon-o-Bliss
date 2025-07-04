@@ -26,6 +26,8 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_consume")));
     public static final RegistryObject<SoundEvent> ICHORFRUIT_EXPLODE = SOUNDS.register("entity.ichorfruit_explode",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.ichorfruit_explode")));
+    public static final RegistryObject<SoundEvent> HEARTBEAT = SOUNDS.register("entity.ceasing",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.ceasing")));
     public static final RegistryObject<SoundEvent> SLAP_BASE = SOUNDS.register("block.slap_base",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.slap_base")));
     public static final RegistryObject<SoundEvent> NICE_GUITAR = SOUNDS.register("block.nice_guitar",

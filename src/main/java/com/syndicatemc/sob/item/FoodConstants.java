@@ -153,14 +153,20 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(SOBMobEffects.ZEST.get(), 1800, 0), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 1800, 0), 1.0F)
             .build();
-    //req: Bac & frycooks
+    //req: frycooks
     public static final FoodProperties POUTINE = (new FoodProperties.Builder())
             .nutrition(13)
             .saturationMod(0.8F)
             .effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 1), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 4800, 0), 1.0F)
             .build();
-    //req: MND
+    //req: frycooks
+    public static final FoodProperties FISH_FRY = (new FoodProperties.Builder())
+            .nutrition(14)
+            .saturationMod(0.80F)
+            .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1.0F)
+            .build();
 
 
     /* drink food items */
