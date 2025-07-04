@@ -57,6 +57,16 @@ public class FoodConstants {
             .fast()
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 1), 1.0F)
             .build();
+    public static final FoodProperties ICHORFRUIT = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.55F)
+            .build();
+    //req: endergetic
+    public static final FoodProperties EUMOZZ_CHEESE_WEDGE = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 100, 0), 1.0F)
+            .build();
     //req: create
     public static final FoodProperties CINDER_BREAD = (new FoodProperties.Builder())
             .nutrition(4)

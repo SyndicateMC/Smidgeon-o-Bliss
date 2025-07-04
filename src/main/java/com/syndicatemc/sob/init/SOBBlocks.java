@@ -1,19 +1,35 @@
 package com.syndicatemc.sob.init;
 
+import com.electronwill.nightconfig.core.UnmodifiableConfig;
 import com.syndicatemc.sob.SOB;
 import com.syndicatemc.sob.block.*;
-import com.teamabnormals.blueprint.common.block.thatch.ThatchBlock;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import umpaz.brewinandchewin.common.block.*;
 import vectorwing.farmersdelight.common.block.RiceBaleBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
+import java.util.function.ToIntFunction;
+
+
 public class SOBBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SOB.MOD_ID);
+
+    private static ToIntFunction<BlockState> ichorfruitLight() {
+        return (state) -> {
+            if (state.getValue(BlockStateProperties.AGE_5) == 0 || state.getValue(BlockStateProperties.AGE_5) == 5) {
+                return 0;
+            } else {
+                return state.getValue(BlockStateProperties.AGE_5) * 2;
+            }
+        };
+    }
 
     //decorative blocks
     public static final RegistryObject<Block> COUNTER = BLOCKS.register("counter",
@@ -42,6 +58,8 @@ public class SOBBlocks {
             () -> new CounterBlock(Block.Properties.copy(Blocks.SPRUCE_PLANKS)));
     public static final RegistryObject<Block> WARPED_COUNTER = BLOCKS.register("warped_counter",
             () -> new CounterBlock(Block.Properties.copy(Blocks.WARPED_PLANKS)));
+    public static final RegistryObject<Block> POWDERY_COUNTER = BLOCKS.register("powdery_counter",
+            () -> new CounterBlock(Block.Properties.copy(Blocks.CRIMSON_PLANKS).sound(SoundType.BAMBOO_WOOD)));
 
     //feast blocks
     public static final RegistryObject<Block> SILVERFISH_PLATTER_BLOCK = BLOCKS.register("silverfish_platter_block",
@@ -54,12 +72,18 @@ public class SOBBlocks {
             () -> new PitcherTuberBlock(Block.Properties.copy(Blocks.OAK_PLANKS), SOBItems.TUBER_STICKS));
     public static final RegistryObject<Block> BIG_SOUP_BLOCK = BLOCKS.register("big_soup_block",
             () -> new BigSoupFeastBlock(Block.Properties.of().strength(0.5F, 6.0F).sound(SoundType.LANTERN).noOcclusion()));
+    public static final RegistryObject<Block> UNRIPE_EUMOZZ_CHEESE_WHEEL = BLOCKS.register("unripe_eumozz_cheese_wheel",
+            () -> new UnripeCheeseWheelBlock(SOBBlocks.EUMOZZ_CHEESE_WHEEL, Block.Properties.copy(Blocks.CAKE)));
+    public static final RegistryObject<Block> EUMOZZ_CHEESE_WHEEL = BLOCKS.register("eumozz_cheese_wheel",
+            () -> new CheeseWheelBlock(SOBItems.EUMOZZ_CHEESE_WEDGE, Block.Properties.copy(Blocks.CAKE)));
 
     //crops
     public static final RegistryObject<Block> NOPAL_CROP = BLOCKS.register("nopal_crop",
             () -> new NopalCropBlock(Block.Properties.copy(Blocks.SWEET_BERRY_BUSH).noOcclusion(), () -> SOBItems.NOPAL.get(), () -> SOBItems.PRICKLY_PEAR.get()));
     public static final RegistryObject<Block> ASPARAGUS = BLOCKS.register("asparagus",
             () -> new AsparagusCropBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion()));
+    public static final RegistryObject<Block> ICHORFRUIT = BLOCKS.register("ichorfruit",
+            () -> new IchorfruitBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion().sound(SoundType.NETHER_SPROUTS).lightLevel(ichorfruitLight())));
 
     //wild crops
     public static final RegistryObject<Block> WILD_ASPARAGUS = BLOCKS.register("wild_asparagus",

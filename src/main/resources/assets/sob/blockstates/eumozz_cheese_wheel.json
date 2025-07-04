@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "servings=3": {
+      "model": "sob:block/eumozz_cheese_wheel"
+    },
+    "servings=2": {
+      "model": "sob:block/eumozz_cheese_wheel1"
+    },
+    "servings=1": {
+      "model": "sob:block/eumozz_cheese_wheel2"
+    },
+    "servings=0": {
+      "model": "sob:block/eumozz_cheese_wheel3"
+    }
+  }
+}

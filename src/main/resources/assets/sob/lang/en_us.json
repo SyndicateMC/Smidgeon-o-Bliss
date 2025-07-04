@@ -43,6 +43,9 @@
   "item.sob.tuber_sticks": "Root Sticks",
   "item.sob.root_steak": "Steak with Root Slaw",
   "item.sob.big_soup": "Good ol' Soup",
+  "item.sob.eumozz_cheese_wedge": "Eumozz Cheese Wedge",
+  "item.sob.ichorfruit": "Ichorfruit",
+  "item.sob.ichor_bud": "Ichor Bud",
 
   "block.sob.wild_asparagus": "Wild Asparagus",
   "block.sob.silverfish_platter_block": "Silverfish Platter",
@@ -68,6 +71,10 @@
   "block.sob.oak_counter": "Oak Countertop",
   "block.sob.spruce_counter": "Spruce Countertop",
   "block.sob.warped_counter": "Warped Countertop",
+  "block.sob.powdery_counter": "Powdery Counter",
+  "block.sob.unripe_eumozz_cheese_wheel": "Unripe Eumozz Cheese Wheel",
+  "block.sob.eumozz_cheese_wheel": "Eumozz Cheese Wheel",
+  "block.sob.ichorfruit": "Ichorfruit",
 
   "fluid_type.sob.bitter_tea_type": "Bitter Tea",
   "fluid_type.sob.hard_cider_type": "Hard Cider",
@@ -105,9 +112,9 @@
 
   "subtitle.sob.collapse_building": "Resonance builds",
   "subtitle.sob.collapsing": "Resonance depletes",
-  "subtitle.sob.fizzy_drink": "Sipping",
   "subtitle.sob.spite_prick": "Spite builds",
   "subtitle.sob.spite_consume": "Spite depletes",
+  "subtitle.sob.ichorfruit_explodes": "Ichorfruit explodes",
 
   "death.attack.collapsing": "%1$s felt the vibrations",
   "death.attack.collapsing.player": "%1$s did not get the memo from %2$s"

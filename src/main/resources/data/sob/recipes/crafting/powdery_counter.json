@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "mynethersdelight:powdery_planks"
+    },
+    "S": {
+      "item": "mynethersdelight:powdery_slab"
+    }
+  },
+  "pattern": [
+    "SS",
+    "BB"
+  ],
+  "result": {
+    "count": 3,
+    "item": "sob:powdery_counter"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mynethersdelight"
+    }
+  ]
+}

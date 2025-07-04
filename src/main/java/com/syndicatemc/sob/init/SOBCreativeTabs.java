@@ -39,6 +39,9 @@ public class SOBCreativeTabs {
                         output.accept(BAMBOO_COUNTER.get());
                         output.accept(CRIMSON_COUNTER.get());
                         output.accept(WARPED_COUNTER.get());
+                        if (ModList.get().isLoaded("mynethersdelight")) {
+                            output.accept(POWDERY_COUNTER.get());
+                        }
                         /* items and bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());
@@ -53,6 +56,8 @@ public class SOBCreativeTabs {
                         output.accept(PITCHER_TUBER.get());
                         output.accept(PITCHER_TUBER_BUNDLE.get());
                         output.accept(TUBER_STICKS.get());
+                        output.accept(ICHOR_SPROUT.get());
+                        output.accept(ICHORFRUIT.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
@@ -118,6 +123,12 @@ public class SOBCreativeTabs {
                         }
                         if (ModList.get().isLoaded("neapolitan")) {
                             output.accept(PALE_DAIQUIRI.get());
+                        }
+                        /* cheese */
+                        if (ModList.get().isLoaded("endergetic")) {
+                            output.accept(UNRIPE_EUMOZZ_CHEESE_WHEEL.get());
+                            output.accept(EUMOZZ_CHEESE_WHEEL.get());
+                            output.accept(EUMOZZ_CHEESE_WEDGE.get());
                         }
                         /* feast items and food items */
                         output.accept(BIG_SOUP_BLOCK.get());

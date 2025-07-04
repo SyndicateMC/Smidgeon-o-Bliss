@@ -1,0 +1,40 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "sob:block/ichorfruit",
+		"particle": "block/crimson_roots"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 8],
+			"to": [9, 4, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [6, 13, 7, 15], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 2], "texture": "#0"},
+				"south": {"uv": [6, 13, 7, 15], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 0], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 0, 7],
+			"to": [8, 4, 9],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 2], "texture": "#0"},
+				"east": {"uv": [6, 13, 7, 15], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 2], "texture": "#0"},
+				"west": {"uv": [6, 13, 7, 15], "texture": "#0"},
+				"up": {"uv": [0, 0, 1, 0], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [0, 0, 1, 0], "rotation": 90, "texture": "#0"}
+			}
+		}
+	]
+}

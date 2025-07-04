@@ -1,0 +1,9 @@
+{
+  "parent": "brewinandchewin:block/cheese_wheel_template",
+  "textures": {
+    "top": "sob:block/unripe_eumozz_cheese_wheel_top",
+    "side": "sob:block/unripe_eumozz_cheese_wheel_side",
+    "bottom": "sob:block/unripe_eumozz_cheese_wheel_bottom",
+    "particle": "sob:block/unripe_eumozz_cheese_wheel_top"
+  }
+}

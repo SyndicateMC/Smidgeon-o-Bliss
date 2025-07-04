@@ -31,7 +31,7 @@
         ]
     },
     "item.fizzy_drink": {
-        "subtitle": "subtitle.sob.fizzy_drink",
+        "subtitle": "subtitles.entity.generic.drink",
         "sounds": [
             {
                 "name": "sob:food_sounds/fizzy_drink1"
@@ -41,6 +41,20 @@
             },
             {
                 "name": "sob:food_sounds/fizzy_drink3"
+            }
+        ]
+    },
+    "item.juicy_eat": {
+        "subtitle": "subtitles.entity.generic.eat",
+        "sounds": [
+            {
+                "name": "sob:food_sounds/juicy_eat1"
+            },
+            {
+                "name": "sob:food_sounds/juicy_eat2"
+            },
+            {
+                "name": "sob:food_sounds/juicy_eat3"
             }
         ]
     },
@@ -66,6 +80,14 @@
             },
             {
                 "name": "sob:spite/spite_consume2"
+            }
+        ]
+    },
+    "entity.ichorfruit_explode": {
+        "subtitle": "subtitle.sob.ichorfruit_explode",
+        "sounds": [
+            {
+                "name": "sob:ichorfruit/explode"
             }
         ]
     },

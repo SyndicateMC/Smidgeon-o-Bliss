@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "sob:block/unripe_eumozz_cheese_wheel"
+    },
+    "age=1": {
+      "model": "sob:block/semiripe_eumozz_cheese_wheel"
+    }
+  }
+}

@@ -18,10 +18,14 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.collapsing")));
     public static final RegistryObject<SoundEvent> FIZZY_DRINK = SOUNDS.register("item.fizzy_drink",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.fizzy_drink")));
+    public static final RegistryObject<SoundEvent> JUICY_EAT = SOUNDS.register("item.juicy_eat",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.juicy_eat")));
     public static final RegistryObject<SoundEvent> SPITE_PRICK = SOUNDS.register("entity.spite_prick",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_prick")));
     public static final RegistryObject<SoundEvent> SPITE_CONSUME = SOUNDS.register("entity.spite_consume",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_consume")));
+    public static final RegistryObject<SoundEvent> ICHORFRUIT_EXPLODE = SOUNDS.register("entity.ichorfruit_explode",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.ichorfruit_explode")));
     public static final RegistryObject<SoundEvent> SLAP_BASE = SOUNDS.register("block.slap_base",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.slap_base")));
     public static final RegistryObject<SoundEvent> NICE_GUITAR = SOUNDS.register("block.nice_guitar",

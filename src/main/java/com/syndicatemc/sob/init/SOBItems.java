@@ -24,23 +24,11 @@ import static vectorwing.farmersdelight.common.registry.ModItems.*;
 public class SOBItems {
     public static DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, SOB.MOD_ID);
 
-    /* blocks */
+    /* decorative blocks */
     public static final RegistryObject<Item> COUNTER = ITEMS.register("counter",
             () -> new BlockItem(SOBBlocks.COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> NETHER_COUNTER = ITEMS.register("nether_counter",
             () -> new BlockItem(SOBBlocks.NETHER_COUNTER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> NOPAL_CRATE = ITEMS.register("nopal_crate",
-            () -> new BlockItem(SOBBlocks.NOPAL_CRATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> PRICKLY_PEAR_CRATE = ITEMS.register("prickly_pear_crate",
-            () -> new BlockItem(SOBBlocks.PRICKLY_PEAR_CRATE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> ASPARAGUS_BUNDLE = ITEMS.register("asparagus_bundle",
-            () -> new BlockItem(SOBBlocks.ASPARAGUS_BUNDLE.get(), new Item.Properties()));
-    public static final RegistryObject<Item> WILD_ASPARAGUS = ITEMS.register("wild_asparagus",
-            () -> new BlockItem(SOBBlocks.WILD_ASPARAGUS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> PITCHER_TUBER = ITEMS.register("pitcher_tuber",
-            () -> new BlockItem(SOBBlocks.PITCHER_TUBER.get(), new Item.Properties()));
-    public static final RegistryObject<Item> PITCHER_TUBER_BUNDLE = ITEMS.register("pitcher_tuber_bundle",
-            () -> new BlockItem(SOBBlocks.PITCHER_TUBER_BUNDLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> ACACIA_COUNTER = ITEMS.register("acacia_counter",
             () -> new BlockItem(SOBBlocks.ACACIA_COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> BAMBOO_COUNTER = ITEMS.register("bamboo_counter",
@@ -63,6 +51,31 @@ public class SOBItems {
             () -> new BlockItem(SOBBlocks.SPRUCE_COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> WARPED_COUNTER = ITEMS.register("warped_counter",
             () -> new BlockItem(SOBBlocks.WARPED_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> POWDERY_COUNTER = ITEMS.register("powdery_counter",
+            () -> new BlockItem(SOBBlocks.POWDERY_COUNTER.get(), new Item.Properties()));
+
+    /* crop storage blocks */
+    public static final RegistryObject<Item> NOPAL_CRATE = ITEMS.register("nopal_crate",
+            () -> new BlockItem(SOBBlocks.NOPAL_CRATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PRICKLY_PEAR_CRATE = ITEMS.register("prickly_pear_crate",
+            () -> new BlockItem(SOBBlocks.PRICKLY_PEAR_CRATE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ASPARAGUS_BUNDLE = ITEMS.register("asparagus_bundle",
+            () -> new BlockItem(SOBBlocks.ASPARAGUS_BUNDLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PITCHER_TUBER_BUNDLE = ITEMS.register("pitcher_tuber_bundle",
+            () -> new BlockItem(SOBBlocks.PITCHER_TUBER_BUNDLE.get(), new Item.Properties()));
+
+    /* misc blocks */
+    public static final RegistryObject<Item> WILD_ASPARAGUS = ITEMS.register("wild_asparagus",
+            () -> new BlockItem(SOBBlocks.WILD_ASPARAGUS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> PITCHER_TUBER = ITEMS.register("pitcher_tuber",
+            () -> new BlockItem(SOBBlocks.PITCHER_TUBER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> UNRIPE_EUMOZZ_CHEESE_WHEEL = ITEMS.register("unripe_eumozz_cheese_wheel",
+            () -> new BlockItem(SOBBlocks.UNRIPE_EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> EUMOZZ_CHEESE_WHEEL = ITEMS.register("eumozz_cheese_wheel",
+            () -> new BlockItem(SOBBlocks.EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ICHOR_BUD = ITEMS.register("ichor_bud",
+            () -> new ItemNameBlockItem(SOBBlocks.ICHORFRUIT.get(), new Item.Properties()));
+
     /* items */
     public static final RegistryObject<Item> ASPARAGUS_SEEDS = ITEMS.register("asparagus_seeds",
             () -> new ItemNameBlockItem(SOBBlocks.ASPARAGUS.get(), new Item.Properties()));
@@ -91,7 +104,11 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.VEGGIE_WRAP)));
     public static final RegistryObject<Item> TUBER_STICKS = ITEMS.register("tuber_sticks",
             () -> new Item(foodItem(FoodConstants.TUBER_STICKS)));
-
+    public static final RegistryObject<Item> ICHORFRUIT = ITEMS.register("ichorfruit",
+            () -> new IchorfruitItem(foodItem(FoodConstants.ICHORFRUIT)));
+    //req: endergetic
+    public static final RegistryObject<Item> EUMOZZ_CHEESE_WEDGE = ITEMS.register("eumozz_cheese_wedge",
+            () -> new Item(foodItem(FoodConstants.EUMOZZ_CHEESE_WEDGE)));
     //req: ENVI & UA
     public static final RegistryObject<Item> DUCK_SANDWICH = ITEMS.register("duck_sandwich",
             () -> new Item(foodItem(FoodConstants.DUCK_SANDWICH)));

@@ -2,7 +2,7 @@ package com.syndicatemc.sob;
 
 import com.syndicatemc.sob.init.*;
 import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
-import com.syndicatemc.sob.utillity.SOBTranslationKey;
+import com.syndicatemc.sob.utility.SOBTranslationKey;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
