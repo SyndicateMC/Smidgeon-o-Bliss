@@ -46,6 +46,8 @@
   "item.sob.eumozz_cheese_wedge": "Eumozz Cheese Wedge",
   "item.sob.ichorfruit": "Ichorfruit",
   "item.sob.ichor_bud": "Ichor Bud",
+  "item.sob.fish_fry": "Fish Fry",
+  "item.sob.death_drink": "Libation of Cessation",
 
   "block.sob.wild_asparagus": "Wild Asparagus",
   "block.sob.silverfish_platter_block": "Silverfish Platter",
@@ -83,6 +85,7 @@
   "fluid_type.sob.pale_daiquiri_type": "Pale Daiquiri",
   "fluid_type.sob.sunrise_seltzer_type": "Sunrise Seltzer",
   "fluid_type.sob.aloe_tea_type": "Aloe Tea",
+  "fluid_type.sob.death_drink_type": "Libation of Cessation",
 
   "effect.sob.bitterness": "Bitterness",
   "effect.sob.bitterness.description": "Increases attack damage dependant on hunger level. The lower your hunger, the more damage you deal.",
@@ -103,7 +106,7 @@
   "effect.sob.exposed": "Exposed",
   "effect.sob.exposed.description": "Reduces armor and increases damage taken.",
   "effect.sob.cessation": "Cessation",
-  "effect.sob.cessation.description": "Deals absurd amounts of damage to the entity upon effect expiry or removal.",
+  "effect.sob.cessation.description": "Deals absurd amounts of damage to you upon effect expiry or removal.",
 
   "tooltip.sob.makes_explosion": "Explodes when drank",
   "tooltip.sob.makes_sparkles": "Sparkles when eaten",
@@ -113,6 +116,7 @@
   "tooltip.sob.surprising_flavor": "Surprising flavor!",
   "tooltip.sob.surprising_flavor_effect_give": "Can give",
   "tooltip.sob.extends_comfort": "Extends Comfort by 1 minute",
+  "tooltip.sob.inevitable_death": "Starts a timer for your inevitable death",
 
   "subtitle.sob.collapse_building": "Resonance builds",
   "subtitle.sob.collapsing": "Resonance depletes",
@@ -120,6 +124,8 @@
   "subtitle.sob.spite_consume": "Spite depletes",
   "subtitle.sob.ichorfruit_explodes": "Ichorfruit explodes",
   "subtitle.sob.ceasing": "Heart beats",
+  "subtitle.sob.bell_toll": "Days become numbered",
+  "subtitle.sob.bell_toll_fail": "A soul is reclaimed",
 
   "death.attack.collapsing": "%1$s felt the vibrations",
   "death.attack.collapsing.player": "%1$s did not get the memo from %2$s",

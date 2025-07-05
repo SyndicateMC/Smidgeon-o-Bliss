@@ -92,6 +92,7 @@ public class SOBEvents {
         }
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+            e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL_FAIL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
         }
     }
     @SubscribeEvent
@@ -100,6 +101,15 @@ public class SOBEvents {
         Entity entity = event.getEntity();
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+            e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL_FAIL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
+        }
+    }
+    @SubscribeEvent
+    public static void mobEffectAddedEvent(MobEffectEvent.Added event) {
+        MobEffect effect = event.getEffectInstance().getEffect();
+        Entity entity = event.getEntity();
+        if (entity instanceof LivingEntity e && !e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) {
+            e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
         }
     }
 

@@ -229,6 +229,12 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 600, 1), 1.0F)
             .alwaysEat()
             .build();
+    public static final FoodProperties DEATH_DRINK = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 6000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 6000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, 3), 1.0F)
+            .alwaysEat()
+            .build();
     //req: ATMO
     public static final FoodProperties TEQUILA = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 3600, 0), 1.0F)

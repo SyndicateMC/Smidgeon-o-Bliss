@@ -128,6 +128,7 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("neapolitan")) {
                             output.accept(PALE_DAIQUIRI.get());
                         }
+                        output.accept(DEATH_DRINK.get());
                         /* cheese */
                         if (ModList.get().isLoaded("endergetic")) {
                             output.accept(UNRIPE_EUMOZZ_CHEESE_WHEEL.get());

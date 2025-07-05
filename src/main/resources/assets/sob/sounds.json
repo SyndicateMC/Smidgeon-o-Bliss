@@ -91,6 +91,22 @@
             }
         ]
     },
+    "entity.bell_toll": {
+        "subtitle": "subtitle.sob.bell_toll",
+        "sounds": [
+            {
+                "name": "sob:bell_toll"
+            }
+        ]
+    },
+    "entity.bell_toll_fail": {
+        "subtitle": "subtitle.sob.bell_toll_fail",
+        "sounds": [
+            {
+                "name": "sob:bell_toll_fail"
+            }
+        ]
+    },
     "entity.ichorfruit_explode": {
         "subtitle": "subtitle.sob.ichorfruit_explode",
         "sounds": [

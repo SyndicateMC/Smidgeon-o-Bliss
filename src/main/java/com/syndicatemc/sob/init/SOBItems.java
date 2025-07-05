@@ -186,6 +186,8 @@ public class SOBItems {
     /* booze food items */
     public static final RegistryObject<Item> HARD_CIDER = ITEMS.register("hard_cider", () -> new BoozeItem(SOBFluids.HARD_CIDER.get(), new Item.Properties()
             .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.HARD_CIDER)));
+    public static final RegistryObject<Item> DEATH_DRINK = ITEMS.register("death_drink", () -> new DeathDrinkItem(SOBFluids.DEATH_DRINK.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.DEATH_DRINK)));
     //req: ATMO
     public static final RegistryObject<Item> TEQUILA = ITEMS.register("tequila", () -> new BoozeItem(SOBFluids.TEQUILA.get(), new Item.Properties()
             .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.TEQUILA)));
