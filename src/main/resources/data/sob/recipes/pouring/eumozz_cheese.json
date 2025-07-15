@@ -1,0 +1,19 @@
+{
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 1000,
+  "filling": true,
+  "fluid": "sob:eumozz_cheese",
+  "output": {
+    "item": "sob:unripe_eumozz_cheese_wheel"
+  },
+  "strict": false,
+  "container": {
+    "item": "minecraft:honeycomb"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ]
+}

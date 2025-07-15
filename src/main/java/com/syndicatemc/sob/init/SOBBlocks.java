@@ -69,13 +69,15 @@ public class SOBBlocks {
     public static final RegistryObject<Block> DONUT_BOX_BLOCK = BLOCKS.register("donut_box_block",
             () -> new DonutBoxBlock(Block.Properties.copy(Blocks.SCAFFOLDING).noOcclusion()));
     public static final RegistryObject<Block> PITCHER_TUBER = BLOCKS.register("pitcher_tuber",
-            () -> new PitcherTuberBlock(Block.Properties.copy(Blocks.OAK_PLANKS), SOBItems.TUBER_STICKS));
+            () -> new PitcherTuberBlock(Block.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.STEM), SOBItems.TUBER_STICKS));
     public static final RegistryObject<Block> BIG_SOUP_BLOCK = BLOCKS.register("big_soup_block",
             () -> new BigSoupFeastBlock(Block.Properties.of().strength(0.5F, 6.0F).sound(SoundType.LANTERN).noOcclusion()));
     public static final RegistryObject<Block> UNRIPE_EUMOZZ_CHEESE_WHEEL = BLOCKS.register("unripe_eumozz_cheese_wheel",
             () -> new UnripeCheeseWheelBlock(SOBBlocks.EUMOZZ_CHEESE_WHEEL, Block.Properties.copy(Blocks.CAKE)));
     public static final RegistryObject<Block> EUMOZZ_CHEESE_WHEEL = BLOCKS.register("eumozz_cheese_wheel",
             () -> new CheeseWheelBlock(SOBItems.EUMOZZ_CHEESE_WEDGE, Block.Properties.copy(Blocks.CAKE)));
+    public static final RegistryObject<Block> RED_RUM_SKULL = BLOCKS.register("red_rum_skull",
+            () -> new RedRumSkullBlock(Block.Properties.copy(Blocks.SKELETON_SKULL).noOcclusion().sound(SoundType.BONE_BLOCK)));
 
     //crops
     public static final RegistryObject<Block> NOPAL_CROP = BLOCKS.register("nopal_crop",
@@ -97,7 +99,7 @@ public class SOBBlocks {
     public static final RegistryObject<Block> ASPARAGUS_BUNDLE = BLOCKS.register("asparagus_bundle",
             () -> new RiceBaleBlock(Block.Properties.copy(Blocks.HAY_BLOCK))); /* uses RiceBaleBlock class as if functions almost identically to it */
     public static final RegistryObject<Block> PITCHER_TUBER_BUNDLE = BLOCKS.register("pitcher_tuber_bundle",
-            () -> new PitcherTuberBundleBlock(Block.Properties.copy(Blocks.OAK_PLANKS)));
+            () -> new PitcherTuberBundleBlock(Block.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.STEM)));
 
     public static void init(IEventBus bus) {
         BLOCKS.register(bus);

@@ -27,7 +27,7 @@ public class CessationEffect extends MobEffect {
                 player.level().playSeededSound(player, player.getX(), player.getY(), player.getZ(), SOBSounds.HEARTBEAT.get(), SoundSource.PLAYERS, 0.5F, 1.0F, 1);
             } else if (effect.getDuration() < 1200 && effect.getDuration() >= 600) {
                 player.level().playSeededSound(player, player.getX(), player.getY(), player.getZ(), SOBSounds.HEARTBEAT.get(), SoundSource.PLAYERS, 0.75F, 1.0F, 1);
-            } else if (effect.getDuration() < 600) {
+            } else if (effect.getDuration() < 600 && effect.getDuration() >= 40) {
                 player.level().playSeededSound(player, player.getX(), player.getY(), player.getZ(), SOBSounds.HEARTBEAT.get(), SoundSource.PLAYERS, 1.0F, 1.0F, 1);
             }
         }

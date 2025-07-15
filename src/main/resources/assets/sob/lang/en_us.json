@@ -48,6 +48,7 @@
   "item.sob.ichor_bud": "Ichor Bud",
   "item.sob.fish_fry": "Fish Fry",
   "item.sob.death_drink": "Libation of Cessation",
+  "item.sob.fish_stick_stick": "Fish Sticks on a Stick",
 
   "block.sob.wild_asparagus": "Wild Asparagus",
   "block.sob.silverfish_platter_block": "Silverfish Platter",
@@ -77,6 +78,7 @@
   "block.sob.unripe_eumozz_cheese_wheel": "Unripe Eumozz Cheese Wheel",
   "block.sob.eumozz_cheese_wheel": "Eumozz Cheese Wheel",
   "block.sob.ichorfruit": "Ichorfruit",
+  "block.sob.red_rum_skull": "Skull of Red Rum",
 
   "fluid_type.sob.bitter_tea_type": "Bitter Tea",
   "fluid_type.sob.hard_cider_type": "Hard Cider",
@@ -86,6 +88,7 @@
   "fluid_type.sob.sunrise_seltzer_type": "Sunrise Seltzer",
   "fluid_type.sob.aloe_tea_type": "Aloe Tea",
   "fluid_type.sob.death_drink_type": "Libation of Cessation",
+  "fluid_type.sob.eumozz_cheese_type": "Eumozz Cheese",
 
   "effect.sob.bitterness": "Bitterness",
   "effect.sob.bitterness.description": "Increases attack damage dependant on hunger level. The lower your hunger, the more damage you deal.",
@@ -117,6 +120,7 @@
   "tooltip.sob.surprising_flavor_effect_give": "Can give",
   "tooltip.sob.extends_comfort": "Extends Comfort by 1 minute",
   "tooltip.sob.inevitable_death": "Starts a timer for your inevitable death",
+  "tooltip.sob.heal_5_percent_health": "Heals 5% of max health",
 
   "subtitle.sob.collapse_building": "Resonance builds",
   "subtitle.sob.collapsing": "Resonance depletes",

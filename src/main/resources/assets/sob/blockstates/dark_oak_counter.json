@@ -8,11 +8,12 @@
       "model": "sob:block/dark_oak_counter"
     },
     "facing=south": {
-      "model": "sob:block/dark_oak_counter"
+      "model": "sob:block/dark_oak_counter",
+      "y": 180
     },
     "facing=west": {
       "model": "sob:block/dark_oak_counter",
-      "y": 90
+      "y": 270
     }
   }
 }

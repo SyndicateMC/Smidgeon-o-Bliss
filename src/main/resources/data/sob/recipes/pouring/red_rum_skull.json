@@ -1,0 +1,13 @@
+{
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 1000,
+  "filling": true,
+  "fluid": "brewinandchewin:red_rum",
+  "output": {
+    "item": "sob:red_rum_skull"
+  },
+  "strict": false,
+  "container": {
+    "item": "minecraft:skeleton_skull"
+  }
+}

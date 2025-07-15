@@ -85,6 +85,11 @@ public class FoodConstants {
             .saturationMod(0.3F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 200, 0), 1.0F)
             .build();
+    //req: frycooks
+    public static final FoodProperties FISH_STICK_STICK = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.3F)
+            .build();
 
     /* bowl food items */
     public static final FoodProperties GRAVY = (new FoodProperties.Builder())
@@ -121,10 +126,11 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
             .build();
     // big poop food item when
+    // never you moron
     public static final FoodProperties BIG_SOUP = (new FoodProperties.Builder())
             .nutrition(8)
             .saturationMod(0.65F)
-            .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 600, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 600, 0), 1.0F)
             .build();
     public static final FoodProperties ROOT_STEAK = (new FoodProperties.Builder())
             .nutrition(12)
@@ -167,7 +173,6 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200, 0), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1.0F)
             .build();
-
 
     /* drink food items */
     public static final FoodProperties BIRCH_BEER = (new FoodProperties.Builder())

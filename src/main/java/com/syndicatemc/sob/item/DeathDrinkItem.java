@@ -40,7 +40,11 @@ public class DeathDrinkItem extends BoozeItem {
             tooltip.add(SOBTranslationKey.getTranslation("inevitable_death", "tooltip").withStyle(ChatFormatting.DARK_RED));
             tooltip.add(Component.translatable("effect.brewinandchewin.tipsy").withStyle(ChatFormatting.RED).append(Component.literal(" (05:00)").withStyle(ChatFormatting.RED)));
             tooltip.add(Component.translatable("effect.brewinandchewin.intoxication").withStyle(ChatFormatting.RED).append(Component.literal(" (05:00)").withStyle(ChatFormatting.RED)));
-            tooltip.add(Component.translatable("effect.minecraft.resistance").withStyle(ChatFormatting.BLUE).append(Component.literal(" (10:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.translatable("effect.minecraft.resistance").withStyle(ChatFormatting.BLUE)
+                    .append(Component.literal(" ").withStyle(ChatFormatting.BLUE)
+                        .append(Component.translatable("potion.potency.3").withStyle(ChatFormatting.BLUE)
+                            .append(Component.literal(" (10:00)").withStyle(ChatFormatting.BLUE)
+                            ))));
         }
     }
 }

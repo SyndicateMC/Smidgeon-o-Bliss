@@ -19,9 +19,9 @@ public class BuilderSmoothieItem extends DrinkableItem {
     private final boolean hasFoodEffectTooltip;
     private final boolean hasCustomTooltip;
 
-    public BuilderSmoothieItem(Properties properties, boolean hasFoodEffectTooltip) {
+    public BuilderSmoothieItem(Properties properties) {
         super(properties);
-        this.hasFoodEffectTooltip = hasFoodEffectTooltip;
+        this.hasFoodEffectTooltip = true;
         this.hasCustomTooltip = false;
     }
 
@@ -40,14 +40,7 @@ public class BuilderSmoothieItem extends DrinkableItem {
 
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
         if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
-            if (this.hasCustomTooltip) {
-                MutableComponent textEmpty = TextUtils.getTranslation("tooltip." + this, new Object[0]);
-                tooltip.add(textEmpty.withStyle(ChatFormatting.BLUE));
-            }
-
-            if (this.hasFoodEffectTooltip) {
-                TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F);
-            }
+            TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F);
         }
     }
 }

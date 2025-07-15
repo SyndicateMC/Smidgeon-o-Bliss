@@ -1,14 +1,22 @@
 package com.syndicatemc.sob.item;
 
 import com.syndicatemc.sob.init.SOBSounds;
+import com.syndicatemc.sob.utility.SOBTranslationKey;
 import com.teamabnormals.atmospheric.common.entity.OrangeVaporCloud;
 import com.teamabnormals.atmospheric.core.registry.AtmosphericEntityTypes;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 import umpaz.brewinandchewin.common.item.BoozeItem;
+import vectorwing.farmersdelight.common.Configuration;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class SunriseSeltzerItem extends BoozeItem {
     public SunriseSeltzerItem(Fluid fluid, Properties properties) {
@@ -33,5 +41,13 @@ public class SunriseSeltzerItem extends BoozeItem {
             level.addFreshEntity(cloud);
         }
         return super.finishUsingItem(stack, level, consumer);
+    }
+
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
+        if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
+            tooltip.add(Component.translatable("effect.brewinandchewin.tipsy").withStyle(ChatFormatting.RED).append(Component.literal(" (01:00)").withStyle(ChatFormatting.RED)));
+            tooltip.add(Component.translatable("effect.brewinandchewin.intoxication").withStyle(ChatFormatting.RED).append(Component.literal(" (01:00)").withStyle(ChatFormatting.RED)));
+            tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
+        }
     }
 }

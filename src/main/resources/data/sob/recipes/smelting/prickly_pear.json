@@ -2,8 +2,8 @@
   "type": "minecraft:smelting",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": "sob:prickly_pear",
-  "result": {
-    "id": "minecraft:magenta_dye"
-  }
+  "ingredient": {
+    "item": "sob:prickly_pear"
+  },
+  "result": "minecraft:magenta_dye"
 }

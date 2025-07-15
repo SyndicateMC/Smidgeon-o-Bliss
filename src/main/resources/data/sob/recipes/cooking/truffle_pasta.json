@@ -10,16 +10,16 @@
       "tag": "forge:mushrooms"
     },
     {
-      "tag": "forge:mushrooms"
-    },
-    {
       "tag": "forge:milk"
     },
     {
       "tag": "forge:milk"
     },
     {
-      "item": "minecraft:potato"
+      "item": "farmersdelight:raw_pasta"
+    },
+    {
+      "item": "farmersdelight:raw_pasta"
     }
   ],
   "result": {

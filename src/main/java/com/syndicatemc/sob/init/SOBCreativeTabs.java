@@ -57,8 +57,9 @@ public class SOBCreativeTabs {
                         output.accept(PITCHER_TUBER.get());
                         output.accept(PITCHER_TUBER_BUNDLE.get());
                         output.accept(TUBER_STICKS.get());
-                        output.accept(ICHOR_BUD.get());
-                        output.accept(ICHORFRUIT.get());
+                        //unfinished
+                        //output.accept(ICHOR_BUD.get());
+                        //output.accept(ICHORFRUIT.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
@@ -72,6 +73,7 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("frycooks_delight") && ModList.get().isLoaded("autumnity")) {
                             output.accept(MAPLE_DONUT.get());
                         }
+                        output.accept(FISH_STICK_STICK.get());
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(MNDCompatItems.HONEY_BARBECUE_STICK.get());
                         }
@@ -149,6 +151,7 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("autumnity") && ModList.get().isLoaded("frycooks_delight")) {
                             output.accept(DONUT_BOX_BLOCK.get());
                         }
+                        output.accept(RED_RUM_SKULL.get());
                     })
                     .build());
 

@@ -1,0 +1,37 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:milk"
+  },
+  "experience": 1.0,
+  "fermentingtime": 9600,
+  "ingredients": [
+    [
+      {
+        "item": "endergetic:poise_bush"
+      },
+      {
+        "item": "endergetic:tall_poise_bush"
+      }
+    ],
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1000,
+    "fluid": "sob:eumozz_cheese"
+  },
+  "temperature": 4,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ]
+}

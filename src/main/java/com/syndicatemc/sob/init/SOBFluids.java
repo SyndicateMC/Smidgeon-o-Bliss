@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import com.syndicatemc.sob.fluid.EumozzCheeseFluidType;
 import com.syndicatemc.sob.fluid.SOBFluidTypes;
 import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
@@ -60,6 +61,12 @@ public class SOBFluids {
     public static final RegistryObject<FlowingFluid> ALOE_TEA = FLUIDS.register("aloe_tea", () -> new ForgeFlowingFluid.Source(SOBFluids.ALOE_TEA_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_ALOE_TEA = FLUIDS.register("flowing_aloe_tea", () -> new ForgeFlowingFluid.Flowing(SOBFluids.ALOE_TEA_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties ALOE_TEA_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(ALOE_TEA_FLUID_TYPE, ALOE_TEA, FLOWING_ALOE_TEA);
+
+    //req: endergetic
+    public static final RegistryObject<FluidType> EUMOZZ_CHEESE_FLUID_TYPE = FLUID_TYPES.register("eumozz_cheese_type", EumozzCheeseFluidType::new);
+    public static final RegistryObject<FlowingFluid> EUMOZZ_CHEESE = FLUIDS.register("eumozz_cheese", () -> new ForgeFlowingFluid.Source(SOBFluids.EUMOZZ_CHEESE_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_EUMOZZ_CHEESE = FLUIDS.register("flowing_eumozz_cheese", () -> new ForgeFlowingFluid.Flowing(SOBFluids.EUMOZZ_CHEESE_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties EUMOZZ_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(EUMOZZ_CHEESE_FLUID_TYPE, EUMOZZ_CHEESE, FLOWING_EUMOZZ_CHEESE);
 
     public static void init(IEventBus bus) {
         FLUIDS.register(bus);

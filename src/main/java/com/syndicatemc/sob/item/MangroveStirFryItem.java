@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.item;
 
 import com.syndicatemc.sob.init.SOBSounds;
+import com.syndicatemc.sob.utility.SOBTranslationKey;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -25,9 +26,9 @@ public class MangroveStirFryItem extends ConsumableItem {
     private final boolean hasFoodEffectTooltip;
     private final boolean hasCustomTooltip;
 
-    public MangroveStirFryItem(Properties properties, boolean hasFoodEffectTooltip) {
+    public MangroveStirFryItem(Properties properties) {
         super(properties);
-        this.hasFoodEffectTooltip = hasFoodEffectTooltip;
+        this.hasFoodEffectTooltip = true;
         this.hasCustomTooltip = false;
     }
 
@@ -52,14 +53,12 @@ public class MangroveStirFryItem extends ConsumableItem {
 
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag isAdvanced) {
         if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
-            if (this.hasCustomTooltip) {
-                MutableComponent textEmpty = TextUtils.getTranslation("tooltip." + this, new Object[0]);
-                tooltip.add(textEmpty.withStyle(ChatFormatting.BLUE));
-            }
-
-            if (this.hasFoodEffectTooltip) {
-                TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F);
-            }
+            TextUtils.addFoodEffectTooltip(stack, tooltip, 1.0F);
+            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor", "tooltip").withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC));
+            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor_effect_give", "tooltip").withStyle(ChatFormatting.GRAY).append(Component.literal(":")));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.strength").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.luck").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
+            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.hunger").withStyle(ChatFormatting.RED)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.RED)));
         }
     }
 }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "frycooks_delight:fried_fish_slice"
+    },
+    {
+      "tag": "forge:salad_ingredients/cabbage"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "sob:fish_fry"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "frycooks_delight"
+    }
+  ]
+}

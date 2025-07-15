@@ -1,0 +1,65 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"particle": "farmersdelight:block/tray_top",
+		"tray_top": "farmersdelight:block/tray_top",
+		"tray_bottom": "farmersdelight:block/tray_bottom"
+	},
+	"elements": [
+		{
+			"name": "tray",
+			"from": [1, 0, 1],
+			"to": [15, 2, 15],
+			"faces": {
+				"north": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"east": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"south": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"west": {"uv": [1, 11, 15, 13], "texture": "#tray_bottom"},
+				"up": {"uv": [1, 1, 15, 15], "texture": "#tray_top"},
+				"down": {"uv": [1, 1, 15, 15], "texture": "#tray_top"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		},
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		},
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		},
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		},
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		},
+		{
+			"name": "group",
+			"origin": [6.5, 3, 7],
+			"color": 0,
+			"children": []
+		}
+	]
+}

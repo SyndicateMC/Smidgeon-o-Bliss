@@ -26,6 +26,7 @@ import net.minecraftforge.event.level.NoteBlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import vectorwing.farmersdelight.common.Configuration;
 
 import java.util.List;
 
@@ -91,7 +92,7 @@ public class SOBEvents {
             e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
         }
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
-            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth()*10);
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL_FAIL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
         }
     }
@@ -100,7 +101,7 @@ public class SOBEvents {
         MobEffect effect = event.getEffectInstance().getEffect();
         Entity entity = event.getEntity();
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
-            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth());
+            e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth()*10);
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL_FAIL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
         }
     }
@@ -110,57 +111,6 @@ public class SOBEvents {
         Entity entity = event.getEntity();
         if (entity instanceof LivingEntity e && !e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) {
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.BELL_TOLL.get(), SoundSource.NEUTRAL, 10, 1.0F, 1);
-        }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    @SubscribeEvent
-    public static void addTooltips(ItemTooltipEvent event) {
-        Item item = event.getItemStack().getItem();
-        List<Component> tooltip = event.getToolTip();
-
-        if (item == SOBItems.GILDED_POTATO.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("makes_sparkles", "tooltip").withStyle(ChatFormatting.BLUE));
-        }
-        if (item == SOBItems.BIG_SOUP.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("extends_comfort", "tooltip").withStyle(ChatFormatting.BLUE));
-        }
-        if (item == SOBItems.ALOE_TEA.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("extinguishes", "tooltip").withStyle(ChatFormatting.BLUE));
-        }
-        if (ModList.get().isLoaded("atmospheric")) {
-            if (item == AtmoCompatItems.ORANGE_JUICE.get()) {
-                tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
-            }
-        }
-        if (item == SOBItems.BIRCH_BEER.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor", "tooltip").withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC));
-            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor_effect_give", "tooltip").withStyle(ChatFormatting.GRAY).append(Component.literal(":")));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.resistance").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.regeneration").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.farmersdelight.comfort").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (00:30)").withStyle(ChatFormatting.BLUE)));
-        }
-        if (ModList.get().isLoaded("neapolitan")) {
-            if (item == SOBItems.PALE_DAIQUIRI.get()) {
-                tooltip.add(SOBTranslationKey.getTranslation("heal_25_percent_health", "tooltip").withStyle(ChatFormatting.BLUE));
-            }
-        }
-        if (ModList.get().isLoaded("atmospheric")) {
-            if (item == AtmoCompatItems.SUNRISE_SELTZER.get()) {
-                tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
-            }
-        }
-        if (ModList.get().isLoaded("savage_and_ravage")) {
-            if (item == SOBItems.CREEPER_DRINK.get()) {
-                tooltip.add(SOBTranslationKey.getTranslation("makes_explosion", "tooltip").withStyle(ChatFormatting.BLUE));
-            }
-        }
-        if (item == SOBItems.MANGROVE_STIR_FRY.get()) {
-            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor", "tooltip").withStyle(ChatFormatting.BLUE).withStyle(ChatFormatting.ITALIC));
-            tooltip.add(SOBTranslationKey.getTranslation("surprising_flavor_effect_give", "tooltip").withStyle(ChatFormatting.GRAY).append(Component.literal(":")));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.strength").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.luck").withStyle(ChatFormatting.BLUE)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.BLUE)));
-            tooltip.add(Component.literal(" ").append(Component.translatable("effect.minecraft.hunger").withStyle(ChatFormatting.RED)).append(Component.literal(" (03:00)").withStyle(ChatFormatting.RED)));
         }
     }
 

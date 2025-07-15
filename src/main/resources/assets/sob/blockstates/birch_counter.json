@@ -8,11 +8,12 @@
       "model": "sob:block/birch_counter"
     },
     "facing=south": {
-      "model": "sob:block/birch_counter"
+      "model": "sob:block/birch_counter",
+      "y": 180
     },
     "facing=west": {
       "model": "sob:block/birch_counter",
-      "y": 90
+      "y": 270
     }
   }
 }
