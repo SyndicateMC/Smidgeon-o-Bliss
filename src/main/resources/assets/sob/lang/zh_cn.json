@@ -43,7 +43,7 @@
   "item.sob.tuber_sticks": "切条根茎",
   "item.sob.root_steak": "牛排配蔬菜条",
   "item.sob.big_soup": "大锅汤",
-  "item.sob.eumozz_cheese_wedge": "Eumozz奶酪块",
+  "item.sob.eumozz_cheese_wedge": "幽陌苏奶酪块",
   "item.sob.ichorfruit": "灵浆果",
   "item.sob.ichor_bud": "灵浆蕾",
   "item.sob.fish_fry": "炸鱼",
@@ -75,8 +75,8 @@
   "block.sob.spruce_counter": "云杉木料理台",
   "block.sob.warped_counter": "诡异木料理台",
   "block.sob.powdery_counter": "烟药竹料理台",
-  "block.sob.unripe_eumozz_cheese_wheel": "未熟成的Eumozz奶酪轮",
-  "block.sob.eumozz_cheese_wheel": "Eumozz奶酪轮",
+  "block.sob.unripe_eumozz_cheese_wheel": "未熟成的幽陌苏奶酪轮",
+  "block.sob.eumozz_cheese_wheel": "幽陌苏奶酪轮",
   "block.sob.ichorfruit": "灵浆果",
   "block.sob.red_rum_skull": "红骷髅朗姆酒",
 
@@ -88,7 +88,7 @@
   "fluid_type.sob.sunrise_seltzer_type": "日出气泡水",
   "fluid_type.sob.aloe_tea_type": "芦荟茶",
   "fluid_type.sob.death_drink_type": "辞世调饮",
-  "fluid_type.sob.eumozz_cheese_type": "Eumozz奶酪",
+  "fluid_type.sob.eumozz_cheese_type": "幽陌苏奶酪",
 
   "effect.sob.bitterness": "苦涩",
   "effect.sob.bitterness.description": "根据已损失饥饿值增加伤害。饥饿值越低，造成伤害越高。",
