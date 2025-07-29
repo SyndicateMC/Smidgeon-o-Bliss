@@ -117,9 +117,9 @@
   "tooltip.sob.extinguishes": "扑灭火焰",
   "tooltip.sob.heal_25_percent_health": "回复25%最大生命值",
   "tooltip.sob.surprising_flavor": "奇妙风味！",
-  "tooltip.sob.surprising_flavor_effect_give": "拥有各种",
+  "tooltip.sob.surprising_flavor_effect_give": "拥有以下效果：",
   "tooltip.sob.extends_comfort": "使舒适效果延长1分钟",
-  "tooltip.sob.inevitable_death": "你的生命已如风中残烛",
+  "tooltip.sob.inevitable_death": "为终将到来的死亡干杯",
   "tooltip.sob.heal_5_percent_health": "回复5%最大生命值",
 
   "subtitle.sob.collapse_building": "共振：积蓄",
