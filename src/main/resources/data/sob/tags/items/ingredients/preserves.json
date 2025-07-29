@@ -1,0 +1,10 @@
+{
+  "values": [
+    "brewinandchewin:sweet_berry_jam",
+    "brewinandchewin:glow_berry_marmalade",
+    "brewinandchewin:apple_jelly",
+    "sob:strawberry_jam",
+    "sob:orange_marmalade",
+    {"id": "sob:pepper_jelly","required": false}
+  ]
+}

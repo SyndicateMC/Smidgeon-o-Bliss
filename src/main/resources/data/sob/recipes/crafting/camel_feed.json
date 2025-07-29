@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:nopal_crate"
+    },
+    {
+      "tag": "sob:ingredients/camel_feed_shrubs"
+    },
+    {
+      "tag": "sob:ingredients/camel_feed_shrubs"
+    },
+    {
+      "tag": "sob:ingredients/camel_feed_fruits"
+    }
+  ],
+  "result": {
+    "item": "sob:camel_feed"
+  }
+}

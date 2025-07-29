@@ -30,6 +30,14 @@
             }
         ]
     },
+    "entity.echo_teleport": {
+        "subtitle": "subtitle.sob.echo_teleport",
+        "sounds": [
+            {
+                "name": "sob:resonance/echo_teleport"
+            }
+        ]
+    },
     "item.fizzy_drink": {
         "subtitle": "subtitles.entity.generic.drink",
         "sounds": [
@@ -128,6 +136,14 @@
         "sounds": [
             {
                 "name": "sob:note_block/nice_guitar"
+            }
+        ]
+    },
+    "block.toot": {
+        "subtitle": "subtitles.block.note_block.note",
+        "sounds": [
+            {
+                "name": "sob:note_block/toot"
             }
         ]
     }

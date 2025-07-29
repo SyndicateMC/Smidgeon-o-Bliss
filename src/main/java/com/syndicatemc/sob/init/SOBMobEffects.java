@@ -26,10 +26,13 @@ public class SOBMobEffects {
     public static final RegistryObject<MobEffect> SPITE_BOOST = MOB_EFFECTS.register("spite_boost", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0xA8379E));
     public static final RegistryObject<MobEffect> REACH = MOB_EFFECTS.register("reach", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0x31a15e)
             .addAttributeModifier(ForgeMod.BLOCK_REACH.get(), "9e6901e5-a3cc-446c-94ed-56dd2e3cd70b", 2.0, AttributeModifier.Operation.ADDITION)
-            .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "4c08845b-48ff-4964-9d5c-d94bd90a853f", 0.5, AttributeModifier.Operation.ADDITION));
+            .addAttributeModifier(ForgeMod.ENTITY_REACH.get(), "4c08845b-48ff-4964-9d5c-d94bd90a853f", 1.0, AttributeModifier.Operation.ADDITION));
     public static final RegistryObject<MobEffect> CESSATION = MOB_EFFECTS.register("cessation", CessationEffect::new);
     public static final RegistryObject<MobEffect> EXPOSED = MOB_EFFECTS.register("exposed", () -> new SOBMobEffectHelp(MobEffectCategory.HARMFUL, 0xFE6C0A)
             .addAttributeModifier(Attributes.ARMOR, "f3145073-5b49-4e46-b58f-f9c37cff9ed3", -5.0, AttributeModifier.Operation.ADDITION));
+    public static final RegistryObject<MobEffect> TOUGHNESS = MOB_EFFECTS.register("toughness", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0xBC7841)
+            .addAttributeModifier(Attributes.ARMOR, "7b4a9349-0f58-4d94-9dd1-8390a8c9b19c", 4.0, AttributeModifier.Operation.ADDITION)
+            .addAttributeModifier(Attributes.ARMOR_TOUGHNESS, "5e7765d7-d87d-46ac-8fcf-bde2846127e5", 1.0, AttributeModifier.Operation.ADDITION));
 
 
     public static void init(IEventBus bus) {

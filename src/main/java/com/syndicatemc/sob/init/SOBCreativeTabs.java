@@ -4,6 +4,7 @@ import com.syndicatemc.sob.SOB;
 import com.syndicatemc.sob.init.compat.atmospheric.AtmoCompatItems;
 import com.syndicatemc.sob.init.compat.autumnity.AutumnityCompatItems;
 import com.syndicatemc.sob.init.compat.mynethersdelight.MNDCompatItems;
+import com.syndicatemc.sob.init.compat.neapolitan.NeapolitanCompatItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -49,20 +50,28 @@ public class SOBCreativeTabs {
                         output.accept(NOPAL.get());
                         output.accept(NOPAL_CRATE.get());
                         output.accept(PRICKLY_PEAR.get());
+                        output.accept(GOLDEN_PRICKLY_PEAR.get());
                         output.accept(PRICKLY_PEAR_CRATE.get());
                         output.accept(ASPARAGUS_SEEDS.get());
                         output.accept(ASPARAGUS.get());
                         output.accept(ASPARAGUS_BUNDLE.get());
                         output.accept(WILD_ASPARAGUS.get());
+                        output.accept(PEANUT.get());
+                        output.accept(ROASTED_PEANUTS.get());
+                        output.accept(PEANUT_BAG.get());
+                        output.accept(WILD_PEANUTS.get());
                         output.accept(PITCHER_TUBER.get());
                         output.accept(PITCHER_TUBER_BUNDLE.get());
                         output.accept(TUBER_STICKS.get());
                         //unfinished
                         //output.accept(ICHOR_BUD.get());
                         //output.accept(ICHORFRUIT.get());
+                        output.accept(DRIED_BERRIES.get());
                         output.accept(VEGGIE_WRAP.get());
                         output.accept(SCULK_TENDRIL.get());
                         output.accept(SCULK_ROLL.get());
+                        output.accept(PBNJ.get());
+                        output.accept(ANTS_LOG.get());
                         if (ModList.get().isLoaded("create")) {
                             output.accept(CINDER_DOUGH.get());
                             output.accept(CINDER_BREAD.get());
@@ -72,15 +81,20 @@ public class SOBCreativeTabs {
                         }
                         if (ModList.get().isLoaded("frycooks_delight") && ModList.get().isLoaded("autumnity")) {
                             output.accept(MAPLE_DONUT.get());
+                            output.accept(FISH_STICK_STICK.get());
                         }
-                        output.accept(FISH_STICK_STICK.get());
+                        if (ModList.get().isLoaded("neapolitan")) {
+                            output.accept(NeapolitanCompatItems.PB_CHOCOLATE.get());
+                        }
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(MNDCompatItems.HONEY_BARBECUE_STICK.get());
                         }
+                        output.accept(ECHO_ROCK_CANDY.get());
                         /* bowl food items */
                         output.accept(GRAVY.get());
                         output.accept(INK_SOUP.get());
                         output.accept(ASPARAGUS_SOUP.get());
+                        output.accept(CANDIED_PEANUTS.get());
                         if (ModList.get().isLoaded("environmental")) {
                             output.accept(EXQUISITE_MUSHROOM_SOUP.get());
                         }
@@ -90,13 +104,20 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(SPIKY_SALAD.get());
                         }
+                        if (ModList.get().isLoaded("miners_delight")) {
+                            output.accept(ROOT_SALAD.get());
+                        }
                         if (ModList.get().isLoaded("frycooks_delight")) {
                             output.accept(POUTINE.get());
+                        }
+                        if (ModList.get().isLoaded("neapolitan") && ModList.get().isLoaded("environmental")) {
+                            output.accept(NeapolitanCompatItems.BANANA_SUNDAE.get());
                         }
                         /* plate food items */
                         output.accept(MANGROVE_STIR_FRY.get());
                         output.accept(GRILLED_VEGETABLES.get());
                         output.accept(ROOT_STEAK.get());
+                        output.accept(CACTUS_PORKCHOP.get());
                         if (ModList.get().isLoaded("environmental")) {
                             output.accept(TRUFFLE_PASTA.get());
                         }
@@ -105,6 +126,17 @@ public class SOBCreativeTabs {
                         }
                         if (ModList.get().isLoaded("frycooks_delight")) {
                             output.accept(FISH_FRY.get());
+                        }
+                        /* preserve food items */
+                        output.accept(PEANUT_BUTTER.get());
+                        if (ModList.get().isLoaded("neapolitan")) {
+                            output.accept(STRAWBERRY_JAM.get());
+                        }
+                        if (ModList.get().isLoaded("atmospheric")) {
+                            output.accept(ORANGE_MARMALADE.get());
+                        }
+                        if (ModList.get().isLoaded("mynethersdelight")) {
+                            output.accept(MNDCompatItems.PEPPER_JELLY.get());
                         }
                         /* drink food items */
                         output.accept(BIRCH_BEER.get());
@@ -120,6 +152,7 @@ public class SOBCreativeTabs {
                         }
                         /* booze food items */
                         output.accept(HARD_CIDER.get());
+                        output.accept(PRICKLY_MELOMEL.get());
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(TEQUILA.get());
                             output.accept(AtmoCompatItems.SUNRISE_SELTZER.get());
@@ -130,7 +163,13 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("neapolitan")) {
                             output.accept(PALE_DAIQUIRI.get());
                         }
-                        output.accept(DEATH_DRINK.get());
+                        if (ModList.get().isLoaded("miners_delight")) {
+                            output.accept(ROOT_BEER.get());
+                        }
+                            output.accept(DEATH_DRINK.get());
+                        if (ModList.get().isLoaded("spelunkery")) {
+                            output.accept(PORTAL_DRINK.get());
+                        }
                         /* cheese */
                         if (ModList.get().isLoaded("endergetic")) {
                             output.accept(UNRIPE_EUMOZZ_CHEESE_WHEEL.get());
@@ -152,6 +191,8 @@ public class SOBCreativeTabs {
                             output.accept(DONUT_BOX_BLOCK.get());
                         }
                         output.accept(RED_RUM_SKULL.get());
+                        /* animal feeds */
+                        output.accept(CAMEL_FEED.get());
                     })
                     .build());
 

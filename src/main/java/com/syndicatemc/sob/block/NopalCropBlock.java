@@ -133,7 +133,7 @@ public class NopalCropBlock extends BushBlock implements BonemealableBlock {
 
     //literally just copied from the SweetBerryBushBlock class
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-        if (pEntity instanceof LivingEntity && pEntity.getType() != EntityType.HUSK) {
+        if (pEntity instanceof LivingEntity && pEntity.getType() != EntityType.HUSK && pEntity.getType() != EntityType.CAMEL && pEntity.getType() != EntityType.RABBIT) {
             pEntity.makeStuckInBlock(pState, new Vec3((double)0.8F, (double)0.75F, (double)0.8F));
             if (!pLevel.isClientSide && (Integer)pState.getValue(NOPAL_AGE) > 0 && (pEntity.xOld != pEntity.getX() || pEntity.zOld != pEntity.getZ())) {
                 double d0 = Math.abs(pEntity.getX() - pEntity.xOld);

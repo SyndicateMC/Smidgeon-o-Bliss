@@ -32,10 +32,14 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.bell_toll")));
     public static final RegistryObject<SoundEvent> BELL_TOLL_FAIL = SOUNDS.register("entity.bell_toll_fail",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.bell_toll_fail")));
+    public static final RegistryObject<SoundEvent> ECHO_TELEPORT = SOUNDS.register("entity.echo_teleport",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.echo_teleport")));
     public static final RegistryObject<SoundEvent> SLAP_BASE = SOUNDS.register("block.slap_base",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.slap_base")));
     public static final RegistryObject<SoundEvent> NICE_GUITAR = SOUNDS.register("block.nice_guitar",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.nice_guitar")));
+    public static final RegistryObject<SoundEvent> TOOT = SOUNDS.register("block.toot",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.toot")));
 
     public static void init(IEventBus bus) {
         SOUNDS.register(bus);

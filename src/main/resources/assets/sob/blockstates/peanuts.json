@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "sob:block/peanuts_stage0"
+    },
+    "age=1": {
+      "model": "sob:block/peanuts_stage1"
+    },
+    "age=2": {
+      "model": "sob:block/peanuts_stage2"
+    },
+    "age=3": {
+      "model": "sob:block/peanuts_stage3"
+    },
+    "age=4": {
+      "model": "sob:block/peanuts_stage4"
+    }
+  }
+}

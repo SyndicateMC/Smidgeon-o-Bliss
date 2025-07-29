@@ -47,6 +47,7 @@ public class SunriseSeltzerItem extends BoozeItem {
         if ((Boolean) Configuration.FOOD_EFFECT_TOOLTIP.get()) {
             tooltip.add(Component.translatable("effect.brewinandchewin.tipsy").withStyle(ChatFormatting.RED).append(Component.literal(" (01:00)").withStyle(ChatFormatting.RED)));
             tooltip.add(Component.translatable("effect.brewinandchewin.intoxication").withStyle(ChatFormatting.RED).append(Component.literal(" (01:00)").withStyle(ChatFormatting.RED)));
+            tooltip.add(Component.translatable("effect.sob.zest").withStyle(ChatFormatting.BLUE).append(Component.literal(" (02:00)").withStyle(ChatFormatting.BLUE)));
             tooltip.add(SOBTranslationKey.getTranslation("makes_orange_vapor", "tooltip").withStyle(ChatFormatting.BLUE));
         }
     }

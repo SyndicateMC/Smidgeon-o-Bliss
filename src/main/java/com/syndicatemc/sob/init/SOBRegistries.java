@@ -11,5 +11,6 @@ public class SOBRegistries {
         SOBSounds.init(bus);
         SOBCreativeTabs.init(bus);
         SOBParticles.init(bus);
+        SOBPaintings.init(bus);
     }
 }

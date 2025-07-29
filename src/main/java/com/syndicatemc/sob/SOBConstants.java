@@ -1,6 +1,7 @@
 package com.syndicatemc.sob;
 
 public class SOBConstants {
+    // I gotta use these
     public static final String CREATE = "create";
     public static final String FARMERS_RESPITE = "farmersrespite";
     public static final String MINERS_DELIGHT = "miners_delight";

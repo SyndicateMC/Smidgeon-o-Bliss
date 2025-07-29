@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sob:asparagus"
+    },
+    {
+      "item": "sob:asparagus"
+    },
+    {
+      "item": "sob:peanut_butter"
+    },
+    {
+      "item": "sob:dried_berries"
+    },
+    {
+      "item": "sob:dried_berries"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "sob:ants_log"
+  }
+}

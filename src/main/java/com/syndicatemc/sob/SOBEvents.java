@@ -51,9 +51,10 @@ public class SOBEvents {
             t.level().playSeededSound(null, t.getX(), t.getY(), t.getZ(), SOBSounds.COLLAPSE_BUILDING.get(), SoundSource.NEUTRAL, 1.0F, (t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() * 0.1F) + 1.0F, 1);
             t.addEffect(new MobEffectInstance(SOBMobEffects.COLLAPSE.get(), 30, Math.min(t.getEffect(SOBMobEffects.COLLAPSE.get()).getAmplifier() + 1, 9), false, true));
         }
-        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && !t.isInvulnerable()) { //consumes all stacks of Retaliation and increases damage accordingly
+        if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && e.hasEffect(SOBMobEffects.SPITE.get()) && !t.isInvulnerable()) { //consumes all stacks of Retaliation and increases damage accordingly
             float amp = e.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier();
-            float bonus = ((amp + 1) / 5);
+            float bAmp = e.getEffect(SOBMobEffects.SPITE.get()).getAmplifier();
+            float bonus = (((amp + 1) / 5) * (bAmp + 1));
             event.setAmount(event.getAmount() * (1 + bonus));
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
             e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
@@ -124,6 +125,8 @@ public class SOBEvents {
             sound = SOBSounds.SLAP_BASE.get();
         } else if (blockUnder == SOBBlocks.NOPAL_CRATE.get() || blockUnder == SOBBlocks.PRICKLY_PEAR_CRATE.get()) {
             sound = SOBSounds.NICE_GUITAR.get();
+        } else if (blockUnder == SOBBlocks.PEANUT_BAG.get()) {
+            sound = SOBSounds.TOOT.get();
         }
         if (sound != null) {
             float pitch = (float) Math.pow(2.0, (event.getVanillaNoteId() - 12) / 12.0);

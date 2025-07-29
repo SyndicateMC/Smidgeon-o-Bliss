@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#P#",
+    "###"
+  ],
+  "key": {
+    "P": {
+      "item": "sob:prickly_pear"
+    },
+    "#": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "sob:golden_prickly_pear"
+  }
+}

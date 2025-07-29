@@ -1,9 +1,13 @@
 package com.syndicatemc.sob.mixin;
 
 import com.syndicatemc.sob.item.BigSoupItem;
+import com.syndicatemc.sob.item.EchoRockCandyItem;
 import com.syndicatemc.sob.item.GildedPotatoItem;
 import com.syndicatemc.sob.item.PaleDaiquiriItem;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -30,6 +34,15 @@ public class LivingEntityMixin {
                     level.addParticle(ParticleTypes.HEART, entity.getX() + Math.random() * 2 - 1, entity.getY() + 1 + Math.random() * 2 - 1, entity.getZ() + Math.random() * 2 - 1, 0.0, 0.0, 0.0);
                 }
             }
+            //dunno what's wrong with this
+            //if (food.getItem() instanceof EchoRockCandyItem && entity instanceof ServerPlayer player) {
+            //    BlockPos deathPos = player.getLastDeathLocation().get().pos();
+            //    ServerLevel deathDim = player.server.getLevel(player.getLastDeathLocation().get().dimension());
+            //    if (deathDim != null && deathDim.isClientSide) {
+            //        level.addParticle(ParticleTypes.SONIC_BOOM, entity.getX(), entity.getY() + 1, entity.getZ(), 0.0, 0.0, 0.0);
+            //        deathDim.addParticle(ParticleTypes.SONIC_BOOM, deathPos.getX(), deathPos.getY() + 1, deathPos.getZ(), 0.0, 0.0, 0.0);
+            //    }
+            //}
         }
         if (food.getItem() instanceof BigSoupItem) {
             if (entity.hasEffect(ModEffects.COMFORT.get())) {

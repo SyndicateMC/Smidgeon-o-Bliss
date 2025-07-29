@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.2,
+  "ingredients": [
+    {
+      "item": "sob:roasted_peanuts"
+    },
+    {
+      "item": "sob:roasted_peanuts"
+    },
+    {
+      "item": "sob:roasted_peanuts"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "sob:candied_peanuts"
+  }
+}

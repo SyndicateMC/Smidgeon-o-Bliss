@@ -86,10 +86,14 @@ public class SOBBlocks {
             () -> new AsparagusCropBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion()));
     public static final RegistryObject<Block> ICHORFRUIT = BLOCKS.register("ichorfruit",
             () -> new IchorfruitBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion().sound(SoundType.NETHER_SPROUTS).lightLevel(ichorfruitLight())));
+    public static final RegistryObject<Block> PEANUTS = BLOCKS.register("peanuts",
+            () -> new PeanutCropBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
     //wild crops
     public static final RegistryObject<Block> WILD_ASPARAGUS = BLOCKS.register("wild_asparagus",
             () -> new WildCropBlock(MobEffects.CONFUSION, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
+    public static final RegistryObject<Block> WILD_PEANUTS = BLOCKS.register("wild_peanuts",
+            () -> new WildCropBlock(MobEffects.DAMAGE_RESISTANCE, 6, Block.Properties.copy(Blocks.TALL_GRASS)));
 
     //storage blocks
     public static final RegistryObject<Block> NOPAL_CRATE = BLOCKS.register("nopal_crate",
@@ -100,6 +104,8 @@ public class SOBBlocks {
             () -> new RiceBaleBlock(Block.Properties.copy(Blocks.HAY_BLOCK))); /* uses RiceBaleBlock class as if functions almost identically to it */
     public static final RegistryObject<Block> PITCHER_TUBER_BUNDLE = BLOCKS.register("pitcher_tuber_bundle",
             () -> new PitcherTuberBundleBlock(Block.Properties.copy(Blocks.OAK_PLANKS).sound(SoundType.STEM)));
+    public static final RegistryObject<Block> PEANUT_BAG = BLOCKS.register("peanut_bag",
+            () -> new Block(Block.Properties.copy(Blocks.WHITE_WOOL)));
 
     public static void init(IEventBus bus) {
         BLOCKS.register(bus);

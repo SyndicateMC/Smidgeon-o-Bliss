@@ -29,6 +29,11 @@ public class FoodConstants {
             .saturationMod(0.45F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 200, 0), 1.0F)
             .build();
+    public static final FoodProperties GOLDEN_PRICKLY_PEAR = (new FoodProperties.Builder())
+            .nutrition(5)
+            .saturationMod(0.45F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 600, 2), 1.0F)
+            .build();
     public static final FoodProperties SCULK_TENDRIL = (new FoodProperties.Builder())
             .nutrition(2)
             .saturationMod(0.5F)
@@ -60,6 +65,33 @@ public class FoodConstants {
     public static final FoodProperties ICHORFRUIT = (new FoodProperties.Builder())
             .nutrition(4)
             .saturationMod(0.55F)
+            .build();
+    public static final FoodProperties ECHO_ROCK_CANDY = (new FoodProperties.Builder())
+            .nutrition(1)
+            .saturationMod(0.1F)
+            .alwaysEat()
+            .build();
+    public static final FoodProperties ROASTED_PEANUTS = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.1F)
+            .fast()
+            .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 900, 0), 1.0F)
+            .build();
+    public static final FoodProperties PBNJ = (new FoodProperties.Builder())
+            .nutrition(10)
+            .saturationMod(0.75F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 3600, 0), 1.0F)
+            .build();
+    public static final FoodProperties DRIED_BERRIES = (new FoodProperties.Builder())
+            .nutrition(3)
+            .saturationMod(0.5F)
+            .fast()
+            .build();
+    public static final FoodProperties ANTS_LOG = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.6F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 1200, 0), 1.0F)
             .build();
     //req: endergetic
     public static final FoodProperties EUMOZZ_CHEESE_WEDGE = (new FoodProperties.Builder())
@@ -125,6 +157,12 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 3600, 0), 1.0F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
             .build();
+    public static final FoodProperties CANDIED_PEANUTS = (new FoodProperties.Builder())
+            .nutrition(11)
+            .saturationMod(0.65F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 4800, 0), 1.0F)
+            .build();
     // big poop food item when
     // never you moron
     public static final FoodProperties BIG_SOUP = (new FoodProperties.Builder())
@@ -137,6 +175,12 @@ public class FoodConstants {
             .saturationMod(0.55F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3000, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1800, 0), 1.0F)
+            .build();
+    public static final FoodProperties CACTUS_PORKCHOP = (new FoodProperties.Builder())
+            .nutrition(12)
+            .saturationMod(0.65F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 600, 0), 1.0F)
             .build();
     //req: ENVI
     public static final FoodProperties TRUFFLE_PASTA = (new FoodProperties.Builder())
@@ -172,6 +216,13 @@ public class FoodConstants {
             .saturationMod(0.80F)
             .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1200, 0), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4800, 0), 1.0F)
+            .build();
+    //req: MD
+    public static final FoodProperties ROOT_SALAD = (new FoodProperties.Builder())
+            .nutrition(7)
+            .saturationMod(0.30F)
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 1200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 2400, 0), 1.0F)
             .build();
 
     /* drink food items */
@@ -226,6 +277,25 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 7200, 0), 1.0F)
             .build();
 
+    /* preserve food items */
+    public static final FoodProperties PEANUT_BUTTER = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.55F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 1800, 0), 1.0F)
+            .build();
+    //req: ATMO
+    public static final FoodProperties ORANGE_MARMALADE = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.6F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.ZEST.get(), 600, 0), 1.0F)
+            .build();
+    //req: NEA
+    public static final FoodProperties STRAWBERRY_JAM = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.6F)
+            .effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1.0F)
+            .build();
+
     /* booze food items */
     public static final FoodProperties HARD_CIDER = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 2400, 0), 1.0F)
@@ -238,6 +308,12 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 6000, 0), 1.0F)
             .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 6000, 0), 1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 12000, 3), 1.0F)
+            .alwaysEat()
+            .build();
+    public static final FoodProperties PRICKLY_MELOMEL = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 2400, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 2400, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 2400, 0), 1.0F)
             .alwaysEat()
             .build();
     //req: ATMO
@@ -263,6 +339,16 @@ public class FoodConstants {
     public static final FoodProperties PALE_DAIQUIRI = (new FoodProperties.Builder())
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 1200, 0), 1.0F)
             .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 1200, 0), 1.0F)
+            .alwaysEat()
+            .build();
+    //req: ATMO
+    public static final FoodProperties PORTAL_DRINK = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 3600, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 3600, 0), 1.0F)
+            .alwaysEat()
+            .build();
+    //req: MD
+    public static final FoodProperties ROOT_BEER = (new FoodProperties.Builder())
             .alwaysEat()
             .build();
 }

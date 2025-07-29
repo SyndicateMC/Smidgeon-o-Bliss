@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+      "item": "sob:peanut"
+    },
+    "result": "sob:roasted_peanuts",
+    "experience": 0.0,
+    "cookingtime": 200
+  }

@@ -56,17 +56,6 @@ public class AsparagusCropBlock extends CropBlock {
         }
     }
 
-    //would require actual collision with the asparagus
-    /*
-    public void fallOn(Level pLevel, BlockState pState, BlockPos pPos, Entity pEntity, float pFallDistance) {
-        if (this.getAge(pState) > 3) {
-            pEntity.causeFallDamage(pFallDistance + 1.0F, 1.5F, pLevel.damageSources().fall());
-        } else {
-            super.fallOn(pLevel, pState, pPos, pEntity, pFallDistance);
-        }
-    }
-    */
-
     protected int getBonemealAgeIncrease(Level pLevel) {
         return Mth.nextInt(pLevel.random, 1, 2);
     }

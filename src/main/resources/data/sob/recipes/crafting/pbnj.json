@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "sob:ingredients/preserves"
+    },
+    {
+      "item": "sob:peanut_butter"
+    }
+  ],
+  "result": {
+    "item": "sob:pbnj"
+  }
+}

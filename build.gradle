@@ -97,6 +97,12 @@ repositories {
     maven {
         url "https://cursemaven.com"
     }
+    maven {
+        url "https://maven.blamejared.com"
+        content {
+            includeGroup "mezz.jei"
+        }
+    }
 
     mavenLocal()
 }
@@ -121,8 +127,10 @@ dependencies {
     implementation fg.deobf("curse.maven:neapolitan-382016:6248885")
     implementation fg.deobf("curse.maven:savage-and-ravage-381736:6040963")
     implementation fg.deobf("curse.maven:upgrade-aquatic-326895:6393133")
-    implementation fg.deobf("curse.maven:jei-238222:6600311")
+    implementation fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
     implementation fg.deobf("curse.maven:abnormals-delight-442719:6057626")
+    implementation fg.deobf("curse.maven:spelunkery-790530:6032457")
+    implementation fg.deobf("curse.maven:selene-499980:6740431")
 
     annotationProcessor "org.spongepowered:mixin:${mixin_version}:processor"
 }

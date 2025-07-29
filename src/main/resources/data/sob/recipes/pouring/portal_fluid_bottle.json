@@ -1,0 +1,19 @@
+{
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 144,
+  "filling": true,
+  "fluid": "spelunkery:portal_fluid",
+  "output": {
+    "item": "spelunkery:portal_fluid_bottle"
+  },
+  "strict": false,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ]
+}
