@@ -100,7 +100,7 @@ public class SOBEvents {
     }
     @SubscribeEvent
     public static void mobEffectRemovedEvent(MobEffectEvent.Remove event) {
-        MobEffect effect = Objects.requireNonNull(event.getEffectInstance()).getEffect();
+        MobEffect effect = event.getEffect();
         Entity entity = event.getEntity();
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth()*10);

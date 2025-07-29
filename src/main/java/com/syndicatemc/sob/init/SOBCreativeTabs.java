@@ -91,7 +91,6 @@ public class SOBCreativeTabs {
                         }
                         output.accept(ECHO_ROCK_CANDY.get());
                         /* bowl food items */
-                        output.accept(GRAVY.get());
                         output.accept(INK_SOUP.get());
                         output.accept(ASPARAGUS_SOUP.get());
                         output.accept(CANDIED_PEANUTS.get());

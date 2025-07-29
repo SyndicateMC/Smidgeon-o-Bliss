@@ -141,8 +141,6 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.FISH_STICK_STICK)));
 
     /* bowl food items */
-    public static final RegistryObject<Item> GRAVY = ITEMS.register("gravy",
-            () -> new GravyItem(bowlFoodItem(FoodConstants.GRAVY).stacksTo(64)));
     public static final RegistryObject<Item> INK_SOUP = ITEMS.register("ink_soup",
             () -> new ConsumableItem(bowlFoodItem(FoodConstants.INK_SOUP), true));
     public static final RegistryObject<Item> MANGROVE_STIR_FRY = ITEMS.register("mangrove_stir_fry",

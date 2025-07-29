@@ -124,10 +124,6 @@ public class FoodConstants {
             .build();
 
     /* bowl food items */
-    public static final FoodProperties GRAVY = (new FoodProperties.Builder())
-            .nutrition(2)
-            .saturationMod(0.65F)
-            .build();
     public static final FoodProperties INK_SOUP = (new FoodProperties.Builder())
             .nutrition(8)
             .saturationMod(0.55F)
