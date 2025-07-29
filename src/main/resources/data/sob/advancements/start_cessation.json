@@ -1,0 +1,39 @@
+{
+  "parent": "brewinandchewin:main/brew_drink",
+  "criteria": {
+    "start_cessation_challenge": {
+      "conditions": {
+        "item": {
+          "items": [
+            "sob:death_drink"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.start_cessation.desc"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "sob:death_drink"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.start_cessation"
+    }
+  },
+  "requirements": [
+    [
+      "start_cessation_challenge"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

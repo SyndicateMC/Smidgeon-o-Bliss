@@ -1,0 +1,36 @@
+{
+  "parent": "sob:get_peanut",
+  "criteria": {
+    "eat_pbnj": {
+      "conditions": {
+        "item": {
+          "items": [
+            "sob:pbnj"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.eat_pbnj.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sob:pbnj"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.eat_pbnj"
+    }
+  },
+  "requirements": [
+    [
+      "eat_pbnj"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

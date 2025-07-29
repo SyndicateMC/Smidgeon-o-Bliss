@@ -1,0 +1,67 @@
+{
+  "values": [
+    "sob:hard_cider",
+    "sob:prickly_melomel",
+    {
+      "id": "sob:tequila",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "atmospheric"
+        }
+      ]
+    },
+    {
+      "id": "sob:sunrise_seltzer",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "atmospheric"
+        }
+      ]
+    },
+    {
+      "id": "sob:creeper_drink",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "savage_and_ravage"
+        }
+      ]
+    },
+    {
+      "id": "sob:pale_daiquiri",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "neapolitan"
+        }
+      ]
+    },
+    {
+      "id": "sob:root_beer",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "miners_delight"
+        }
+      ]
+    },
+    "sob:death_drink",
+    {
+      "id": "sob:portal_drink",
+      "required": false,
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "spelunkery"
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,7 @@ import net.minecraftforge.fml.common.Mod;
 import vectorwing.farmersdelight.common.Configuration;
 
 import java.util.List;
+import java.util.Objects;
 
 @Mod.EventBusSubscriber(modid = SOB.MOD_ID)
 public class SOBEvents {
@@ -99,7 +100,7 @@ public class SOBEvents {
     }
     @SubscribeEvent
     public static void mobEffectRemovedEvent(MobEffectEvent.Remove event) {
-        MobEffect effect = event.getEffectInstance().getEffect();
+        MobEffect effect = Objects.requireNonNull(event.getEffectInstance()).getEffect();
         Entity entity = event.getEntity();
         if (entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.CESSATION.get()) && effect == SOBMobEffects.CESSATION.get()) { //deals massive damage upon effect expiry
             e.hurt(SOBDamageTypes.getSimpleDamageSource(e.level(), SOBDamageTypes.CEASING), e.getMaxHealth()*10);
