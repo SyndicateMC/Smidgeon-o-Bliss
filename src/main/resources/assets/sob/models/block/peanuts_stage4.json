@@ -1,0 +1,7 @@
+{
+  "parent": "sob:block/cross_crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "sob:block/peanuts_stage4"
+  }
+}

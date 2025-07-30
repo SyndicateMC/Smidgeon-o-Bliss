@@ -1,0 +1,54 @@
+{
+  "parent": "brewinandchewin:main/brew_drink",
+  "criteria": {
+    "drink_root_beer": {
+      "conditions": {
+        "item": {
+          "items": [
+            "sob:root_beer"
+          ]
+        },
+        "player": {
+          "location": {
+            "position": {
+              "y": {
+                "max": -50
+              }
+            }
+          }
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.drink_root_beer_depth.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sob:root_beer"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.drink_root_beer_depth"
+    }
+  },
+  "requirements": [
+    [
+      "drink_root_beer"
+    ]
+  ],
+  "rewards": {
+    "experience": 10
+  },
+  "sends_telemetry_event": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "miners_delight"
+    }
+  ]
+}

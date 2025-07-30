@@ -1,0 +1,10 @@
+{
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 250,
+  "filling": true,
+  "fluid": "sob:root_beer",
+  "output": {
+    "item": "sob:root_beer"
+  },
+  "strict": false
+}

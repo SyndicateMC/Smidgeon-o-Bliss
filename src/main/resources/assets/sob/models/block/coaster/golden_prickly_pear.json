@@ -1,0 +1,6 @@
+{
+  "parent": "sob:block/coaster/prickly_pear",
+  "textures": {
+    "0": "sob:block/coaster/golden_prickly_pear"
+  }
+}

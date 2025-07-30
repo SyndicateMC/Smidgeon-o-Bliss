@@ -1,0 +1,6 @@
+{
+  "values": [
+    "minecraft:hanging_roots",
+    {"id": "spelunkery:tangle_roots","required": false}
+  ]
+}

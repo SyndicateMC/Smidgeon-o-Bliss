@@ -1,0 +1,26 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "brewinandchewin:mead"
+  },
+  "experience": 1.0,
+  "fermentingtime": 9600,
+  "ingredients": [
+    {
+      "item": "sob:prickly_pear"
+    },
+    {
+      "tag": "forge:fruits"
+    },
+    {
+      "item": "minecraft:rose_bush"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1000,
+    "fluid": "sob:prickly_melomel"
+  },
+  "temperature": 3
+}

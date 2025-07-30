@@ -1,0 +1,35 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
+  "experience": 1.0,
+  "fermentingtime": 3600,
+  "ingredients": [
+    {
+      "item": "miners_delight:cave_carrot"
+    },
+    {
+      "item": "miners_delight:cave_carrot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "tag": "sob:ingredients/cave_roots"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1000,
+    "fluid": "sob:root_beer"
+  },
+  "temperature": 2,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "miners_delight"
+    }
+  ]
+}

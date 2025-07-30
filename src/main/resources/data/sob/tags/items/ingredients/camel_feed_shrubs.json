@@ -1,0 +1,7 @@
+{
+  "values": [
+    "minecraft:dead_bush",
+    "farmersdelight:sandy_shrub",
+    {"id": "atmospheric:arid_sprouts","required": false}
+  ]
+}

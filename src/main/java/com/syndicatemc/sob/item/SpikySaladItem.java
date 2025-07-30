@@ -17,13 +17,9 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class SpikySaladItem extends ConsumableItem {
-    private final boolean hasFoodEffectTooltip;
-    private final boolean hasCustomTooltip;
 
     public SpikySaladItem(Properties properties) {
         super(properties);
-        this.hasFoodEffectTooltip = true;
-        this.hasCustomTooltip = false;
     }
 
     @Override

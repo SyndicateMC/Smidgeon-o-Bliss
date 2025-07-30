@@ -1,0 +1,16 @@
+{
+  "item": "sob:portal_drink",
+  "models": [
+    {
+      "model": "sob:block/coaster/portal_drink"
+    },
+    {
+      "model": "sob:block/coaster/portal_drink",
+      "texture_modifiers": [
+        {
+          "type": "brewinandchewin:glint"
+        }
+      ]
+    }
+  ]
+}

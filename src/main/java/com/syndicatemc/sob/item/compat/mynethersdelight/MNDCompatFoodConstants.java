@@ -11,4 +11,9 @@ public class MNDCompatFoodConstants {
             .saturationMod(0.85F)
             .effect(() -> new MobEffectInstance(MNDEffects.BPUNGENT.get(), 200, 0), 1.0F)
             .build();
+    public static final FoodProperties PEPPER_JELLY = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.5F)
+            .effect(() -> new MobEffectInstance(MNDEffects.BPUNGENT.get(), 600, 0), 1.0F)
+            .build();
 }

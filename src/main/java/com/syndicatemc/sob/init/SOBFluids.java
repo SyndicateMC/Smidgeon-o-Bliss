@@ -26,6 +26,11 @@ public class SOBFluids {
     public static final RegistryObject<FlowingFluid> FLOWING_DEATH_DRINK = FLUIDS.register("flowing_death_drink", () -> new ForgeFlowingFluid.Flowing(SOBFluids.DEATH_DRINK_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties DEATH_DRINK_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(DEATH_DRINK_FLUID_TYPE, DEATH_DRINK, FLOWING_DEATH_DRINK);
 
+    public static final RegistryObject<FluidType> PRICKLY_MELOMEL_FLUID_TYPE = FLUID_TYPES.register("prickly_melomel_type", () -> new SOBFluidTypes(0xFFCA5792));
+    public static final RegistryObject<FlowingFluid> PRICKLY_MELOMEL = FLUIDS.register("prickly_melomel", () -> new ForgeFlowingFluid.Source(SOBFluids.PRICKLY_MELOMEL_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_PRICKLY_MELOMEL = FLUIDS.register("flowing_prickly_melomel", () -> new ForgeFlowingFluid.Flowing(SOBFluids.PRICKLY_MELOMEL_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties PRICKLY_MELOMEL_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(PRICKLY_MELOMEL_FLUID_TYPE, PRICKLY_MELOMEL, FLOWING_PRICKLY_MELOMEL);
+
     //req: ATMO
     public static final RegistryObject<FluidType> TEQUILA_FLUID_TYPE = FLUID_TYPES.register("tequila_type", () -> new SOBFluidTypes(0xFF8ADAB9));
     public static final RegistryObject<FlowingFluid> TEQUILA = FLUIDS.register("tequila", () -> new ForgeFlowingFluid.Source(SOBFluids.TEQUILA_FLUID_PROPERTIES));
@@ -67,6 +72,18 @@ public class SOBFluids {
     public static final RegistryObject<FlowingFluid> EUMOZZ_CHEESE = FLUIDS.register("eumozz_cheese", () -> new ForgeFlowingFluid.Source(SOBFluids.EUMOZZ_CHEESE_FLUID_PROPERTIES));
     public static final RegistryObject<FlowingFluid> FLOWING_EUMOZZ_CHEESE = FLUIDS.register("flowing_eumozz_cheese", () -> new ForgeFlowingFluid.Flowing(SOBFluids.EUMOZZ_CHEESE_FLUID_PROPERTIES));
     public static final ForgeFlowingFluid.Properties EUMOZZ_CHEESE_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(EUMOZZ_CHEESE_FLUID_TYPE, EUMOZZ_CHEESE, FLOWING_EUMOZZ_CHEESE);
+
+    //req: spelunkery
+    public static final RegistryObject<FluidType> PORTAL_DRINK_FLUID_TYPE = FLUID_TYPES.register("portal_drink_type", () -> new SOBFluidTypes(0xFF7519D2));
+    public static final RegistryObject<FlowingFluid> PORTAL_DRINK = FLUIDS.register("portal_drink", () -> new ForgeFlowingFluid.Source(SOBFluids.PORTAL_DRINK_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_PORTAL_DRINK = FLUIDS.register("flowing_portal_drink", () -> new ForgeFlowingFluid.Flowing(SOBFluids.PORTAL_DRINK_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties PORTAL_DRINK_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(PORTAL_DRINK_FLUID_TYPE, PORTAL_DRINK, FLOWING_PORTAL_DRINK);
+
+    //req: MD
+    public static final RegistryObject<FluidType> ROOT_BEER_FLUID_TYPE = FLUID_TYPES.register("root_beer_type", () -> new SOBFluidTypes(0xFF371717));
+    public static final RegistryObject<FlowingFluid> ROOT_BEER = FLUIDS.register("root_beer", () -> new ForgeFlowingFluid.Source(SOBFluids.ROOT_BEER_FLUID_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> FLOWING_ROOT_BEER = FLUIDS.register("flowing_root_beer", () -> new ForgeFlowingFluid.Flowing(SOBFluids.ROOT_BEER_FLUID_PROPERTIES));
+    public static final ForgeFlowingFluid.Properties ROOT_BEER_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(ROOT_BEER_FLUID_TYPE, ROOT_BEER, FLOWING_ROOT_BEER);
 
     public static void init(IEventBus bus) {
         FLUIDS.register(bus);

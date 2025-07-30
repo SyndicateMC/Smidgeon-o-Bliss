@@ -1,0 +1,7 @@
+{
+  "parent": "brewinandchewin:block/coaster_jam_jar",
+  "textures": {
+    "particle": "sob:block/coaster/strawberry_jam",
+    "jam": "sob:block/coaster/strawberry_jam"
+  }
+}

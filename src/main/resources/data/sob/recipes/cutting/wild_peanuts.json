@@ -1,0 +1,24 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "sob:wild_peanuts"
+    }
+  ],
+  "result": [
+    {
+      "item": "sob:peanut"
+    },
+    {
+      "chance": 0.5,
+      "item": "sob:peanut"
+    },
+    {
+      "chance": 0.30,
+      "item": "farmersdelight:sandy_shrub"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

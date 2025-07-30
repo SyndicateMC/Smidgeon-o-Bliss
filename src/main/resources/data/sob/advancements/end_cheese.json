@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:end/enter_end_gateway",
+  "criteria": {
+    "end_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "sob:eumozz_cheese_items"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.end_cheese.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sob:eumozz_cheese_wheel"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.end_cheese"
+    }
+  },
+  "requirements": [
+    [
+      "end_cheese"
+    ]
+  ],
+  "sends_telemetry_event": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "endergetic"
+    }
+  ]
+}

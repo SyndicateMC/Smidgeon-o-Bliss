@@ -1,0 +1,32 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 1000,
+    "fluid": "spelunkery:portal_fluid"
+  },
+  "experience": 1.0,
+  "fermentingtime": 4800,
+  "ingredients": [
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 1000,
+    "fluid": "sob:portal_drink"
+  },
+  "temperature": 4,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "spelunkery"
+    }
+  ]
+}

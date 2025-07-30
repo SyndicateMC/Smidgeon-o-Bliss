@@ -1,0 +1,36 @@
+{
+  "parent": "sob:get_prickly_pear",
+  "criteria": {
+    "eat_nopal": {
+      "conditions": {
+        "item": {
+          "items": [
+            "sob:nopal"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.sob.eat_nopal.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "sob:nopal"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.sob.eat_nopal"
+    }
+  },
+  "requirements": [
+    [
+      "eat_nopal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
