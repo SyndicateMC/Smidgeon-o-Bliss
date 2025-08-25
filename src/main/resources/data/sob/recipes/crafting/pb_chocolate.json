@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "sob:peanut_butter"
+      "tag": "forge:peanut_butter"
     },
     {
       "item": "neapolitan:chocolate_bar"

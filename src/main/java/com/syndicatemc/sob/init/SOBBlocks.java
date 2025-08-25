@@ -34,8 +34,16 @@ public class SOBBlocks {
     //decorative blocks
     public static final RegistryObject<Block> COUNTER = BLOCKS.register("counter",
             () -> new Block(Block.Properties.copy(Blocks.BRICKS)));
+    public static final RegistryObject<Block> METAL_COUNTER = BLOCKS.register("metal_counter",
+            () -> new Block(Block.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> NETHER_COUNTER = BLOCKS.register("nether_counter",
             () -> new Block(Block.Properties.copy(Blocks.NETHER_BRICKS)));
+    public static final RegistryObject<Block> STONE_COUNTER = BLOCKS.register("stone_counter",
+            () -> new Block(Block.Properties.copy(Blocks.SMOOTH_STONE)));
+    public static final RegistryObject<Block> DEEPSLATE_COUNTER = BLOCKS.register("deepslate_counter",
+            () -> new Block(Block.Properties.copy(Blocks.POLISHED_DEEPSLATE)));
+    public static final RegistryObject<Block> BLACKSTONE_COUNTER = BLOCKS.register("blackstone_counter",
+            () -> new Block(Block.Properties.copy(Blocks.POLISHED_BLACKSTONE)));
     public static final RegistryObject<Block> ACACIA_COUNTER = BLOCKS.register("acacia_counter",
             () -> new CounterBlock(Block.Properties.copy(Blocks.ACACIA_PLANKS)));
     public static final RegistryObject<Block> BAMBOO_COUNTER = BLOCKS.register("bamboo_counter",
@@ -88,6 +96,8 @@ public class SOBBlocks {
             () -> new IchorfruitBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion().sound(SoundType.NETHER_SPROUTS).lightLevel(ichorfruitLight())));
     public static final RegistryObject<Block> PEANUTS = BLOCKS.register("peanuts",
             () -> new PeanutCropBlock(Block.Properties.copy(Blocks.WHEAT).noOcclusion()));
+    public static final RegistryObject<Block> STARFRUIT = BLOCKS.register("starfruit",
+            () -> new StarfruitCropBlock(Block.Properties.copy(Blocks.WHEAT).sound(SoundType.NETHER_WART).noOcclusion()));
 
     //wild crops
     public static final RegistryObject<Block> WILD_ASPARAGUS = BLOCKS.register("wild_asparagus",

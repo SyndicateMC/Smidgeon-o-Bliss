@@ -1,0 +1,16 @@
+{
+  "item": "sob:exp_candy",
+  "models": [
+    {
+      "model": "sob:block/coaster/exp_candy"
+    },
+    {
+      "model": "sob:block/coaster/exp_candy",
+      "texture_modifiers": [
+        {
+          "type": "brewinandchewin:glint"
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@
   },
   "strict": false,
   "container": {
-    "item": "minecraft:glass_bottle"
+    "item": "minecraft:bucket"
   },
   "conditions": [
     {

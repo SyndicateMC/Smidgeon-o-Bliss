@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "sob:asparagus"
+      "tag": "forge:vegetables/asparagus"
     },
     {
-      "item": "sob:asparagus"
+      "tag": "forge:vegetables/asparagus"
     },
     {
-      "item": "sob:peanut_butter"
+      "tag": "forge:peanut_butter"
     },
     {
       "item": "sob:dried_berries"

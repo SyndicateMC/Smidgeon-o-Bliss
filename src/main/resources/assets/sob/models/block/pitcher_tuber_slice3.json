@@ -4,7 +4,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "sob:block/pitcher_tuber",
-		"particle": "sob:block/pitcher_tuber"
+		"particle": "sob:block/pitcher_tuber_break"
 	},
 	"elements": [
 		{

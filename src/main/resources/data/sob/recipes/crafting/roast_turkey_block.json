@@ -6,7 +6,7 @@
       "item": "environmental:plum"
     },
     "B": {
-      "item": "minecraft:bread"
+      "tag": "forge:bread/wheat"
     },
     "C": {
       "item": "minecraft:carrot"

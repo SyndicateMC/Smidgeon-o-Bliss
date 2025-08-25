@@ -93,6 +93,15 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(SOBMobEffects.REACH.get(), 1200, 0), 1.0F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.TOUGHNESS.get(), 1200, 0), 1.0F)
             .build();
+    public static final FoodProperties EXP_CANDY = (new FoodProperties.Builder())
+            .nutrition(1)
+            .saturationMod(0.1F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.BRAIN_BLAST.get(), 400, 0), 1.0F)
+            .build();
+    public static final FoodProperties STARFRUIT = (new FoodProperties.Builder())
+            .nutrition(4)
+            .saturationMod(0.2F)
+            .build();
     //req: endergetic
     public static final FoodProperties EUMOZZ_CHEESE_WEDGE = (new FoodProperties.Builder())
             .nutrition(4)
@@ -285,6 +294,11 @@ public class FoodConstants {
             .saturationMod(0.6F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.ZEST.get(), 600, 0), 1.0F)
             .build();
+    //req: ATMO
+    public static final FoodProperties CURRANT_JAM = (new FoodProperties.Builder())
+            .nutrition(6)
+            .saturationMod(0.5F)
+            .build();
     //req: NEA
     public static final FoodProperties STRAWBERRY_JAM = (new FoodProperties.Builder())
             .nutrition(6)
@@ -310,6 +324,12 @@ public class FoodConstants {
             .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 2400, 1), 1.0F)
             .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 2400, 0), 1.0F)
             .effect(() -> new MobEffectInstance(SOBMobEffects.SPITE.get(), 2400, 0), 1.0F)
+            .alwaysEat()
+            .build();
+    public static final FoodProperties BUSTLING_BREW = (new FoodProperties.Builder())
+            .effect(() -> new MobEffectInstance(BnCEffects.TIPSY.get(), 4200, 1), 1.0F)
+            .effect(() -> new MobEffectInstance(BnCEffects.INTOXICATION.get(), 3000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(SOBMobEffects.BRAIN_BLAST.get(), 6000, 0), 1.0F)
             .alwaysEat()
             .build();
     //req: ATMO

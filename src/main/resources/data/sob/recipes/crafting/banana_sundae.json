@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "neapolitan:banana"
+      "tag": "forge:fruits/banana"
     },
     {
       "item": "neapolitan:vanilla_ice_cream"
@@ -17,7 +17,7 @@
       "item": "sob:roasted_peanuts"
     },
     {
-      "item": "environmental:cherries"
+      "tag": "forge:fruit/cherry"
     },
     {
       "item": "minecraft:bowl"

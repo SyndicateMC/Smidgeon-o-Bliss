@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -22,6 +23,7 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.MobEffectEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.event.entity.player.PlayerXpEvent;
 import net.minecraftforge.event.level.NoteBlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -55,7 +57,7 @@ public class SOBEvents {
         if (target instanceof LivingEntity t && entity instanceof LivingEntity e && e.hasEffect(SOBMobEffects.SPITE_BOOST.get()) && e.hasEffect(SOBMobEffects.SPITE.get()) && !t.isInvulnerable()) { //consumes all stacks of Retaliation and increases damage accordingly
             float amp = e.getEffect(SOBMobEffects.SPITE_BOOST.get()).getAmplifier();
             float bAmp = e.getEffect(SOBMobEffects.SPITE.get()).getAmplifier();
-            float bonus = (((amp + 1) / 5) * (bAmp + 1));
+            float bonus = ((amp + 1) / 5) * (bAmp + 1);
             event.setAmount(event.getAmount() * (1 + bonus));
             e.level().playSeededSound(null, e.getX(), e.getY(), e.getZ(), SOBSounds.SPITE_CONSUME.get(), SoundSource.NEUTRAL, 1.0F, 1.0F, 1);
             e.removeEffect(SOBMobEffects.SPITE_BOOST.get());
@@ -133,6 +135,18 @@ public class SOBEvents {
             float pitch = (float) Math.pow(2.0, (event.getVanillaNoteId() - 12) / 12.0);
             level.playSound(null, noteBlockPos, sound, SoundSource.RECORDS, 1F, pitch);
             event.setCanceled(true);
+        }
+    }
+
+    @SubscribeEvent
+    public static void expOrbPickedUp(PlayerXpEvent.PickupXp event) {
+        Player player = event.getEntity();
+        int value = event.getOrb().getValue();
+
+        if (player.hasEffect(SOBMobEffects.BRAIN_BLAST.get())) {
+            int amp = player.getEffect(SOBMobEffects.BRAIN_BLAST.get()).getAmplifier();
+            double bonus = ((amp + 1) * 0.20);
+            player.giveExperiencePoints((int) (value * bonus));
         }
     }
 }

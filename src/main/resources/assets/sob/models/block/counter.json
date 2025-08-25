@@ -2,7 +2,7 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "bottom": "minecraft:block/bricks",
-    "side": "farmersdelight:block/stove_side",
+    "side": "sob:block/counter_side",
     "top": "sob:block/counter_top"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 250,
+    "fluid": "minecraft:water"
+  },
+  "experience": 0.0,
+  "fermentingtime": 3000,
+  "ingredients": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    },
+    {
+      "item": "sob:sculk_tendril"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 250,
+    "fluid": "sob:liquid_experience"
+  },
+  "temperature": 1
+}

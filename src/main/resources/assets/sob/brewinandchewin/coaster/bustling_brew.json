@@ -1,0 +1,16 @@
+{
+  "item": "sob:bustling_brew",
+  "models": [
+    {
+      "model": "sob:block/coaster/bustling_brew"
+    },
+    {
+      "model": "sob:block/coaster/bustling_brew",
+      "texture_modifiers": [
+        {
+          "type": "brewinandchewin:glint"
+        }
+      ]
+    }
+  ]
+}

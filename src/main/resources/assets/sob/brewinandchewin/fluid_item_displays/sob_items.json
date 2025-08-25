@@ -8,5 +8,7 @@
   "sob:death_drink": "sob:death_drink",
   "sob:portal_drink": "sob:portal_drink",
   "sob:prickly_melomel": "sob:prickly_melomel",
-  "sob:root_beer": "sob:root_beer"
+  "sob:root_beer": "sob:root_beer",
+  "sob:liquid_experience": "minecraft:experience_bottle",
+  "sob:bustling_brew": "sob:bustling_brew"
 }

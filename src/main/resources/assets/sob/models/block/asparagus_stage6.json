@@ -7,7 +7,7 @@
 	"textures": {
 		"0": "sob:block/asparagus_stage6",
 		"1": "sob:block/asparagus_stage4",
-		"particle": "sob:block/asparagus_stage6"
+		"particle": "sob:block/asparagus_stage5"
 	},
 	"elements": [
 		{

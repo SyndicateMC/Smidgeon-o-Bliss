@@ -10,9 +10,6 @@ import net.minecraftforge.fluids.FluidType;
 import java.util.function.Consumer;
 
 public class EumozzCheeseFluidType extends FluidType {
-    public static final ResourceLocation EUMOZZ_STILL_TEXTURE = new ResourceLocation(SOB.MOD_ID, "block/eumozz_cheese_still");
-    public static final ResourceLocation EUMOZZ_FLOWING_TEXTURE = new ResourceLocation(SOB.MOD_ID, "block/eumozz_cheese_flow");
-
     public EumozzCheeseFluidType() {
         super(FluidType.Properties.create()
                 .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
@@ -26,12 +23,12 @@ public class EumozzCheeseFluidType extends FluidType {
         consumer.accept(new IClientFluidTypeExtensions() {
             @Override
             public ResourceLocation getStillTexture() {
-                return EUMOZZ_STILL_TEXTURE;
+                return new ResourceLocation(SOB.MOD_ID, "block/eumozz_cheese_still");
             }
 
             @Override
             public ResourceLocation getFlowingTexture() {
-                return EUMOZZ_FLOWING_TEXTURE;
+                return new ResourceLocation(SOB.MOD_ID, "block/eumozz_cheese_flow");
             }
         });
     }

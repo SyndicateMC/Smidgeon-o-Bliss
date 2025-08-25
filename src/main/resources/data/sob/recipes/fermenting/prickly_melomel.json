@@ -8,7 +8,7 @@
   "fermentingtime": 9600,
   "ingredients": [
     {
-      "item": "sob:prickly_pear"
+      "tag": "forge:fruits/prickly_pear"
     },
     {
       "tag": "forge:fruits"

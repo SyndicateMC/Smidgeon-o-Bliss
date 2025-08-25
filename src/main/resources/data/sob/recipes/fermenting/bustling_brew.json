@@ -1,0 +1,29 @@
+{
+  "type": "brewinandchewin:fermenting",
+  "basefluid": {
+    "count": 250,
+    "fluid": "sob:liquid_experience"
+  },
+  "experience": 0.0,
+  "fermentingtime": 6000,
+  "ingredients": [
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    }
+  ],
+  "recipe_book_tab": "drinks",
+  "result": {
+    "count": 250,
+    "fluid": "sob:bustling_brew"
+  },
+  "temperature": 4
+}

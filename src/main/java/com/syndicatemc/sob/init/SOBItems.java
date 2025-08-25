@@ -28,8 +28,16 @@ public class SOBItems {
     /* decorative blocks */
     public static final RegistryObject<Item> COUNTER = ITEMS.register("counter",
             () -> new BlockItem(SOBBlocks.COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> METAL_COUNTER = ITEMS.register("metal_counter",
+            () -> new BlockItem(SOBBlocks.METAL_COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> NETHER_COUNTER = ITEMS.register("nether_counter",
             () -> new BlockItem(SOBBlocks.NETHER_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STONE_COUNTER = ITEMS.register("stone_counter",
+            () -> new BlockItem(SOBBlocks.STONE_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_COUNTER = ITEMS.register("deepslate_counter",
+            () -> new BlockItem(SOBBlocks.DEEPSLATE_COUNTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> BLACKSTONE_COUNTER = ITEMS.register("blackstone_counter",
+            () -> new BlockItem(SOBBlocks.BLACKSTONE_COUNTER.get(), new Item.Properties()));
     public static final RegistryObject<Item> ACACIA_COUNTER = ITEMS.register("acacia_counter",
             () -> new FuelBlockItem(SOBBlocks.ACACIA_COUNTER.get(), new Item.Properties(), 300));
     public static final RegistryObject<Item> BAMBOO_COUNTER = ITEMS.register("bamboo_counter",
@@ -75,9 +83,9 @@ public class SOBItems {
     public static final RegistryObject<Item> PITCHER_TUBER = ITEMS.register("pitcher_tuber",
             () -> new BlockItem(SOBBlocks.PITCHER_TUBER.get(), new Item.Properties()));
     public static final RegistryObject<Item> UNRIPE_EUMOZZ_CHEESE_WHEEL = ITEMS.register("unripe_eumozz_cheese_wheel",
-            () -> new BlockItem(SOBBlocks.UNRIPE_EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties()));
+            () -> new BlockItem(SOBBlocks.UNRIPE_EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> EUMOZZ_CHEESE_WHEEL = ITEMS.register("eumozz_cheese_wheel",
-            () -> new BlockItem(SOBBlocks.EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties()));
+            () -> new BlockItem(SOBBlocks.EUMOZZ_CHEESE_WHEEL.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> ICHOR_BUD = ITEMS.register("ichor_bud",
             () -> new ItemNameBlockItem(SOBBlocks.ICHORFRUIT.get(), new Item.Properties()));
 
@@ -88,6 +96,8 @@ public class SOBItems {
             () -> new CamelFeedItem(new Item.Properties()));
     public static final RegistryObject<Item> PEANUT = ITEMS.register("peanut",
             () -> new ItemNameBlockItem(SOBBlocks.PEANUTS.get(), new Item.Properties()));
+    public static final RegistryObject<Item> STARFRUIT_SEED = ITEMS.register("starfruit_seed",
+            () -> new ItemNameBlockItem(SOBBlocks.STARFRUIT.get(), new Item.Properties()));
     //req: create
     public static final RegistryObject<Item> CINDER_DOUGH = ITEMS.register("cinder_dough",
             () -> new Item(new Item.Properties()));
@@ -117,6 +127,8 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.VEGGIE_WRAP)));
     public static final RegistryObject<Item> TUBER_STICKS = ITEMS.register("tuber_sticks",
             () -> new Item(foodItem(FoodConstants.TUBER_STICKS)));
+    public static final RegistryObject<Item> STARFRUIT = ITEMS.register("starfruit",
+            () -> new StarfruitItem(foodItem(FoodConstants.STARFRUIT)));
     public static final RegistryObject<Item> ICHORFRUIT = ITEMS.register("ichorfruit",
             () -> new IchorfruitItem(foodItem(FoodConstants.ICHORFRUIT)));
     public static final RegistryObject<Item> ECHO_ROCK_CANDY = ITEMS.register("echo_rock_candy",
@@ -127,6 +139,8 @@ public class SOBItems {
             () -> new Item(foodItem(FoodConstants.DRIED_BERRIES)));
     public static final RegistryObject<Item> ANTS_LOG = ITEMS.register("ants_log",
             () -> new Item(foodItem(FoodConstants.ANTS_LOG)));
+    public static final RegistryObject<Item> EXP_CANDY = ITEMS.register("exp_candy",
+            () -> new ExpCandyItem(foodItem(FoodConstants.EXP_CANDY)));
     //req: endergetic
     public static final RegistryObject<Item> EUMOZZ_CHEESE_WEDGE = ITEMS.register("eumozz_cheese_wedge",
             () -> new Item(foodItem(FoodConstants.EUMOZZ_CHEESE_WEDGE)));
@@ -220,6 +234,9 @@ public class SOBItems {
     //req: ATMO
     public static final RegistryObject<Item> ORANGE_MARMALADE = ITEMS.register("orange_marmalade",
             () -> new JamJarItem(foodItem(FoodConstants.ORANGE_MARMALADE).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
+    //req: ATMO
+    public static final RegistryObject<Item> CURRANT_JAM = ITEMS.register("currant_jam",
+            () -> new JamJarItem(foodItem(FoodConstants.CURRANT_JAM).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
     //req: NEA
     public static final RegistryObject<Item> STRAWBERRY_JAM = ITEMS.register("strawberry_jam",
             () -> new JamJarItem(foodItem(FoodConstants.STRAWBERRY_JAM).stacksTo(16).craftRemainder(Items.GLASS_BOTTLE)));
@@ -231,6 +248,8 @@ public class SOBItems {
             .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.DEATH_DRINK)));
     public static final RegistryObject<Item> PRICKLY_MELOMEL = ITEMS.register("prickly_melomel", () -> new BoozeItem(SOBFluids.PRICKLY_MELOMEL.get(), new Item.Properties()
             .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.PRICKLY_MELOMEL)));
+    public static final RegistryObject<Item> BUSTLING_BREW = ITEMS.register("bustling_brew", () -> new BustlingBrewItem(SOBFluids.BUSTLING_BREW.get(), new Item.Properties()
+            .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.BUSTLING_BREW)));
     //req: ATMO
     public static final RegistryObject<Item> TEQUILA = ITEMS.register("tequila", () -> new BoozeItem(SOBFluids.TEQUILA.get(), new Item.Properties()
             .stacksTo(16).craftRemainder(BnCItems.TANKARD.get()).food(FoodConstants.TEQUILA)));

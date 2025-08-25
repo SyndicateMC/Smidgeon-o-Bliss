@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/bricks",
+    "side": "farmersdelight:block/stove_side",
+    "top": "sob:block/metal_counter_top"
+  }
+}

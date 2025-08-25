@@ -27,6 +27,7 @@ public class SOBCreativeTabs {
                     .displayItems((parameters, output) -> {
                         /* blocks */
                         output.accept(COUNTER.get());
+                        output.accept(METAL_COUNTER.get());
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(NETHER_COUNTER.get());
                         }
@@ -44,6 +45,9 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(POWDERY_COUNTER.get());
                         }
+                        output.accept(STONE_COUNTER.get());
+                        output.accept(DEEPSLATE_COUNTER.get());
+                        output.accept(BLACKSTONE_COUNTER.get());
                         /* items and bowl-less food items */
                         output.accept(GILDED_POTATO.get());
                         output.accept(DRIPLEAVES.get());
@@ -64,6 +68,8 @@ public class SOBCreativeTabs {
                         output.accept(PITCHER_TUBER_BUNDLE.get());
                         output.accept(TUBER_STICKS.get());
                         //unfinished
+                        //output.accept(STARFRUIT.get());
+                        //output.accept(STARFRUIT_SEED.get());
                         //output.accept(ICHOR_BUD.get());
                         //output.accept(ICHORFRUIT.get());
                         output.accept(DRIED_BERRIES.get());
@@ -72,6 +78,7 @@ public class SOBCreativeTabs {
                         output.accept(SCULK_ROLL.get());
                         output.accept(PBNJ.get());
                         output.accept(ANTS_LOG.get());
+                        output.accept(EXP_CANDY.get());
                         if (ModList.get().isLoaded("create")) {
                             output.accept(CINDER_DOUGH.get());
                             output.accept(CINDER_BREAD.get());
@@ -130,9 +137,11 @@ public class SOBCreativeTabs {
                         output.accept(PEANUT_BUTTER.get());
                         if (ModList.get().isLoaded("neapolitan")) {
                             output.accept(STRAWBERRY_JAM.get());
+                            output.accept(NeapolitanCompatItems.MINT_JELLY.get());
                         }
                         if (ModList.get().isLoaded("atmospheric")) {
                             output.accept(ORANGE_MARMALADE.get());
+                            output.accept(CURRANT_JAM.get());
                         }
                         if (ModList.get().isLoaded("mynethersdelight")) {
                             output.accept(MNDCompatItems.PEPPER_JELLY.get());
@@ -165,6 +174,7 @@ public class SOBCreativeTabs {
                         if (ModList.get().isLoaded("miners_delight")) {
                             output.accept(ROOT_BEER.get());
                         }
+                            output.accept(BUSTLING_BREW.get());
                             output.accept(DEATH_DRINK.get());
                         if (ModList.get().isLoaded("spelunkery")) {
                             output.accept(PORTAL_DRINK.get());

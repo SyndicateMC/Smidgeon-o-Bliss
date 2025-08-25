@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -29,6 +30,9 @@ public class EchoRockCandyItem extends ConsumableItem {
     @Override
     public int getUseDuration(ItemStack stack) {
         return 64;
+    }
+    public SoundEvent getEatingSound() {
+        return SOBSounds.CRUNCHY_EAT.get();
     }
 
     @Override

@@ -4,10 +4,10 @@
   "experience": 1.0,
   "ingredients": [
     {
-      "item": "sob:nopal"
+      "tag": "forge:vegetables/cactus_paddle"
     },
     {
-      "item": "sob:nopal"
+      "tag": "forge:vegetables/cactus_paddle"
     },
     {
       "item": "farmersdelight:onion"

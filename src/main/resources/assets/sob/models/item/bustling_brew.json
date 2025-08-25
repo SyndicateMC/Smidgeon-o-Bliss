@@ -1,6 +1,6 @@
 {
   "parent": "farmersdelight:item/mug",
     "textures": {
-        "layer0": "sob:item/gravy"
+        "layer0": "sob:item/bustling_brew"
     }
 }

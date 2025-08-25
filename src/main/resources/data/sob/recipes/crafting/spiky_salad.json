@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "sob:prickly_pear"
+      "tag": "forge:fruits/prickly_pear"
     },
     {
       "item": "atmospheric:yucca_flower"
     },
     {
-      "item": "sob:nopal"
+      "tag": "forge:vegetables/cactus_paddle"
     },
     {
-      "item": "sob:nopal"
+      "tag": "forge:vegetables/cactus_paddle"
     },
     {
       "item": "minecraft:bowl"

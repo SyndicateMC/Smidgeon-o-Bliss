@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "sob:block/stone_counter_top",
+    "side": "sob:block/stone_counter_side",
+    "top": "sob:block/stone_counter_top"
+  }
+}

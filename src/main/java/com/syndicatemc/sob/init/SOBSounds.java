@@ -20,6 +20,8 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.fizzy_drink")));
     public static final RegistryObject<SoundEvent> JUICY_EAT = SOUNDS.register("item.juicy_eat",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.juicy_eat")));
+    public static final RegistryObject<SoundEvent> CRUNCHY_EAT = SOUNDS.register("item.crunchy_eat",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "item.crunchy_eat")));
     public static final RegistryObject<SoundEvent> SPITE_PRICK = SOUNDS.register("entity.spite_prick",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "entity.spite_prick")));
     public static final RegistryObject<SoundEvent> SPITE_CONSUME = SOUNDS.register("entity.spite_consume",
@@ -40,6 +42,8 @@ public class SOBSounds {
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.nice_guitar")));
     public static final RegistryObject<SoundEvent> TOOT = SOUNDS.register("block.toot",
             () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.toot")));
+    public static final RegistryObject<SoundEvent> JUICY_HARVEST = SOUNDS.register("block.juicy_harvest",
+            () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(SOB.MOD_ID, "block.juicy_harvest")));
 
     public static void init(IEventBus bus) {
         SOUNDS.register(bus);

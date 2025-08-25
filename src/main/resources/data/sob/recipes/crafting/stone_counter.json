@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:smooth_stone"
+    },
+    "S": {
+      "item": "minecraft:smooth_stone_slab"
+    }
+  },
+  "pattern": [
+    "SS",
+    "BB"
+  ],
+  "result": {
+    "count": 3,
+    "item": "sob:stone_counter"
+  }
+}

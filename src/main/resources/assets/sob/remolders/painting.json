@@ -1,0 +1,71 @@
+{
+  "molding": "json",
+  "remolder": [
+    {
+      "type": "add",
+      "target": "overrides",
+      "value": []
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/bliss",
+        "predicate": {
+          "sob:bliss": 1.0
+        }
+      }
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/propaganda",
+        "predicate": {
+          "sob:propaganda": 1.0
+        }
+      }
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/roots",
+        "predicate": {
+          "sob:roots": 1.0
+        }
+      }
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/number_one",
+        "predicate": {
+          "sob:number_one": 1.0
+        }
+      }
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/lies",
+        "predicate": {
+          "sob:lies": 1.0
+        }
+      }
+    },
+    {
+      "type": "add",
+      "target": "overrides[]",
+      "value": {
+        "model": "sob:item/painting/blue_tiles",
+        "predicate": {
+          "sob:blue_tiles": 1.0
+        }
+      }
+    }
+  ],
+  "selector": "minecraft:models/item/painting"
+}

@@ -1,0 +1,13 @@
+{
+  "type": "brewinandchewin:keg_pouring",
+  "amount": 250,
+  "filling": true,
+  "fluid": "sob:liquid_experience",
+  "output": {
+    "item": "minecraft:experience_bottle"
+  },
+  "container": {
+    "item": "minecraft:glass_bottle"
+  },
+  "strict": false
+}

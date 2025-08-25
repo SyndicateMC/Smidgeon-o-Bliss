@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:bread"
+      "tag": "forge:bread/wheat"
     },
     {
       "tag": "sob:ingredients/preserves"
     },
     {
-      "item": "sob:peanut_butter"
+      "tag": "forge:peanut_butter"
     }
   ],
   "result": {

@@ -6,7 +6,7 @@
       "item": "minecraft:glow_berries"
     },
     "B": {
-      "item": "minecraft:bread"
+      "tag": "forge:bread/wheat"
     },
     "E": {
       "item": "miners_delight:silverfish_eggs"

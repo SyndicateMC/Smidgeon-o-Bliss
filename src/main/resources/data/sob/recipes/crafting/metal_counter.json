@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "SS",
+    "BB"
+  ],
+  "result": {
+    "count": 2,
+    "item": "sob:metal_counter"
+  }
+}

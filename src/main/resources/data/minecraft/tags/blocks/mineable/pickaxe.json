@@ -1,8 +1,12 @@
 {
   "values": [
     "sob:counter",
+    "sob:metal_counter",
     "sob:nether_counter",
     "sob:big_soup_block",
-    "sob:red_rum_skull"
+    "sob:red_rum_skull",
+    "sob:stone_counter",
+    "sob:deepslate_counter",
+    "sob:blackstone_counter"
   ]
 }

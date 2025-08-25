@@ -1,6 +1,7 @@
 package com.syndicatemc.sob.init;
 
 import com.syndicatemc.sob.SOB;
+import com.syndicatemc.sob.mob_effect.BrainBlastEffect;
 import com.syndicatemc.sob.mob_effect.CessationEffect;
 import com.syndicatemc.sob.mob_effect.SOBMobEffectHelp;
 import net.minecraft.core.registries.Registries;
@@ -33,7 +34,9 @@ public class SOBMobEffects {
     public static final RegistryObject<MobEffect> TOUGHNESS = MOB_EFFECTS.register("toughness", () -> new SOBMobEffectHelp(MobEffectCategory.BENEFICIAL, 0xBC7841)
             .addAttributeModifier(Attributes.ARMOR, "7b4a9349-0f58-4d94-9dd1-8390a8c9b19c", 4.0, AttributeModifier.Operation.ADDITION)
             .addAttributeModifier(Attributes.ARMOR_TOUGHNESS, "5e7765d7-d87d-46ac-8fcf-bde2846127e5", 1.0, AttributeModifier.Operation.ADDITION));
-
+    public static final RegistryObject<MobEffect> BRAIN_BLAST = MOB_EFFECTS.register("brain_blast", () -> new BrainBlastEffect()
+            .addAttributeModifier(Attributes.MOVEMENT_SPEED, "affee4da-5d43-4ca3-8de3-b985c10f6bad", 0.1, AttributeModifier.Operation.MULTIPLY_BASE)
+            .addAttributeModifier(Attributes.LUCK, "e70a43f8-fc1a-4796-a105-8e5d8c027c2c", 0.2, AttributeModifier.Operation.ADDITION));
 
     public static void init(IEventBus bus) {
         MOB_EFFECTS.register(bus);
